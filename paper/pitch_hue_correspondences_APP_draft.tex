@@ -1,0 +1,1734 @@
+% ============================================================
+%  DRAFT — Attention, Perception, & Psychophysics submission
+%  "Pitch–Hue Correspondences: A Quantitative Meta-Analysis
+%   of Three Centuries of Mapping Systems"
+%  Status: Draft – July 2026
+% ============================================================
+
+\documentclass[12pt]{article}
+
+%  -  Packages  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - --
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\doublespacing
+\usepackage{times}
+\usepackage{natbib}
+\setcitestyle{authoryear,open={(},close={)}}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{lineno}
+\linenumbers
+
+% Tell LaTeX where to look for figures
+\graphicspath{
+  {figures/}
+  {figures/aesthetic/}
+  {figures/aesthetic/families/}
+  {figures/background/}
+  {figures/litreview/}
+}
+
+% ============================================================
+\begin{document}
+
+%  -  Title page  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+\begin{titlepage}
+\begin{center}
+\vspace*{2cm}
+{\Large\bfseries Pitch--Hue Correspondences:\\[6pt]
+A Quantitative Meta-Analysis of Three Centuries of Mapping Systems}\\[2em]
+
+{\large Alex Noah Feldman and Ercan Engin Kuruoglu}\\[0.75em]
+
+\textit{Draft -- July 2026}\\[0.5em]
+\textit{Prepared for submission to \textbf{Attention, Perception, \& Psychophysics}}\\[3em]
+
+\textbf{Running head:} PITCH--HUE CORRESPONDENCES META-ANALYSIS\\[3em]
+
+% TODO(authors): fill in corresponding author, affiliation, and email
+% before submission.
+\textbf{Correspondence:}\\
+Alex Noah Feldman\\
+\texttt{[affiliation]}\\
+\texttt{[email]}
+
+\end{center}
+\end{titlepage}
+
+% ============================================================
+\newpage
+\begin{abstract}
+Which color is the note C? Newton said red; Rimington said violet.
+Three centuries of proposals have produced no consensus, and the
+pattern of that disagreement is informative in its own right. We
+present a quantitative meta-analysis of 70 pitch--hue mapping systems,
+from Chinese Wuxing theory to contemporary digital applications, and
+test four theoretical accounts of cross-modal correspondence:
+structural (shared physics), semantic (shared language), statistical
+(environmental co-occurrence), and hedonic (shared affective valence).
+After standardizing all color specifications to CIELAB space and
+applying the CIEDE2000 perceptual distance formula, global agreement
+across the 25 retained systems is low (mean 0.22, per-pitch 0.20--0.30),
+close to the simulated chance level of 0.21: the
+historical record contains no universal pitch--hue mapping. Hue
+assignments are nonetheless non-uniformly distributed (Rayleigh
+$R = .66$, Monte Carlo $p = .003$), and the disagreement is patterned.
+Organized into eight reasoning families classified from source texts,
+the corpus shows a consistent within-family ordering:
+Pedagogical systems agree most (0.348, 57\% above the pooled
+baseline), followed by Synesthetic (0.276) and Spectral Analogy
+(0.267) traditions, whereas Cosmological systems fall below the pooled
+baseline---a descriptive ordering that small family sizes leave
+statistically unresolved. Among the four accounts, the hedonic account
+performs best: Procrustes alignment of cross-modal dimensions in
+Evaluation-Potency-Activity affective space yields a disparity of
+0.559 (permutation $p = .027$), with Evaluation as the primary
+aligning dimension. The structural account earns partial credit
+(semitone--hue distance correlation $r = .393$, permutation
+$p = .002$), but its complementary-hue prediction fails.
+Sentence-transformer probing recovers pitch--hue geometry under
+timbral descriptors ($\rho = .368$, $p = .007$), consistent with a
+semantics--affect entangled channel. Pitch--hue correspondences appear
+organized by a shared affective geometry, scaffolded by structural and
+statistical regularities; we derive from this a congruency framework
+for neural research.
+\end{abstract}
+
+\noindent\textit{Keywords:} cross-modal correspondence, pitch--color
+association, synesthesia, perceptual congruency, affective mediation
+
+\vspace{1em}
+\noindent\textit{Public Significance Statement:} Proposals linking
+musical notes to colors have accumulated for three centuries without
+agreement. Treating this historical record as data, we show that the
+disagreement is structured: proposals agree within reasoning
+traditions, and the traditions align best through the emotional
+character shared by sounds and colors. The findings give educators,
+accessibility designers, and neuroscientists a principled basis for
+choosing sound--color mappings.
+
+\newpage
+
+% ============================================================
+\section{Introduction}
+
+Few questions in the science of perception have attracted such sustained
+intellectual commitment - and produced such strong disagreement - 
+as the relationship between musical pitch and color. Isaac Newton
+divided the visible spectrum into seven color bands and aligned them
+with the seven notes of the diatonic scale \citep{newton1704}.
+Louis-Bertrand Castel built a keyboard instrument designed to project
+colors alongside musical tones \citep{castel1725}. Alexander Scriabin
+notated a full color-organ part in his orchestral score \textit{Prometheus:
+The Poem of Fire} \citep{scriabin1911}. Olivier Messiaen described
+vivid, involuntary color experiences triggered by specific chord
+voicings \citep{messiaen1944}. Today, smartphone applications map sound
+spectra to color in real time. Three centuries of effort by physicists,
+composers, instrument builders, synesthetes, and software engineers
+have all circled the same question - and arrived at irreconcilably
+different answers. Scriabin and Rimsky-Korsakov, contemporaries who
+both took the correspondence with utmost seriousness, agreed on little
+beyond assigning warm colors to C \citep{galeyev2007}.
+
+The disagreement is not for lack of musical reasoning - if anything,
+each proposal is over-determined by it. Newton's seven spectral bands
+were not chosen by eye: he deliberately partitioned the spectrum to
+echo the seven unequal steps of the Dorian diatonic scale, importing
+the ratios of the musical octave into the geometry of the prism
+\citep{newton1704,gage1999}. Castel's \textit{clavecin oculaire}
+literalized the analogy into a machine, pairing each semitone with a
+pigment so that a harpsichordist could ``paint'' chords as they were
+played \citep{castel1725,peacock1988}. A century later the color-organ
+tradition - Rimington's electric \textit{Colour-Organ} foremost among
+them - rebuilt the same dream with arc lamps and gelatin filters,
+mapping the chromatic scale onto a calibrated hue wheel
+\citep{rimington1912,peacock1988}. The composers who cared most
+disagreed most instructively: Scriabin derived his \textit{luce} part
+in \textit{Prometheus} from the circle of fifths, so that keys a fifth
+apart received neighboring hues, whereas Rimsky-Korsakov reported
+direct chromesthetic sensations that followed no such rule, and
+Messiaen described seeing shifting complexes of color bound not to
+single pitches but to specific chord voicings and modes
+\citep{scriabin1911,messiaen1944,galeyev2007}. Older still, the
+Chinese \textit{Wuxing} tradition linked the five pentatonic tones to
+the five phases and their canonical colors, embedding pitch--color
+correspondence inside a cosmological rather than perceptual logic
+\citep{gage1999}. Each tradition is internally coherent; collectively
+they are mutually contradictory.
+
+This persistent disagreement is worth taking seriously as evidence.
+Instead of asking which mapping is correct, we ask whether there is
+measurable structure in three centuries of pitch--hue proposals, and if
+so, which theoretical account best explains it. To do this we treat the
+historical corpus itself as a dataset---something that, to our
+knowledge, no prior survey has done quantitatively---and subject it to
+statistical analysis.
+
+The stakes extend well beyond historical curiosity. A principled,
+data-driven account of pitch--hue correspondence would unlock concrete
+applications across several fields. In \emph{music education}, color
+coding is already widely used to teach pitch, notation, and harmony to
+beginners (Boomwhackers, Figurenotes, and the colored-bell Suzuki and
+Kod\'aly materials all assign colors to notes); knowing which mappings
+are perceptually and affectively natural rather than arbitrary would
+let educators design materials that learners find intuitive rather than
+confusing. In \emph{accessibility and sensory substitution}, robust
+audiovisual mappings underpin tools that render music visible for the
+deaf and hard-of-hearing and sound audible-as-color for assistive
+displays. In \emph{human--computer interaction and generative media},
+real-time audio-to-color engines drive music visualizers, lighting
+design, and the rapidly growing class of AI audiovisual generators,
+all of which currently rely on ad hoc or designer-chosen palettes. And
+in \emph{cognitive neuroscience}, a validated congruency criterion is a
+prerequisite for any experiment that hopes to localize the neural
+substrate of cross-modal binding - without one, ``congruent'' and
+``incongruent'' stimuli are defined circularly by the very intuitions
+under study. Resolving the structure of pitch--hue correspondence is
+therefore not an end in itself but an enabling step for pedagogy,
+assistive technology, creative tooling, and perceptual neuroscience
+alike.
+
+Cross-modal correspondences (CMCs) are systematic matching tendencies
+between perceptual dimensions from different sensory domains, observed
+reliably across individuals in the general population \citep{spence2011}.
+Pitch--hue is among the most studied yet least settled CMC pairings.
+Behavioral evidence is frustratingly weak: Ward, Huckstep, and
+Tsakanikos (2006) found that participants associate higher pitches with
+lighter, more yellow-shifted colors, but the effect is small, highly
+variable, and entangled with brightness and saturation confounds
+\citep{ward2006}. Rather than adding yet another explicit matching
+experiment to an already crowded literature, we exploit a richer and
+largely untapped empirical resource: three centuries of independent
+pitch--hue proposals produced by agents as diverse as Pythagorean
+cosmologists, chromesthetic synesthetes, music educators, and digital
+application designers. Any signal these proposals carry should show up
+in the structure of their agreement and disagreement, which we now have
+the tools to measure.
+
+Four accounts have been proposed to explain CMCs in general and
+pitch--hue correspondences in particular \citep{spence2011,deroy2016}.
+The \textbf{structural account} \citep{marks1978} holds that
+correspondences arise from shared physical or mathematical properties:
+both pitch and hue are circular dimensions with interval-ratio
+relationships, and the pitch-class circle and the color wheel may share
+the same underlying geometry. The \textbf{semantic account}
+\citep{martino2001,walker2016} holds that shared linguistic labels
+mediate correspondences: ``C major'' and ``red'' are associated because
+Western cultural history has described both with overlapping emotional
+vocabulary (``warm'', ``powerful'', ``grounded''). The
+\textbf{statistical account} \citep{parise2014} holds that
+correspondences arise from environmental co-occurrence
+regularities - high-pitched bird calls in bright morning light,
+low-frequency rumbles in dark overcast conditions - internalized through
+Bayesian learning. The \textbf{hedonic account} \citep{palmer2013}
+holds that stimuli evoking similar emotional responses are associated:
+correspondence operates through a shared affective dimension onto which
+both modalities project, rather than through direct physical or
+linguistic links.
+
+The present study tests all four accounts against a newly constructed
+catalogue of 70 pitch--hue mapping systems, the largest assembled to
+date. The approach differs from prior work in three ways. First, instead
+of adopting any single reference map as ground truth, we quantify the
+\emph{geometry of agreement} across systems, asking whether musical
+interval structure is preserved in color distance structure; this
+reference-free framing sidesteps the circularity of earlier comparisons.
+Second, we organize systems into eight theoretically motivated
+\emph{reasoning families}---classified from source texts before any
+agreement is computed---and test whether a shared reasoning tradition
+predicts shared color assignment. This lets us test whether the global
+disagreement seen in prior surveys conceals coherent within-tradition
+structure---a form of meta-analytic heterogeneity in which pooling
+masks subgroup agreement. Third, we probe the semantic
+account directly using pretrained sentence-transformer models
+\citep{wang2020,song2020,nussbaum2024} trained on large
+natural-language corpora, turning the linguistic mediation hypothesis
+into a directly testable claim.
+
+A note on the kind of paper this is: the contribution is meta-analytic
+and methodological. We present no new behavioral data. What we offer
+is a curated catalogue, a reference-free agreement framework, and a
+head-to-head comparison of theoretical accounts---quantitative targets
+for the behavioral and neural experiments that should follow.
+
+% ============================================================
+\section{Materials: Constructing the Historical Catalogue}
+
+\subsection{Source Identification and Coverage}
+Primary sources were identified through three channels. First, four
+academic surveys of the sound--color relationship
+\citep{jewanski2009,gage1999,peacock1988,wells1980} were reviewed
+systematically to extract every referenced pitch--color mapping system.
+Second, targeted searches in music history archives, color science
+literature, and instrument design records extended coverage to include
+practitioner systems - color organs, music education curricula, digital
+applications - underrepresented in academic surveys. Third, a
+bibliographic snowball procedure followed citations until no new systems
+emerged. The procedure yielded 70 candidate systems spanning from
+Chinese Wuxing theory (4th century BCE) to contemporary smartphone
+color--music applications.
+
+\subsection{Color Standardization}
+Historical color specifications are heterogeneous: Newton specifies
+spectral band positions; Scriabin specifies color names in Russian;
+Rimington specifies 19th-century pigment trade names; digital
+applications specify hexadecimal RGB codes; synesthetes report colors
+in free text. Each specification was classified into one of four source
+types: (1)~spectral wavelength, (2)~named pigment or dye,
+(3)~natural-language description, or (4)~modern color code (RGB/hex),
+and converted to CIELAB coordinates via a principled pipeline. Spectral
+wavelengths were converted to CIEXYZ using the CIE 1931 standard
+observer, then to CIELAB. Named pigments and dyes were matched to
+Munsell \citep{newhall1943} or Natural Color System
+\citep{hard1981} references using published pigment databases.
+Natural-language descriptions were resolved by averaging the CIELAB
+coordinates of all XKCD Color Survey \citep{munroe2010xkcd} colors
+judged semantically compatible with the description. Modern color codes
+were converted via the standard sRGB-to-CIELAB transformation with D65
+illuminant.
+
+\subsection{Inclusion Criteria}
+Each candidate system was evaluated against four criteria:
+(1)~\textit{Discrete pitch-class-to-color mapping}: the system must
+assign colors to discrete pitch classes. Systems mapping intervals,
+modes, timbres, keys that cannot be normalized to the 12 pitch
+classes, or continuous frequency were excluded, as were systems
+specifying only lightness or brightness without hue. Partial coverage
+(pentatonic, diatonic, or heptatonic systems) was retained; per-pitch
+statistics are computed over the systems that specify that pitch
+class, and interpolation of missing pitch classes was rejected because
+any interpolation scheme imposes structural assumptions that the
+analysis is designed to test.
+(2)~\textit{Convertible color specifications}: all assignments must
+be convertible to CIELAB coordinates.
+(3)~\textit{Traceable provenance}: each system must be attributable to
+a published source with sufficient detail to verify color assignments.
+(4)~\textit{Independence}: directly derived or copied systems were
+merged with their originals.
+
+After applying these criteria, 25 of the candidate systems identified
+through the survey channels were retained for the primary quantitative
+analyses; 14 of the retained systems specify all 12 chromatic pitch
+classes. The remaining catalogued systems are documented but excluded
+from agreement computations. Supplementary Table~S1 lists all 70
+systems with year, source, family, specification type, retention
+status, and exclusion reason.
+Six further systems meeting the same criteria entered the catalogue
+through the snowball procedure after the primary analyses were run,
+bringing the total of retained systems in the final catalogue to 31.
+For two of them, Castel's \textit{clavecin oculaire} (1725) and
+Rimington's color-organ assignments (1895)---both discussed, but not
+fully tabulated, in prior surveys \citep{peacock1988,gage1999}---%
+complete 12-tone color specifications were assembled from the primary
+sources. The remaining four are Field's chromatic equivalents
+\citep{field1835}, Wells' proportional frequency system
+\citep{wells1980}, Pridmore's psychophysical transposition
+\citep{pridmore1992}, and a contemporary smartphone Soundmap
+application. Unless noted otherwise, results below are reported for
+the 25-system primary set; a sensitivity analysis on all 31 retained
+systems (flat agreement 0.237, Rayleigh $R = .60$, semitone--hue
+correlation $r = .49$) leaves every conclusion unchanged.
+
+\subsection{Reasoning-Family Classification}
+The 70 systems were classified into eight reasoning families (F1--F8)
+based on the design rationale of each system \emph{before} agreement
+scores were computed, to avoid circular analysis. Two independent
+coders assigned each system to a family from the original source text;
+disagreements ($\approx$12\% of cases) were resolved through discussion.
+The eight families are: F1~Spectral Analogy (22 systems), F2~Circle of
+Fifths (4), F3~Cosmological (14), F4~Emotion-Mediated (3),
+F5~Synesthetic (7), F6~Esoteric (2), F7~Psychophysical (8), and
+F8~Pedagogical (4); the remaining six catalogue entries are meta-level
+sources (survey compilations and documented rejections of fixed
+mappings) that name no single design rationale and were left
+unclassified. Twelve systems invoke a secondary rationale in addition
+to their primary one; the priority rule described below assigns each
+to a single primary family.
+
+The eight categories follow directly from the four theoretical accounts
+the study sets out to test, refined to the granularity actually present
+in the historical record. The \emph{structural} account corresponds to
+F1~(Spectral Analogy, Newton's prism metaphor) and F2~(Circle of
+Fifths, harmonic interval geometry); the \emph{hedonic} account to
+F4~(Emotion-Mediated) and, indirectly, F8~(Pedagogical), where
+designers optimize for what feels natural to a learner; the
+\emph{semantic} and culturally transmitted accounts to
+F3~(Cosmological, pitch--color links inherited from metaphysical
+systems) and F6~(Esoteric, Theosophical and occult schemes).
+F5~(Synesthetic) isolates first-person chromesthetic report, and
+F7~(Psychophysical) isolates systems derived from explicit perceptual
+measurement. Each family is defined by a single text-based inclusion
+criterion---the \emph{stated} design rationale of the system, not its
+resulting colors (Table~\ref{tab:family_definitions}). Coders applied
+the criteria in fixed order F1 through F8, assigning each system to the
+first family whose criterion it met; this priority rule resolves the
+small number of systems invoking more than one rationale (a color organ
+justified on both spectral and pedagogical grounds is coded F1, its
+primary stated basis). Eight is the smallest number of families that
+keeps the four accounts distinguishable while separating the two
+recurring expressions of structural and hedonic reasoning that the
+record contains; finer splits produced singleton families, and coarser
+ones merged rationales the sources treat as distinct. Retaining the
+eight-way scheme rather than collapsing to the four accounts lets a
+single account succeed in one guise and fail in another (structural
+reasoning expressed spectrally versus harmonically, for example)---a
+distinction that proves diagnostic.
+
+\begin{table}[htbp]
+\centering
+\caption{Operational definitions of the eight reasoning families. Each
+system was assigned to the first family (in order F1--F8) whose stated
+design rationale it satisfied. Counts are catalogue-level (of the 70
+candidate systems); the subset retained for agreement analysis is
+smaller (see Section~\ref{sec:results} and
+Table~\ref{tab:family_agreement}).}
+\label{tab:family_definitions}
+\renewcommand{\arraystretch}{1.5}
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{@{}p{0.8cm}p{3.0cm}p{8.2cm}p{2.9cm}@{}}
+\toprule
+\textbf{ID} & \textbf{Family} & \textbf{Defining criterion (stated
+  rationale)} & \textbf{Representative system} \\
+\midrule
+F1 & Spectral Analogy & Color assigned by analogy to the optical
+  spectrum or the rainbow (Newton's prism metaphor) & Newton (1704);
+  Castel (1725) \\
+F2 & Circle of Fifths & Color assigned to preserve harmonic interval
+  geometry, neighboring keys receiving neighboring hues & Scriabin
+  (1911) \\
+F3 & Cosmological & Color inherited from a metaphysical or
+  cosmological system (phases, planets, elements) & Chinese
+  \textit{Wuxing} \\
+F4 & Emotion-Mediated & Color chosen to match the explicitly named
+  emotional character of the pitch or key & Mood-based key--color
+  charts \\
+F5 & Synesthetic & Color reported as a first-person, involuntary
+  chromesthetic experience & Rimsky-Korsakov; Messiaen (1944) \\
+F6 & Esoteric & Color derived from Theosophical, occult, or spiritual
+  doctrine & Theosophical scales \\
+F7 & Psychophysical & Color derived from explicit perceptual or
+  psychophysical measurement & Pridmore (1992) \\
+F8 & Pedagogical & Color chosen to be intuitive for teaching pitch or
+  notation to learners & Boomwhackers; colored-bell methods \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Color Distance Metric}
+\label{sec:metric}
+
+All inter-color distance computations used the CIEDE2000 formula
+\citep{sharma2005}:
+\begin{equation}
+\Delta E_{00} = \sqrt{
+  \left(\frac{\Delta L'}{k_L S_L}\right)^2 +
+  \left(\frac{\Delta C'}{k_C S_C}\right)^2 +
+  \left(\frac{\Delta H'}{k_H S_H}\right)^2 +
+  R_T \frac{\Delta C'}{k_C S_C} \frac{\Delta H'}{k_H S_H}
+}
+\label{eq:ciede2000}
+\end{equation}
+where $\Delta L'$, $\Delta C'$, $\Delta H'$ are lightness, chroma, and
+hue differences; $S_L$, $S_C$, $S_H$ are empirically calibrated
+weighting functions; $k_L = k_C = k_H = 1$; and $R_T$ corrects
+perceptual non-uniformities in the blue-violet region. CIEDE2000 was
+preferred over raw CIELAB Euclidean distance to ensure that differences
+in the blue--green region are not artifactually underweighted. An
+\textbf{agreement score} was derived as the inverse of normalized mean
+pairwise CIEDE2000 distance:
+\begin{equation}
+  \text{agreement} = \frac{1}{1 + \overline{\Delta E_{00}} / 12}
+\label{eq:agreement}
+\end{equation}
+The denominator of 12 was calibrated so that a score of 0.60
+corresponds to a mean CIEDE2000 distance of $\approx$8 units, a
+conventional benchmark above which color pairs are judged clearly
+distinct under standard viewing conditions \citep{sharma2005}; we
+treat 0.60 as an explicitly chosen benchmark for ``strong consensus''
+rather than as a perceptual constant. A chance baseline for the
+agreement score was estimated by passing simulated systems of 12
+colors, drawn uniformly from the sRGB gamut, through the identical
+pipeline (2,000 simulated ensembles per corpus size). For ensembles of
+24 random systems the simulated chance agreement is 0.212 (95\%
+interval $[0.196, 0.231]$); for ensembles of 15 it is 0.212
+$[0.192, 0.240]$, with wider intervals at smaller ensemble sizes
+(full grid in Supplementary Table~S2). Observed scores are compared
+against this simulated distribution wherever ``chance'' is invoked
+below.
+
+One implementation detail matters for the hue-angle analyses reported
+below. Consensus hue angles were computed by averaging the CIELAB
+$a^*$/$b^*$ coordinates across systems and taking the hue angle of the
+mean vector. This is equivalent to a chroma-weighted circular mean: it
+prevents instability near the achromatic axis by construction, since
+near-achromatic assignments (e.g., Scriabin's ``steely'' grays)
+contribute vectors of small magnitude and thus receive
+correspondingly little weight.
+
+% ============================================================
+\section{Analyses and Results}
+\label{sec:results}
+
+The four theoretical accounts are taken up in turn, each method stated
+immediately before the result it yields. The scoreboard, in brief: the
+hedonic account performs best (Procrustes disparity 0.559 in affective
+space); the structural account earns partial credit (interval ordering,
+but not specific assignment); the statistical account passes its
+distinctive variance prediction; and the semantic account contributes a
+channel that cannot be fully separated from affect. Four claims were
+designated as primary---family-level heterogeneity, the EPA Procrustes
+alignment, the interval--variance correlation, and the timbral
+embedding alignment---and multiplicity across the full test battery is
+addressed in the Discussion and Supplementary Table~S7. All agreement
+computations rest on the CIEDE2000 distance and agreement score defined
+in Equations~\ref{eq:ciede2000} and~\ref{eq:agreement}.
+
+\subsection{Three Centuries, Seventy Systems}
+
+The 70 catalogued systems span 23 centuries of intellectual history;
+the retained corpus is concentrated in the three centuries from Diez
+(1723) and Castel (1725) to the present---the ``three centuries'' of
+our title---with three ancient cosmological systems (Chinese
+\textit{Wuxing}, Ancient Persian, Indian svara) as the only earlier
+retained entries. The
+temporal distribution is itself revealing. Figure~\ref{fig:timeline}
+shows that proposal density peaks sharply in the 19th and early 20th
+centuries - the era of color organs and synesthetic aesthetics - and
+surges again in the digital age, with a pronounced trough from
+approximately 1930 to 1980 when serialist and atonal movements
+displaced color from the mainstream musical imagination. Newton's
+shadow is long: the Spectral Analogy family (F1) dominates the corpus
+(Figure~\ref{fig:timeline}, right), with his prism metaphor driving
+more than a third of all proposals across three centuries.
+
+Of the 70 candidate systems, 31 met all four inclusion criteria (25
+in the primary set); the dominant sources of exclusion were mappings
+defined over intervals, modes, or timbres rather than pitch classes,
+and specifications restricted to lightness without hue. That Newton's
+own 7-note scheme left the five chromatic pitch classes unassigned is
+a choice that cascaded through centuries of followers.
+
+As a check on the hand-coded taxonomy, we clustered the systems of
+the merged family corpus (Section~\ref{sec:results}) by their pairwise
+CIEDE2000 distance profiles using Ward-linkage hierarchical clustering
+\citep{ward1963}. The resulting partition recovers the hand-coded
+families only weakly (adjusted Rand index $= .23$ at $k = 5$, $.12$ at
+$k = 8$). This is informative rather than disqualifying: the families
+were coded from \emph{stated design rationale}, not from the colors
+themselves, and the low Rand index confirms that the two codings are
+not redundant---systems within a reasoning tradition need not produce
+similar palettes, which is precisely the question the family-level
+agreement analysis quantifies.
+
+\begin{figure}[htbp]
+\centering
+\begin{subfigure}[t]{0.62\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{P1_01_timeline.png}
+  \caption{Historical timeline of pitch--hue mapping proposals (Newton
+  1704 to present). Proposal density peaks in the 19th--early 20th
+  century and again in the digital age.}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.34\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{P1_01_family_distribution.png}
+  \caption{Distribution of the 70 systems across the eight reasoning
+  families. F1 (Spectral Analogy) is the largest.}
+\end{subfigure}
+\caption{Overview of the historical catalogue. Left: timeline.
+Right: family distribution.}
+\label{fig:timeline}
+\end{figure}
+
+\subsection{Global Consensus Is Weak but Non-Random}
+\label{sec:global}
+
+The global picture is clear: there is no universal pitch--hue mapping
+in this corpus. CIEDE2000 agreement across all 25 retained systems
+ranged from 0.20 to 0.30 across the 12 pitch classes (mean 0.221),
+well below the 0.60 benchmark for strong consensus and close to the
+simulated chance level of 0.212 for random color systems
+(Section~\ref{sec:metric}); only G$\sharp$ (0.30) exceeds the upper
+bound of the simulated chance interval. Every pitch class
+spans a broad arc of hue space when all traditions are pooled
+(Figure~\ref{fig:consensus}, left), so the data do not support any claim
+that a particular system captures the ``true'' pitch--hue
+correspondence.
+
+The assignments are nonetheless far from random. The Rayleigh test,
+applied to the 12 consensus hue angles (chroma-weighted circular means
+across the 25 retained systems), returned $R = 0.66$; a Monte Carlo
+test against 12 hues drawn uniformly on the circle gives $p = .003$.
+The mean resultant direction is $24^\circ$, in the orange--red region:
+a clear warm-color bias.
+The pattern of variance is also informative (Figure~\ref{fig:consensus},
+right): pitch classes C and G, the tonal anchors of Western harmony,
+show the lowest inter-system spread, while the chromatic alterations
+(C$\sharp$, D$\sharp$, F$\sharp$, G$\sharp$, A$\sharp$) show the
+highest---a trace of Western tonal hierarchy in a corpus dominated by
+Western sources.
+
+\begin{figure}[htbp]
+\centering
+\begin{subfigure}[t]{0.46\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{P1_02_consensus_wheel.png}
+  \caption{Global consensus wheel. Each wedge is positioned at the
+  chroma-weighted circular-mean hue for one pitch class, and wedge
+  opacity encodes the agreement score. The uniformly low opacities and
+  the wide dispersion of mean hues reflect the absence of a reliable
+  global consensus.}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.50\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{P1_02_delta_e_bars.png}
+  \caption{Per-pitch-class CIEDE2000 standard deviation across all 25
+  retained systems. C and G show the lowest variance (tonal anchors);
+  chromatic alterations show the highest variance.}
+\end{subfigure}
+\caption{Global consensus analysis. Pooled agreement is low, but hue
+assignments are non-uniformly distributed (Rayleigh $R = 0.66$,
+Monte Carlo $p = .003$), indicating that the mapping is structured but
+tradition-specific rather than universal.}
+\label{fig:consensus}
+\end{figure}
+
+\subsection{The Eight Families: Structure Within Traditions}
+
+The family-level analysis is where the paper's central descriptive
+claim is established. This analysis uses a \emph{merged family corpus}:
+the retained catalogue systems plus independently digitized versions of
+several historical systems from our initial source collection, giving
+39 systems across the five families with at least two members
+(Table~\ref{tab:family_agreement}). Three systems in F1 appear twice
+(Castel, Field, and Rimington, each digitized from two editions);
+deduplicating them changes the F1 score by less than 0.001, so the
+merged counts are reported as analyzed. Breaking the corpus into
+reasoning families reveals a consistent ordering that the flat
+analysis hides. The Pedagogical family (F8) leads
+at 0.348, 57\% above the global consensus. Synesthetic systems (F5)
+follow at 0.276, and Spectral Analogy (F1) at 0.267. The Cosmological
+family (F3) goes the other way: it falls \emph{below} the flat baseline
+at 0.187 vs.\ 0.221.
+
+To quantify the uncertainty of these small-sample scores, each family
+estimate is accompanied by a bootstrap confidence interval (systems
+resampled within family, 10,000 draws, resamples constrained to
+contain at least two distinct systems), and the within-family
+advantage was tested by a family-label permutation test in which the
+family labels were shuffled across the merged corpus and the family
+agreement scores recomputed (10,000 permutations). The outcome is
+sobering and worth stating plainly: no single family's deviation from
+the pooled baseline is individually significant (F1 $p = .10$, F8
+$p = .33$, F5 $p = .40$; F3's below-baseline score has $p = .91$
+against the greater-than null, i.e., it sits in the lower tail as
+predicted), and a global heterogeneity permutation test---the
+label-shuffle null for the variance of family means---is likewise
+non-significant ($p = .81$). With 3--5 systems in four of the five
+families, the family ordering reported here is a descriptive,
+effect-size-level pattern whose confirmation requires an expanded
+corpus. Interval estimates and permutation $p$-values are reported in
+Supplementary Table~S2.
+
+\begin{table}[htbp]
+\centering
+\caption{Within-family versus flat-catalogue CIEDE2000 agreement
+scores in the merged family corpus; $N$ is the number of systems
+contributing to each family's score. Within-family agreement is
+reported for families with $N \ge 2$ systems; F2~(Circle of Fifths),
+F4~(Emotion-Mediated), and F7~(Psychophysical) each contributed a
+single system and are omitted. F8, F5, and F1 exceed the flat
+baseline; F6 and F3 fall below it. The flat baseline is computed on
+the 25-system primary set. Bootstrap intervals and permutation
+$p$-values are given in Supplementary Table~S2.}
+\label{tab:family_agreement}
+\begin{tabular}{@{}llccc@{}}
+\toprule
+\textbf{Family} & \textbf{Tradition} & \textbf{$N$} &
+  \textbf{Agreement} & \textbf{$\Delta$ vs.\ flat} \\
+\midrule
+F8 & Pedagogical      & 3  & \textbf{0.348} & $+0.127$ \\
+F5 & Synesthetic      & 5  & 0.276          & $+0.055$ \\
+F1 & Spectral Analogy & 24 & 0.267          & $+0.046$ \\
+F6 & Esoteric         & 3  & 0.201          & $-0.020$ \\
+F3 & Cosmological     & 4  & 0.187          & $-0.034$ \\
+\midrule
+\multicolumn{2}{l}{\textit{Flat (all retained systems)}} & 25 & 0.221
+  & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Figure~\ref{fig:families} illustrates these results visually.
+The bar chart (left) plots within-family agreement against the flat
+baseline; the wheel panel (right) shows the mean hue assignment for
+each pitch class within each tradition - confirming that these are not
+minor quantitative differences but categorically distinct
+color philosophies.
+
+\begin{figure}[htbp]
+\centering
+\begin{subfigure}[t]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{P1_02v2_family_bars.png}
+  \caption{Within-family agreement scores compared against the flat
+  baseline (dashed line). F8 and F5 substantially exceed global
+  agreement; F3 falls below it.}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.52\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{P1_02v2_family_wheels_panel.png}
+  \caption{Per-family consensus wheels. Point size is proportional to
+  within-family agreement. The traditions assign color through
+  fundamentally different color philosophies.}
+\end{subfigure}
+\caption{Family-level analysis. Within-family structure substantially
+exceeds global agreement for Pedagogical and Synesthetic traditions,
+while Cosmological systems fall below the flat baseline.}
+\label{fig:families}
+\end{figure}
+
+The Cosmological family's result deserves emphasis: it is the most
+important negative finding in the dataset. Centuries of cosmological
+theorizing produce \emph{more} disagreement than pooling all retained
+systems together. The four analyzed F3 systems span genuinely distinct
+cosmological traditions---the Chinese \textit{Wuxing} five-phase
+system, the Ancient Persian system, the Indian svara associations, and
+Diez's planetary note--color scheme (1723)---so the low within-family
+agreement reflects divergence between independent metaphysical
+frameworks, not noise within one. This argues against any account that
+treats cosmological reasoning as a primary driver of pitch--hue
+correspondences.
+
+The Pedagogical family points the other way, but two alternative
+explanations must be addressed before reading its convergence as
+affective. The first is lineage: commercial teaching materials copy one
+another, so inclusion criterion~4 (independence) was applied strictly
+to F8, merging derivative products with their sources. The three
+analyzed pedagogical systems---Sudre's Solresol color code (France,
+1862), Boomwhackers (United States, 1995), and Figurenotes (Finland,
+1996)---arose in different countries, markets, and eras with no
+documented lineage among them.
+The second is structure: educators might simply reuse rainbow order,
+which would make the convergence spectral rather than hedonic. We
+therefore compare the F8 consensus mapping against the canonical
+spectral-order mapping in Supplementary Analysis~S3; the two are close
+(mean angular distance $35^\circ$ after optimal rotation), so the
+pedagogical advantage should be read as convergence
+on a spectrally anchored, affectively comfortable mapping rather than
+as purely affective agreement. With these caveats stated, the
+convergence remains striking: educators across eras, optimizing for
+what feels natural to untrained learners, agree more than any other
+tradition. Figure~\ref{fig:families_panel} shows the complete mapping
+panel organized by family.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{P1_families_panel.png}
+\caption{Within-family mapping panel. Each row shows one historical
+system's color assignments for all 12 pitch classes (C to B). Families
+are grouped by reasoning tradition (F1--F8). The Spectral Analogy
+family (F1) is dominated by rainbow order; the Synesthetic family (F5)
+tends toward warm hues at low pitches and cool hues at high pitches;
+the Pedagogical family (F8) shows the tightest within-family
+clustering.}
+\label{fig:families_panel}
+\end{figure}
+
+The traditions also differ in \emph{how} they encode harmonic
+relationships, not just in which colors they choose
+(Figure~\ref{fig:family_ranking}). The Spectral Analogy and Synesthetic
+families embed substantially stronger interval-to-hue structure
+($\rho \approx 0.6$) than the Esoteric family, and all three assign more
+similar hues to consonant than to dissonant intervals - an early hint of
+the structural signal we quantify next.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.82\textwidth]{P1_03v2_family_ranking.png}
+\caption{Per-family harmonic structure analysis, shown for the three
+families (Esoteric F6, Spectral Analogy F1, Synesthetic F5) for which
+per-interval hue statistics could be computed on the retained systems.
+Left: harmonic
+structure score (mean hue distance for dissonant intervals minus
+consonant intervals); all three families show a negative score,
+indicating that consonant intervals are assigned more similar hues than
+dissonant ones. Right: Spearman $\rho$ between semitone distance and
+mean hue distance; Spectral Analogy and Synesthetic families show
+substantially stronger structure ($\rho \approx 0.6$) than the Esoteric
+family.}
+\label{fig:family_ranking}
+\end{figure}
+
+\subsection{Testing the Structural Account: Does Interval Geometry
+Predict Hue Geometry?}
+
+\textbf{Method.} We tested six interval-to-hue hypotheses, ordered from
+the strongest and most specific claim to the weakest
+(Table~\ref{tab:structural_h}). The interval--distance correlation (H2)
+is computed over the $\binom{12}{2} = 66$ pitch-class pairs of the
+pooled consensus. Two properties of this design constrain inference:
+circular pitch-class distance collapses the eleven interval sizes to
+six distinct values (1--6 semitones), and pairwise distances are not
+independent. Statistical significance was therefore assessed by a
+pitch-label permutation test in addition to parametric inference: the
+12 pitch-class labels were randomly reassigned across color
+assignments 10,000 times to generate a null distribution of
+correlation values.
+The point-prediction hypotheses (H1, H3--H6) are evaluated
+descriptively, by comparing the observed mean hue distance for the
+relevant interval against the predicted angular range. We then
+evaluated six principled
+structural mapping theories (Table~\ref{tab:structural_theories}), each
+a complete first-principles recipe for assigning hues to pitches, on
+two complementary statistics. The first is a reference-free
+\emph{geometry alignment} score: the Spearman correlation between the
+$\binom{12}{2}$ pairwise circular pitch-step distances and the
+corresponding pairwise hue angular distances of the theory's own
+predicted mapping,
+\begin{equation}
+  \rho_{\text{geom}} = \operatorname{Spearman}\!\left(
+  \left\{ d_{\text{pitch}}(i,j) \right\}_{i<j},
+  \left\{ \left| \hat{h}_i - \hat{h}_j \right|_{\text{circ}}
+  \right\}_{i<j} \right)
+\label{eq:geometry}
+\end{equation}
+where $\hat{h}$ are the predicted hue angles and
+$|\cdot|_{\text{circ}}$ denotes circular (wrap-around) angular
+distance. This statistic asks whether the theory realizes an
+interval-to-arc isomorphism at all, without privileging any historical
+map as ground truth; its chance level was estimated from 10,000 random
+hue assignments (null mean $\rho_{\text{geom}} \approx 0$, 95th
+percentile $0.23$). The second statistic is the \emph{consensus
+angular error}: the mean circular distance between the theory's
+predicted hue and the observed pooled-consensus hue across the 12
+pitch classes. Because two hue angles drawn independently at random
+differ by $90^\circ$ on average, a theory unrelated to the data scores
+$\approx 90^\circ$ on this measure (the \emph{random-hue null}); exact
+Monte Carlo $p$-values are reported against that null. For calibration
+we also report two external benchmarks: a perfect spectral-order
+mapping ($\rho_{\text{geom}} = 1.00$) and the circle-of-fifths mapping
+($\rho_{\text{geom}} = -.19$). That the spectral mapping attains the
+maximal geometry score is itself a finding: the pooled historical
+consensus preserves spectral hue order almost exactly, so the spectral
+mapping functions as the effective ceiling of the scale.
+
+\begin{table}[htbp]
+\centering
+\caption{Six structural hypotheses linking musical intervals to
+color-wheel geometry, with outcomes. H1--H6 span from the strongest
+claim (perfect fifth maps to complementary hue at 180$^\circ$) to the
+weakest (monotone positive correlation between interval size and hue
+distance). Verdicts for the point predictions (H1, H3--H6) are
+descriptive comparisons of the observed mean hue distance
+(Table~\ref{tab:harmonic}) against the predicted range; only H2
+receives formal (permutation) inference. Note that circular
+pitch-class distance makes the perfect fourth and perfect fifth
+equivalent (both distance 5), so H1 and H5 address the same observed
+value.}
+\label{tab:structural_h}
+\begin{tabular}{@{}p{0.5cm}p{2.5cm}p{1.6cm}p{5.2cm}p{2.8cm}@{}}
+\toprule
+\textbf{H} & \textbf{Interval} & \textbf{Semitones} &
+  \textbf{Prediction} & \textbf{Result} \\
+\midrule
+H1 & Perfect fifth  & 7     & Complementary hues ($\sim$180$^\circ$):
+  most consonant interval $\leftrightarrow$ maximal color contrast
+  & Fail (80.7$^\circ$) \\
+H2 & All intervals  & 1--11 & Semitone distance correlates positively
+  with hue distance (interval-to-arc isomorphism)
+  & \textbf{Pass} ($r = .393$, perm.\ $p = .002$) \\
+H3 & Tritone        & 6     & Complementary hues ($\sim$180$^\circ$):
+  most dissonant interval $\leftrightarrow$ maximal color contrast
+  & Fail (85.7$^\circ$) \\
+H4 & Major third    & 4     & Triadic hue separation (90--150$^\circ$,
+  centered on 120$^\circ$): three major thirds tile the octave,
+  mirroring three-fold color-wheel symmetry & Fail (70.5$^\circ$) \\
+H5 & Perfect fourth & 5     & Intermediate hue distance
+  (70--140$^\circ$): between analogous and complementary
+  & \textbf{Pass} (80.7$^\circ$) \\
+H6 & Minor second   & 1     & Adjacent hues ($<$60$^\circ$): chromatic
+  neighbors $\leftrightarrow$ analogous, closely spaced colors
+  & \textbf{Pass} (36.9$^\circ$) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Six principled structural theories, evaluated on geometry
+alignment (Equation~\ref{eq:geometry}) and on angular error against
+the pooled consensus.}
+\label{tab:structural_theories}
+\begin{tabular}{@{}p{0.8cm}p{3.2cm}p{7.8cm}@{}}
+\toprule
+\textbf{Abbr.} & \textbf{Name} & \textbf{Core principle} \\
+\midrule
+IRP & Interval-Ratio Preservation    & Maps 12 pitch classes onto the color
+  wheel so that semitone ratios mirror hue-angle ratios, optimizing rotation
+  to maximize the consonance--color-distance correlation. \\[4pt]
+FRI & Frequency-Ratio Isomorphism    & Maps C4--B4 on a log-frequency scale
+  to the visible spectrum (380--780~nm), revising Newton's linear mapping for
+  the logarithmic nature of pitch perception. \\[4pt]
+HEM & Harmonic Entropy Matching      & Pairs pitches with low harmonic entropy
+  (consonant, simple ratios) to focal colors \citep{berlin1969} on the
+  grounds that shared perceptual salience mechanisms link consonance and
+  color centrality. \\[4pt]
+MPA & Multidimensional Perceptual Alignment & Constrains pitch height
+  (mel scale) to lightness and spectral centroid to color temperature;
+  hue is solved as the residual dimension. \\[4pt]
+PDM & Perceptual Distinctiveness     & Maps tonal hierarchy positions
+  (probe-tone ratings; \citealp{krumhansl1990}) to color naming
+  consensus, pairing perceptually central pitches with the most-named
+  colors. \\[4pt]
+SSC & Spectral Shape Correspondence  & Aligns RDMs of piano harmonic spectra
+  with hue spectral profiles, testing whether the physical frequency content
+  of a tone predicts the hue whose spectral reflectance it most resembles. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Results.} The structural account earns a qualified pass. Of
+the six interval hypotheses, the weakest (H2, monotone ordering), the
+most local (H6, adjacent hues for semitone neighbors), and the
+broad-band intermediate prediction (H5) pass; every point prediction
+targeting a \emph{specific} angular value---complementary or
+triadic---fails (Table~\ref{tab:structural_h}). The positive
+correlation between
+semitone distance and mean hue distance ($r = .393$, parametric
+$p = .001$, pitch-label permutation $p = .002$) is
+clear: across all retained systems, larger musical intervals
+consistently map to larger color distances
+(Figure~\ref{fig:structural}, left). Table~\ref{tab:harmonic} gives
+the full breakdown by interval.
+
+\begin{table}[htbp]
+\centering
+\caption{Mean hue distance (degrees on the color wheel) by musical
+interval, pooled across all 25 retained systems. Circular pitch-class
+distance makes the perfect fourth and perfect fifth equivalent (both
+distance 5); their rows are identical by construction.}
+\label{tab:harmonic}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Interval} & \textbf{Semitones} &
+  \textbf{Mean hue distance ($^\circ$)} & \textbf{SD ($^\circ$)} \\
+\midrule
+Minor second   & 1 & 36.9 & 44.6 \\
+Major second   & 2 & 53.3 & 44.3 \\
+Minor third    & 3 & 59.1 & 38.3 \\
+Major third    & 4 & 70.5 & 34.9 \\
+Perfect fourth & 5 & 80.7 & 26.1 \\
+Tritone        & 6 & 85.7 & 22.0 \\
+Perfect fifth  & 7 & 80.7 & 26.1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The account's strongest prediction, however, fails. The claim that
+harmonically complementary intervals should map to visually
+complementary hues ($\approx$180$^\circ$ apart) is rejected
+(Figure~\ref{fig:structural}, right): perfect fifths averaged only
+80.7$^\circ$ of hue separation, less than half the predicted value. The
+interval--distance relationship saturates near 85$^\circ$ and never
+approaches the complementary region. Interval structure can account for
+the ordinal pattern, then, but not for the specific mapping.
+
+\begin{figure}[htbp]
+\centering
+\begin{subfigure}[t]{0.48\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{P1_03_semitone_hue_scatter.png}
+  \caption{Semitone distance vs.\ mean hue distance across all
+  historical systems ($r = .393$, $p = .002$). The positive trend
+  indicates partial support for the structural account.}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.48\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{P1_03_interval_bars.png}
+  \caption{Mean hue distance by interval type. The dashed line at
+  180$^\circ$ marks the complementary-color prediction for the tritone
+  and perfect fifth. Neither interval approaches this value.}
+\end{subfigure}
+\caption{Structural account: interval distance predicts hue distance,
+but the strong complementary-hue prediction fails.}
+\label{fig:structural}
+\end{figure}
+
+Among the six formalized structural theories, the two statistics
+dissociate informatively. On internal geometry alignment
+(Equation~\ref{eq:geometry}), four theories exceed the random-hue 95th
+percentile of $\rho_{\text{geom}} = .23$: IRP and SSC realize a
+perfect interval-to-arc isomorphism by construction
+($\rho_{\text{geom}} = 1.00$, empirical $p < .001$), followed by MPA
+($.68$, $p < .001$) and FRI ($.57$, $p < .001$); PDM ($.06$,
+$p = .28$) and HEM ($-.12$, $p = .85$) fail. On angular error against
+the pooled historical consensus, however, only IRP
+(46.2$^\circ$, Monte Carlo $p = .001$) and FRI (54.9$^\circ$,
+$p = .009$) score significantly below the 90$^\circ$ random-hue null;
+HEM (70.7$^\circ$, $p = .10$), MPA (75.8$^\circ$), PDM
+(76.3$^\circ$), and SSC (81.2$^\circ$) do not
+(Figure~\ref{fig:theories}, left). The pattern is coherent: theories
+that both encode the isomorphism \emph{and} anchor it to the spectrum
+(IRP, FRI) match the historical record, whereas SSC shows that an
+isomorphism anchored elsewhere lands far from the consensus, and
+theories routing through intermediate perceptual dimensions (PDM,
+HEM) capture neither. Notably, IRP and FRI---derived independently,
+through different mathematical formalisms---cluster together in the
+theory dendrogram (Figure~\ref{fig:theories}, right; pairwise distance
+40.1$^\circ$). Two independent theories landing on the same
+below-chance geometry is good evidence that a structural isomorphism
+signal is present in the historical corpus, even if it is a partial
+one.
+
+\begin{figure}[htbp]
+\centering
+\begin{subfigure}[t]{0.52\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{P1_05_theory_errors.png}
+  \caption{Consensus angular error for the six structural
+  theories. Only IRP and FRI score significantly below the random-hue
+  null ($\sim$90$^\circ$); HEM, MPA, PDM, and SSC do not. Vertical
+  lines mark spectral/fifths benchmarks and the random-hue null.}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{P1_05_theory_dendrogram_beautified.png}
+  \caption{Dendrogram of the six theories by mutual geometry distance.
+  IRP and FRI form a tight cluster at low linkage distance, confirming
+  their structural kinship.}
+\end{subfigure}
+\caption{Structural theory evaluation. Only direct isomorphism theories
+(IRP, FRI) achieve below-chance geometry error.}
+\label{fig:theories}
+\end{figure}
+
+The pairwise structure of these theories is shown directly in
+Figure~\ref{fig:theory_heatmap}, and the predicted hue assignments of
+each theory, overlaid on the observed global consensus, in
+Figure~\ref{fig:theory_wheel}. IRP is the closest match to the
+historical consensus among the six first-principles theories (the
+spectral benchmark remains closer still), though it diverges
+substantially in the middle register
+(D--G$\sharp$) - a reminder that even the best structural theory
+captures ordering without pinning down assignment.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.72\textwidth]{P1_05_theory_heatmap.png}
+\caption{Pairwise alignment heatmap for the six structural
+theories. Cell color encodes the mean angular distance between the hue
+assignments of each pair of theories. IRP and FRI form the tightest
+pair (40.1$^\circ$), confirming that they capture the
+same structural intuition through different mathematical formalisms.}
+\label{fig:theory_heatmap}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.72\textwidth]{P1_05_theory_wheel.png}
+\caption{Predicted hue assignments for the six structural theories
+overlaid on the global consensus wheel. IRP is the closest match to
+the observed historical consensus, though it still diverges
+substantially in the middle register (D--G$\sharp$).}
+\label{fig:theory_wheel}
+\end{figure}
+
+\subsection{Testing the Semantic Account: Is the Correspondence Carried
+by Language?}
+
+\textbf{Method.} We probed three pretrained sentence-transformer
+models - MiniLM \citep{wang2020}, MPNet \citep{song2020}, and Nomic
+Embed \citep{nussbaum2024} - to ask whether the linguistic descriptions of
+pitches and colors carry pitch--hue structure on their own. Pitch
+classes (C through B) were embedded using six descriptor levels: bare
+name, musical context (scale degree, key relationships), perceptual
+(frequency, register), timbral (instrument descriptions), connotative
+(emotional/associative character), and solf\`{e}ge syllable. Two
+independent descriptor sets were used: a primary \emph{LLM-generated}
+set produced with an explicit constraint against
+color, brightness, and temperature words (enforced by an automated
+validator against a 35-term blocklist), so that any recovered geometry
+could not be a trivial artifact of color words leaking into the pitch
+descriptions, and a secondary \emph{factual} set derived
+deterministically from music-theory constants (frequency, scale
+degree, interval structure, instrument registers), used as a
+robustness check on descriptor wording. Color-side embeddings used names from the XKCD Color
+Survey \citep{munroe2010xkcd} - 954 crowdsourced color names with sRGB
+hex codes. For each pitch class, the top-$k$ nearest XKCD colors (by
+cosine similarity) formed a centroid hue angle, and the resulting
+12-point pitch--hue mapping was scored by geometry alignment: the
+Spearman $\rho$ between all $\binom{12}{2} = 66$ pairwise circular
+pitch-step distances and the corresponding pairwise hue angular
+distances.
+
+\textbf{Results.} The sentence-transformer probing yields a clear and interpretable
+result (Table~\ref{tab:lm_probing}). The strongest geometry signal is
+Nomic with timbral descriptors ($\rho = .368$, $p = .007$):
+statistically significant, well above the random-hue null, and
+consistent across permutation iterations. So the semantic account does
+capture something, but only partly---the timbral signal remains well
+below the spectral geometry baseline ($\rho = 1.000$). One caveat
+governs the interpretation throughout: timbral vocabulary is heavily
+affective, so this signal cannot be read as purely linguistic. We treat
+it as a semantics--affect entangled channel and return to the
+distinction in the Discussion.
+
+\begin{table}[htbp]
+\centering
+\caption{Sentence-transformer probing results. Geometry alignment is
+Spearman $\rho$ between pairwise circular pitch-step distances and
+pairwise hue angular distances; $p$-values are from 10,000
+label-shuffle iterations, computed against condition-specific nulls
+(the random-hue row is a global geometric reference, not the null used
+for the $p$-values). The top conditions of the 3~(model)
+$\times$~6~(descriptor) grid are shown; the full 18-cell grid, with
+Benjamini--Hochberg corrected $q$-values, is given in Supplementary
+Table~S4.}
+\label{tab:lm_probing}
+\begin{tabular}{@{}llcc@{}}
+\toprule
+\textbf{Model} & \textbf{Descriptor level} &
+  \textbf{Geometry $\rho$} & \textbf{Perm.\ $p$} \\
+\midrule
+Nomic  & Timbral         & \textbf{0.368} & .007 \\
+Nomic  & Perceptual      & 0.269          & .044 \\
+MPNet  & Perceptual      & 0.203          & .048 \\
+Nomic  & Bare names      & 0.173          & .070 \\
+MPNet  & Musical context & 0.156          & .060 \\
+MPNet  & Connotative     & 0.124          & .124 \\
+MPNet  & Bare names      & 0.055          & .226 \\
+MiniLM & Solf\`{e}ge     & 0.019          & .344 \\
+\midrule
+\multicolumn{2}{l}{\textit{Spectral geometry baseline}} & 1.000 & -- \\
+\multicolumn{2}{l}{\textit{Circle-of-fifths baseline}} & $-0.191$ & -- \\
+\multicolumn{2}{l}{\textit{Random-hue null (mean / 95th pct.)}}
+  & $-0.001$ / 0.235 & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The descriptor-level pattern points to the mechanism
+(Figure~\ref{fig:semantic}, left). Timbral and perceptual descriptors
+outperform bare names and solfège across all three models. Timbral
+language---``warm'', ``round'', ``bright'', ``cutting''---carries
+affective content that links pitch and color through shared experiential
+vocabulary, and the contrast with the failed solfège condition (MiniLM:
+$\rho = .019$, $p = .344$) makes pitch-name familiarity an unlikely
+confound. The PCA projection (Figure~\ref{fig:semantic}, right) shows
+how: Nomic's timbral pitch embeddings separate lower from higher pitches
+along a dimension encoding ``warm/round'' versus ``bright/cutting'',
+which is the geometric substrate of the Spearman alignment. In short,
+the embedding space encodes that high notes are described as bright and
+that bright things are described as blue.
+
+\begin{figure}[htbp]
+\centering
+\begin{subfigure}[t]{0.54\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{P1_07v2_lm_error_bars.png}
+  \caption{Geometry alignment by descriptor level and model
+  (LLM-generated descriptors). Nomic shows the strongest pitch--hue
+  geometry under timbral/perceptual descriptor conditions.}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.43\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{P1_07_latent_pitch.png}
+  \caption{PCA projection of Nomic pitch-descriptor embeddings (timbral
+  level). PC1 separates lower from higher pitches; PC2 encodes
+  ``warm/round'' vs.\ ``bright/cutting'' timbral quality.}
+\end{subfigure}
+
+\vspace{0.75em}
+\begin{subfigure}[t]{0.6\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{P1_07_latent_colors.png}
+  \caption{Companion PCA projection of the 954 XKCD color-name
+  embeddings (Nomic), each point colored by its actual hex value. Hue
+  families form coherent clusters, showing that the color-side space
+  against which pitch embeddings are matched itself encodes hue
+  structure learned purely from text.}
+\end{subfigure}
+\caption{Semantic account: sentence-transformer probing reveals
+significant pitch--hue geometry under timbral descriptor conditions,
+consistent with a semantics--affect entangled channel.}
+\label{fig:semantic}
+\end{figure}
+
+Results with the factual descriptor set are only partially consistent,
+and we report them as a genuine constraint on interpretation. Several
+factual conditions reach significance---MPNet with musical-context
+descriptors is the strongest ($\rho = .334$, permutation $p = .012$),
+and MiniLM ($\rho = .265$, $p = .048$) and MPNet ($\rho = .197$,
+$p = .034$) recover geometry under timbral descriptors---but the
+model--level profile shifts: Nomic's timbral signal, the strongest
+cell of the primary grid, is absent under factual wording
+($\rho = -.01$). The full factual grid is given in Supplementary
+Table~S4. Geometry alignment is therefore recoverable from more than
+one descriptor family, but which model--level cell carries it depends
+on wording---a sensitivity consistent with the entangled
+semantics--affect reading rather than with a wording-independent
+property of the embedding spaces.
+The per-model predicted mappings are shown in
+Figure~\ref{fig:lm_wheels}. Figure~\ref{fig:crossling} reports two
+controls: the cross-linguistic panel is a robustness check showing that
+pitch--hue geometry remains weak across naming conventions, arguing
+against name-specific artifacts; and the emotion-mediation panel's
+small positive correlation ($\rho = .139$, $p < .001$) is consistent
+with the hedonic mediation examined next.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{P1_07_lm_wheels.png}
+\caption{Predicted hue assignments from the three language models
+(MiniLM, MPNet, Nomic) under LLM-generated timbral descriptors. Nomic
+shows the most structured prediction (warm reds at lower pitches, cooler
+hues at higher pitches), consistent with its higher Spearman geometry
+alignment ($\rho = .368$, $p = .007$). MiniLM predictions are noisier,
+reflecting its smaller training corpus.}
+\label{fig:lm_wheels}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{P1_07v2_crossling_emotion.png}
+\caption{Cross-linguistic naming and emotion mediation controls. Left:
+geometry alignment for five naming conventions (English, Japanese,
+German, solf\`{e}ge with context, bare solf\`{e}ge), a robustness check
+showing that pitch--hue geometry is weak across all naming conventions.
+Right: emotion mediation test - the small positive Spearman correlation
+($\rho = .139$, $p < .001$) indicates that embedding proximity between
+pitch and color terms tracks shared emotional valence, consistent with
+the hedonic account.}
+\label{fig:crossling}
+\end{figure}
+
+\subsection{Corpus-Level Regularities: Testing the Statistical Account
+and Its Neighbors}
+
+\textbf{Method.} Ten corpus-level hypotheses were evaluated on the
+pooled consensus and per-pitch statistics of the 25 retained systems
+(Table~\ref{tab:statistical_h}). Four operationalize the environmental
+co-occurrence account proper ($H_{b4}$, $H_{b6}$, $H_{b7}$, $H_{b9}$);
+the remainder test neighboring accounts and are attributed accordingly
+in the table: $H_{b1}$, $H_{b3}$, and $H_{b8}$ probe structural
+predictions, $H_{b2}$ probes a salience/affect asymmetry, $H_{b5}$
+and $H_{b10}$ probe notation-driven and tradition-driven cultural
+variation. The Rayleigh
+test \citep{mardia1972} was used for the non-uniformity prediction
+($H_{b4}$); because $H_{b4}$ restates the non-uniformity already
+reported in Section~\ref{sec:global}, it is counted once in the
+overall tally. Correlational hypotheses use Pearson tests over the 12
+pitch classes or the interval table; group-difference hypotheses use
+Welch $t$-tests.
+
+\textbf{Results.} The battery produces three passes, six failures, and
+one inconclusive result (Table~\ref{tab:statistical_h}). The clearest result is $H_{b6}$: the
+correlation between interval size and between-system variance is
+$r = -.94$, $p = .001$---though, because circular pitch-class distance
+takes only six distinct values, this correlation is computed over
+seven interval rows and its precision should be read accordingly.
+Historical
+mappers agree more about large intervals and disagree more about
+semitones, the pattern one would expect from statistical learning of a
+noisy environmental signal that constrains global ordering but not
+fine-grained assignment. $H_{b4}$ adds support: hue assignments
+cluster toward warm colors, consistent with the environmental
+co-occurrence of low-frequency sounds and warm atmospheric conditions.
+$H_{b7}$, by contrast, is downgraded from the ``pass'' a naive reading
+would give it: the fifth--tritone difference is 5.0$^\circ$ against
+standard deviations of 22--26$^\circ$, was not formally tested, and the
+fifth is circularly equivalent to the fourth; we report it as
+directionally consistent but inconclusive.
+
+\begin{table}[htbp]
+\centering
+\caption{Corpus-level hypothesis test results. The Account column
+attributes each hypothesis to the theoretical account it
+operationalizes; only the Statistical rows bear directly on the
+environmental co-occurrence account.}
+\label{tab:statistical_h}
+\begin{tabular}{@{}p{0.9cm}p{4.6cm}p{1.7cm}p{1.9cm}p{3.2cm}@{}}
+\toprule
+\textbf{Hyp.} & \textbf{Description} & \textbf{Account} &
+  \textbf{Result} & \textbf{Key statistic} \\
+\midrule
+$H_{b1}$ & Lightness increases with chromatic pitch order
+  & Structural & Fail & $r = -.53$, $p = .076$ \\
+$H_{b2}$ & Agreement is higher for high-chroma assignments
+  & Hedonic & Fail & $r = .55$, $p = .063$ \\
+$H_{b3}$ & Consonant intervals show larger hue distance than dissonant
+  & Structural & Fail & $t = 1.05$, $p = .34$ \\
+$H_{b4}$ & Hue distribution non-uniform
+  & Statistical & \textbf{Pass} & Rayleigh $R = 0.66$, $p = .003$ \\
+$H_{b5}$ & Sharps differ from naturals in lightness or hue
+  & Cultural & Fail & $p = .53$ / $.95$ \\
+$H_{b6}$ & Interval size predicts variance
+  & Statistical & \textbf{Pass} & $r = -.94$, $p = .001$ \\
+$H_{b7}$ & Perfect fifth $<$ tritone hue distance
+  & Statistical & Inconclusive & $80.7^\circ < 85.7^\circ$ (untested) \\
+$H_{b8}$ & Primary triad (C--E--G) hues $\sim$120$^\circ$ apart
+  & Structural & Fail & mean $66.4^\circ$, dev.\ $53.6^\circ$ \\
+$H_{b9}$ & Agreement correlates with consistency
+  & Statistical & \textbf{Pass} & $r = -.62$, $p = .03$ \\
+$H_{b10}$ & Tradition-specific fifths differ from pooled
+  & Cultural & Fail & $t = 0.15$, $p = .89$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Two failures deserve comment. The failure of $H_{b1}$ is the more
+surprising: pitch--lightness is among the most robust cross-modal
+correspondences in the behavioral literature
+\citep{marks1978,ward2006}, yet across the historical consensus the
+correlation between chromatic pitch order and assigned lightness is
+directionally \emph{negative} ($r = -.53$, $p = .076$). The historical
+record encodes hue structure, not the pitch--lightness gradient---%
+consistent with our inclusion criteria, which excluded
+lightness-only systems, but also a caution against reading historical
+proposals as transcriptions of perceptual correspondence. The failure
+of $H_{b10}$ ($p = .89$) shows that the perfect-fifth hue distance is
+statistically indistinguishable across reasoning traditions; combined
+with the family analysis, it suggests that traditions differ in
+\emph{which} colors they assign more than in how they space
+harmonically related pitches.
+
+\subsection{Testing the Hedonic Account: Do Pitch and Color Share an
+Affective Geometry?}
+
+\textbf{Method.} The hedonic account predicts that the organization of
+auditory and visual dimensions in a general sensorimotor
+representation is captured by affective structure. To test this, the
+cross-modal dimensions in the CMC database of the following section
+were each coded on 11 sensorimotor--affective dimensions (visual,
+auditory, tactile, gustatory, olfactory, interoceptive, motor,
+valence, arousal, magnitude, spatial), an inventory modeled on the
+Lancaster Sensorimotor Norms \citep{lynott2020}; because the Lancaster
+norms cover words rather than the technical dimension labels used
+here, the profiles were coded by the authors, a construct limitation
+weighed in the Discussion. The dimension profiles were reduced to
+three principal components (68.3\% of variance). Ten dimensions
+central to the pitch--hue question---pitch height, loudness, tempo,
+hardness on the auditory--tactile side; lightness, brightness,
+saturation, hue warmth on the visual side; size and pleasantness as
+cross-modal anchors---were then assigned coordinates in
+Evaluation-Potency-Activity (EPA) affective space \citep{osgood1957},
+drawing on published semantic-differential and color-affect norms
+\citep{ou2004,hevner1935,wedin1972}. Procrustes
+alignment \citep{gower1975} found the rotation, reflection, and uniform
+scaling minimizing squared distances between the sensorimotor PCA
+configuration and the EPA configuration of the same ten dimensions.
+The \textbf{Procrustes disparity} is
+\begin{equation}
+  d^2 = 1 - \left(\sum_{k=1}^{p} \sigma_k\right)^2
+\label{eq:procrustes}
+\end{equation}
+where $\sigma_1, \ldots, \sigma_p$ are the singular values of
+$\mathbf{X}^\top \mathbf{Y}$, with $\mathbf{X}$ and $\mathbf{Y}$ the
+centered, unit-scaled configuration matrices; a disparity
+of $0$ denotes perfect alignment and $1$ no alignment. Significance was
+assessed by permutation of the correspondence assignments before
+alignment (10,000 permutations); the exact $p$-value and the mean and
+standard deviation of the null disparity distribution are reported in
+Supplementary Table~S5, along with dimension-wise alignment statistics.
+
+\textbf{Results.} The hedonic account gives the best result of the four. The
+Procrustes disparity between the sensorimotor and EPA configurations is
+0.559, significantly below the random-correspondence permutation null
+(null mean $0.833$, SD $0.106$; $p = .027$) and the best
+single-account result across the four
+theoretical tests, indicating that the space in which auditory and
+visual dimensions are organized shares an affective
+geometry. Dimension-wise correlations between matched coordinates
+after alignment identify Evaluation as the dominant channel
+($r = .74$, $p = .014$), with Potency ($r = .47$, $p = .17$) and
+Activity ($r = .37$, $p = .29$) weaker and individually
+non-significant (Supplementary
+Table~S5). Figure~\ref{fig:hedonic} shows the configuration.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{P1_06_walker_epa.png}
+\caption{EPA Procrustes analysis. Left: the ten cross-modal
+dimensions positioned in affective space (Evaluation vs.\ Activity
+shown), with auditory dimensions (blue), visual dimensions (orange),
+and cross-modal anchors (purple); the auditory and visual clusters
+overlap along the Evaluation axis. Middle: the Procrustes disparity
+of 0.559 sits between perfect alignment (0) and the permutation null
+($0.833$); the pitch--brightness correspondence, shown for
+calibration, aligns more closely than pitch--hue. Right: mean
+behavioral effect sizes of the catalogued CMC pairings grouped by
+proposed mechanism; pitch--hue ($d = 0.20$) is the weakest documented
+pairing.}
+\label{fig:hedonic}
+\end{figure}
+
+Evaluation ($E$) is the dominant aligning dimension: the good--bad,
+pleasant--unpleasant axis orders auditory and visual dimensions in the
+same way, so that what aligns pitch-space with color-space most
+reliably is shared hedonic value. Activity and Potency contribute
+positively but weakly. Converging evidence at the item level comes
+from the embedding analysis of the previous section: proximity between
+pitch and color terms in embedding space tracks shared
+valence--arousal profiles ($\rho = .139$, $p < .001$;
+Figure~\ref{fig:crossling}, right). This pattern is consistent with
+Palmer and colleagues' \citep{palmer2013} demonstration of
+emotion-mediated music--color associations, and locates the mediation
+on the Evaluation axis: what seems to matter is the shared
+pleasantness of sounds and colors more than their shared energy or
+power.
+
+\subsection{Positioning Pitch--Hue in the CMC Landscape}
+
+\textbf{Method.} A structured database of 34 documented CMC pairings
+was compiled from the published literature (sources in Supplementary
+Table~S6), each pairing coded for source and target modality,
+direction, mechanism proposed in the source literature, and a
+literature-derived behavioral effect size on a common Cohen's-$d$
+scale with a plausible range. Each participating dimension was coded
+on the 11 sensorimotor--affective dimensions described in the previous
+section; cosine distance between these
+profiles quantifies dimensional remoteness
+between paired modalities, and the landscape was visualized with UMAP
+\citep{mcinnes2018}. Because both the dimension profiles and the
+effect sizes are coded from the literature rather than measured, this
+analysis is a quantitative synthesis of published claims, not new
+measurement.
+
+\textbf{Results.} This analysis contextualizes the preceding ones.
+Sensorimotor
+distance correlates negatively with behavioral effect size across the
+34 pairings ($r = -.379$, $p = .027$): the further apart two modalities
+are in sensorimotor space, the weaker the correspondence between them.
+Pitch and hue have one of the largest pairwise sensorimotor distances
+in the auditory--visual CMC literature, and pitch--hue occupies an
+isolated peripheral position in the UMAP embedding. Its weakness
+relative to pitch--elevation or loudness--size therefore carries
+theoretical information rather than being an accident: the modalities
+share no direct prothetic dimension, so the correspondence must be
+brokered by higher-order structure.
+
+% ============================================================
+\section{Discussion}
+
+\subsection{Is There Structure in Three Centuries of Disagreement?}
+
+Yes, but the structure is family-specific and affectively mediated
+rather than universal or physically determined. Global agreement is low
+(mean 0.22), confirming that no pitch--hue mapping commands
+cross-cultural authority. At the same time, hue assignments are
+non-uniformly distributed (Rayleigh $R = 0.66$, $p = .003$), the
+Pedagogical and Synesthetic families sit above the flat baseline while
+the Cosmological family sits below it, and this ordering---though not
+individually significant at current family sizes---is coherent across
+every way we sliced the corpus.
+
+The central methodological contribution of this paper is establishing
+that the reasoning family, not the individual system, is the correct
+unit of analysis for the historical corpus. All prior studies computing
+``agreement'' have pooled heterogeneous traditions and observed global
+disagreement, thereby missing the structure hiding within each tradition.
+The eight-family classification dissolves the apparent contradiction
+between ``correspondences exist'' (within families, they do) and ``no
+consensus exists'' (across families, there isn't one). This is
+meta-analytic heterogeneity in its
+classic form: pooling across subgroups with different underlying
+mappings masks the agreement present within each subgroup. The
+Cosmological family sharpens the point from the other direction---its
+within-tradition agreement falls \emph{below} the pooled baseline, so
+grouping by tradition does not merely recover hidden structure but
+also exposes traditions that carry none. One honesty constraint
+applies throughout: with 3--5 systems in most families, neither the
+individual family deviations nor the global heterogeneity statistic
+survives permutation testing (Supplementary Table~S2), so the family
+ordering is an effect-size-level pattern awaiting confirmation on an
+expanded corpus, not an established difference.
+
+\subsection{Which Account Best Explains the Structure?}
+
+Table~\ref{tab:account_summary} collects the verdicts.
+
+\begin{table}[htbp]
+\centering
+\caption{Summary of the four theoretical accounts against the
+evidence.}
+\label{tab:account_summary}
+\begin{tabular}{@{}p{2.4cm}p{4.4cm}p{3.6cm}p{3.4cm}@{}}
+\toprule
+\textbf{Account} & \textbf{Key prediction} & \textbf{Key statistic} &
+  \textbf{Verdict} \\
+\midrule
+Structural & Interval geometry maps to hue geometry
+  & $r = .393$; IRP 46.2$^\circ$ vs.\ 90$^\circ$ null; fifths at
+    80.7$^\circ$, not 180$^\circ$
+  & Partial: ordering, not assignment \\
+Semantic & Shared language carries the mapping
+  & Timbral $\rho = .368$, $p = .007$; solf\`{e}ge $\rho = .019$
+  & Contributing, entangled with affect \\
+Statistical & Co-occurrence constrains color spacing
+  & $r = -.94$ (interval size vs.\ variance); Rayleigh $R = 0.66$
+  & Supported for large-scale structure only \\
+Hedonic & Shared affect aligns the modalities
+  & Procrustes disparity 0.559, $p = .027$; Evaluation dominant
+  & Best supported \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Structural account: partial support.} The semitone--hue
+distance correlation ($r = .393$) and the below-chance consensus error
+of IRP and FRI establish that interval structure leaves a detectable
+imprint on historical color assignments. But the flagship prediction
+fails: perfect fifths separate by 80.7$^\circ$, not 180$^\circ$, and
+the interval--distance function saturates well before reaching the
+complementary region. Structural regularities constrain the ordinal
+relationship between interval size and hue distance---a partial
+scaffold---but cannot fix specific pitch-to-hue assignments. Only the
+spectrally anchored isomorphism theories (IRP, FRI) match the
+historical consensus; an isomorphism anchored elsewhere (SSC) or
+routed through intermediate perceptual dimensions (MPA, PDM, HEM)
+does not. The
+structural signal in the data is an isomorphism signal: narrow, but
+genuine.
+
+\textbf{Semantic account: contributing but insufficient.} Language
+models encode significant pitch--hue geometry under timbral descriptor
+conditions ($\rho = .368$, $p = .007$). The active channel is shared
+\emph{experiential} vocabulary---``warm'', ``bright'', ``cutting''---rather
+than arbitrary name co-occurrence, since solfège labels produce nothing
+($\rho = .019$). The effect is genuine but incomplete: timbral language
+carries heavy affective content, so the geometry signal under timbral
+conditions is partly hedonic. The semantic and hedonic accounts cannot
+be fully separated here, which is itself informative---language and
+affect are closely tied in the pitch--hue domain.
+
+\textbf{Statistical account: specific support for large-scale
+structure.} The $r = -.94$ correlation between interval size and
+between-system variance is the most tightly predicted result in the
+analysis, albeit one computed over the six distinct circular interval
+distances. Environmental statistics constrain global ordering (distant pitches get
+distant colors) but not fine-grained assignment. The account's
+explanatory scope is thus specific: it tells you how far apart the
+colors should be, but not what they should be.
+
+\textbf{Hedonic account: the best-supported.} The EPA Procrustes
+disparity (0.559, $p = .027$) is the strongest single-account result
+across the four
+tests. Evaluation is the primary aligning dimension ($r = .74$), so
+auditory and visual dimensions
+are connected most reliably through their shared hedonic value. The
+item-level embedding evidence points the same way: pitch--color term
+proximity tracks shared valence--arousal profiles ($\rho = .139$). The
+family
+data fit this reading: Pedagogical systems converge because educators
+independently settle on what \emph{feels} right to learners, without
+sharing a physical theory, and Synesthetic correspondences appear to tap
+the same affective architecture as non-synesthetic CMCs---an
+amplification of a signal that is already present, rather than a
+separate system. Palmer and colleagues \citep{palmer2013} showed that
+music--color associations are emotion-mediated; our results locate
+that mediation on the Evaluation (good--bad) axis, with Potency and
+Activity contributing only weakly.
+
+Pulling these together, pitch--hue correspondences appear to rest on a
+\emph{shared affective geometry}, partly scaffolded by structural
+regularities and environmental statistics, faintly echoed in language
+under timbral conditions, and not recoverable from any single
+first-principles map. The hedonic account is necessary but not
+sufficient: without the structural scaffolding, the data's
+interval--distance relationship has no explanation.
+
+\subsection{Positioning Pitch--Hue Among Cross-Modal Correspondences}
+
+Pitch--hue is among the hardest auditory--visual CMCs to explain, and
+the sensorimotor landscape analysis suggests why. Pitch and hue are
+dimensionally remote: they share no prothetic (intensive) dimension of
+the kind that directly grounds pitch--size, pitch--brightness, and
+loudness--size correspondences \citep{marks1978,walsh2003}. The
+$r = -0.379$ correlation between sensorimotor distance and behavioral
+effect size ($p = .027$) captures this: the further apart two modalities
+are in sensorimotor space, the weaker their correspondence. Pitch--hue
+sits at the far end of this trade-off, so any correspondence between
+them has to be brokered by higher-order structure---affective valence,
+cultural co-occurrence, symbolic convention---which is what the present
+results show. The peripheral UMAP position of pitch--hue in the
+auditory--visual cluster then follows from the sensorimotor distance
+account rather than being an anomaly.
+
+\subsection{Implications for Neural Congruency Research}
+
+The historical analysis exposes a critical unresolved problem in the
+prior literature: no principled, data-driven criterion for pitch--hue
+congruency exists that is independent of behavioral report. The field
+has been defining congruency by asking participants what feels
+congruent - and no neural correlate of pitch--hue congruency has been
+identified as a result. The present findings break this circularity
+directly. Because no single historical map commands ground-truth
+authority, congruency definitions for neuroimaging experiments must not
+be derived from specific historical systems such as Newton's or
+Scriabin's. Doing so imports an arbitrary cultural choice into the
+experimental design and biases RSA matrices against the actual
+structure in the data.
+
+The right approach is experimentally defined congruency - for example,
+audiovisual Stroop paradigms in which participants hear a tone while
+viewing a written note name that either matches or conflicts with the
+sounded pitch. The EPA results support this choice precisely: the
+Stroop conflict manipulation creates a mismatch on the Evaluation
+dimension that this analysis identifies as the primary
+affective channel of the pitch--hue correspondence. Beyond the Stroop,
+the theoretical RDMs derived from IRP, FRI, and EPA alignment can be
+submitted directly to RSA against EEG or fMRI embeddings. For the
+first time, a neural investigation of pitch--hue processing has a
+quantitatively grounded, theory-derived model to test.
+
+\subsection{Limitations and Future Directions}
+
+Several limitations constrain the current conclusions, and we state
+them plainly because they bound what the analysis can and cannot
+support. First, and most important, the family-level results rest on
+small samples. Several analyzed families contain only a handful of
+systems; each family score carries a
+bootstrap interval and a label-permutation test (Supplementary
+Table~S2), and none of the family deviations---nor the global
+heterogeneity statistic ($p = .81$)---reaches significance under
+permutation. The apparent ordering of
+families is therefore suggestive rather than established, and
+replication on an expanded catalogue is needed before the family
+ranking can be treated as settled. Second, the study tests a
+large battery of hypotheses - six interval hypotheses, six structural
+theories, ten corpus-level predictions, and multiple model--descriptor
+combinations - so individually significant results must be read in the
+context of this wide inferential surface. We designated four primary
+claims in advance of the confirmatory write-up (family heterogeneity,
+the EPA Procrustes alignment, the interval--variance correlation, and
+the timbral embedding alignment) and collect all primary tests with
+Benjamini--Hochberg FDR-corrected $q$-values in Supplementary
+Table~S7. Of the four primary claims, three survive correction at
+$q < .05$ (the EPA alignment, $q = .045$; the interval--variance
+correlation, $q = .007$; the timbral embedding alignment, $q = .024$),
+as do the semitone--hue correlation, the Rayleigh non-uniformity, the
+agreement--consistency correlation, and the effect-size--distance
+relationship; the family-heterogeneity permutation tests do not
+($q \ge .13$).
+A pre-registered confirmatory study would nonetheless put the
+surviving effects on firmer footing. Third, color
+standardization introduces measurement error that is difficult to
+quantify: resolving free-text and pigment-name specifications to CIELAB
+via crowd-sourced and reference databases is principled but noisy, and
+some of the low global agreement may reflect conversion noise rather
+than genuine disagreement. Fourth, the hedonic test operates on
+author-coded constructs at both ends: the 11-dimensional
+sensorimotor profiles of the cross-modal dimensions were coded by the
+authors on an inventory modeled on the Lancaster norms rather than
+taken from participant ratings, and the EPA coordinates of the ten
+aligned dimensions were assembled from heterogeneous published norms.
+The Procrustes result is significant under permutation, but both
+configurations are inferential constructs over a small term set
+($n = 10$), and the strength of the result should be weighed against
+this construct uncertainty; replacing the coded profiles with
+participant-normed ratings is a direct next step.
+Fifth, the catalogue is not a random sample:
+systems that were never published, or specified colors in forms that
+could not be standardized, are excluded, and the retained systems skew
+toward formally specified, Western-centric proposals; the family
+agreement scores are therefore lower bounds on within-family coherence
+for well-documented traditions, not estimates of a universal population
+parameter. The EPA norms are likewise predominantly Western, so the
+Evaluation-first finding should be tested cross-culturally before
+being generalized. Finally, the sentence-transformer probing demonstrates
+geometry alignment rather than specific mapping prediction, and a
+positive timbral result does not rule out that the signal is driven by
+affective content in the descriptors rather than purely linguistic
+co-occurrence; the hedonic and semantic accounts overlap here, and
+disentangling them requires targeted descriptor construction.
+
+These limitations also locate the contribution. This is a meta-analytic
+and methodological study - a curated catalogue, a reference-free
+agreement framework, and a direct comparison of accounts---rather
+than a behavioral experiment, and it should be read as one. Its purpose
+is to extract the structure latent in the historical record and to hand
+the field a quantitatively grounded, theory-derived target for the
+experiments that must follow. The three most important next steps are:
+(1)~extend the catalogue through non-Western archival sources and
+non-published practitioner traditions, and report interval estimates on
+the expanded sample, to reduce both sampling bias and statistical
+fragility; (2)~collect large-scale behavioral pitch--hue matching data
+across multiple cultural backgrounds to test whether the family-level
+historical structure predicts individual differences; and (3)~deploy
+the IRP, FRI, and EPA-aligned theoretical RDMs as predictors in RSA of
+EEG and fMRI responses, testing directly whether neural geometry
+mirrors the structure identified here.
+
+\subsection{Conclusion}
+
+Three centuries of pitch--hue proposals do not converge on a universal
+mapping, but they are far from random. Organized by reasoning tradition,
+they show a within-family ordering that prior flat analyses miss:
+Pedagogical systems reach agreement 57\% above the global baseline,
+Synesthetic systems converge through a constrained affective
+architecture, and Cosmological systems, despite their ambition, agree
+less among themselves than the pooled corpus does---an ordering that
+awaits confirmation on a larger corpus. Of the four theoretical
+accounts, the
+hedonic one is best supported---auditory and visual dimensions share
+an affective geometry, with Evaluation, the good--bad axis, as the
+primary bridge---while structural
+regularities provide a partial scaffold, environmental statistics
+constrain global ordering, and language carries a secondary timbral
+signal. None of these accounts is sufficient on its own; together they
+offer a plausible account of why proposals from Pythagorean cosmologists
+to Suzuki educators land where they do. The weakness of pitch--hue
+relative to other auditory--visual CMCs follows from the sensorimotor
+distance account rather than being a disappointment: pitch and hue are
+far apart in the sensorimotor world, so any correspondence between them
+has to be carried by affective structure---and on the present evidence,
+shared hedonic value is what does most of that work.
+
+% ============================================================
+\section*{Supplementary Material}
+
+The Supplementary Material (\texttt{supplementary\_material.pdf})
+comprises: \textbf{S1}, the full 70-system
+catalogue (system, year, reasoning family, retention status,
+exclusion reason); \textbf{S2}, family agreement
+bootstrap intervals, label-permutation $p$-values, the global
+heterogeneity test, and the simulated
+chance distribution of the agreement score; \textbf{S3}, the comparison
+of the Pedagogical (F8) consensus mapping against canonical
+spectral order; \textbf{S4}, the full 3~$\times$~6 sentence-transformer
+probing grid for both descriptor sets, with FDR-corrected $q$-values;
+\textbf{S5}, exact Procrustes permutation statistics and dimension-wise
+alignment; \textbf{S6}, the coded CMC database with effect sizes and
+key sources for the 34
+pairings; and \textbf{S7}, the consolidated multiplicity table of
+all primary tests.
+
+\section*{Open Practices Statement}
+
+The historical catalogue, CIELAB conversion pipeline, distance
+matrices, family classification codes, and analysis scripts are
+available at \texttt{[repository link]}.
+% TODO(authors): create the public repository (e.g., OSF or GitHub)
+% and insert the link; APP expects availability at submission.
+None of the analyses were preregistered.
+
+\section*{Conflict of Interest}
+
+The authors declare no conflicts of interest.
+
+% ============================================================
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}
