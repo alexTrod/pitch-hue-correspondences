@@ -236,7 +236,7 @@ To test the hedonic account, ten cross-modal dimensions central to the pitch–h
 
 [11] Palmer SE, Schloss KB, Xu Z, Prado-León LR. Music–color associations are mediated by emotion. Proc Natl Acad Sci USA. 2013;110(22):8836–8841. doi:10.1073/pnas.1212562110
 
-[12] Jewanski J. Colour and music. In: Macy L, ed. Grove Music Online. Oxford University Press; 2009. doi:10.1093/gmo/9781561592630.001.0001/omo-9781561592630-e-0000006156
+[12] Jewanski J. Colour and music. In: Grove Music Online. Oxford University Press; 2009. Available from: https://www.bodysonics.co.uk/wp-content/uploads/2011/04/jorg-jewanksi-color-and-music.pdf [Accessed 2026-08-12].
 
 [13] Gage J. Color and Culture: Practice and Meaning from Antiquity to Abstraction. University of California Press; 1999.
 
@@ -274,7 +274,7 @@ To test the hedonic account, ten cross-modal dimensions central to the pitch–h
 
 [30] Nanayakkara SC, Wyse L, Ong SH, Taylor EA. Enhancing musical experience for the hearing-impaired using visual and haptic displays. Hum-Comput Interact. 2013;28(2):115–160. doi:10.1080/07370024.2012.697006
 
-[31] Baione A, Rizzo G, Barco L, Urbanelli A, Di Biasi L, Tortora G. Musipainter: A music-conditioned generative architecture for artistic image synthesis. Intell Syst Appl. 2025;29. doi:10.1016/j.iswa.2025.200611
+[31] Baione A, Rizzo G, Barco L, Urbanelli A, Di Biasi L, Tortora G. Musipainter: A music-conditioned generative architecture for artistic image synthesis. Intell Syst Appl. 2026;29:200611. doi:10.1016/j.iswa.2025.200611
 
 ---
 
