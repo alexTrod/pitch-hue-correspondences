@@ -1,7 +1,7 @@
 # Pitch–Hue Correspondences: A Quantitative Corpus Analysis
 
 **Feldman AN, Kuruoglu EE** (2026).  
-*Pitch–Hue Correspondences: A Quantitative Corpus Analysis of Three Centuries of Mapping Systems.*  
+*Pitch–Hue Correspondences: A Quantitative Corpus Analysis of Three Millennia of Mapping Systems.*  
 Submitted to *Attention, Perception, & Psychophysics*.
 
 ## Repository contents
@@ -54,7 +54,7 @@ reference list; no raw participant data were collected.
 ## Citation
 
 > Feldman AN, Kuruoglu EE. Pitch–Hue Correspondences: A Quantitative Corpus
-> Analysis of Three Centuries of Mapping Systems. *Attention, Perception, &
+> Analysis of Three Millennia of Mapping Systems. *Attention, Perception, &
 > Psychophysics*. 2026 (submitted).
 
 ## Licence

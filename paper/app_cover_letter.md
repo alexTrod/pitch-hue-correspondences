@@ -2,8 +2,8 @@
 
 **To:** The Editors, *Attention, Perception, & Psychophysics*
 
-**Re:** "Pitch–Hue Correspondences: A Quantitative Corpus Analysis of Three
-Centuries of Mapping Systems" — submitted as a Research Article
+**Re:** "Pitch–Hue Correspondences: A Quantitative Corpus Analysis Spanning
+Three Millennia of Mapping Systems" — submitted as a Research Article
 
 ---
 
