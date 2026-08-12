@@ -5,10 +5,16 @@
 \usepackage{longtable}
 \usepackage{amsmath}
 \usepackage{times}
+\usepackage{graphicx}
+\graphicspath{
+  {figures/}
+  {figures/aesthetic/}
+  {figures/aesthetic/families/}
+}
 \begin{document}
 \begin{center}
 {\Large\bfseries Supplementary Material}\\[6pt]
-{\large Pitch--Hue Correspondences: A Quantitative Meta-Analysis of
+{\large Pitch--Hue Correspondences: A Quantitative Corpus Analysis of
 Three Centuries of Mapping Systems}
 \end{center}
 \section*{S1. The full 70-system catalogue}
@@ -290,4 +296,135 @@ Family heterogeneity: F1 label-permutation & 0.1011 & 0.126 \\
 Family heterogeneity: F8 label-permutation & 0.3330 & 0.370 \\
 Family heterogeneity: F5 label-permutation & 0.3973 & 0.397 \\
 \bottomrule\end{tabular}\end{table}
+\clearpage
+\section*{S8. Mean hue distance by musical interval}
+\begin{table}[htbp]\centering
+\caption{Table S8. Mean hue distance (degrees on the colour wheel)
+by musical interval, pooled across all 25 retained systems. Circular
+pitch-class distance makes the perfect fourth and perfect fifth
+equivalent (both 5 semitones); their rows are identical by
+construction.}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Interval} & \textbf{Semitones} &
+  \textbf{Mean hue dist.\ ($^\circ$)} & \textbf{SD ($^\circ$)} \\
+\midrule
+Minor second   & 1 & 36.9 & 44.6 \\
+Major second   & 2 & 53.3 & 44.3 \\
+Minor third    & 3 & 59.1 & 38.3 \\
+Major third    & 4 & 70.5 & 34.9 \\
+Perfect fourth & 5 & 80.7 & 26.1 \\
+Tritone        & 6 & 85.7 & 22.0 \\
+Perfect fifth  & 7 & 80.7 & 26.1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+\section*{S9. Corpus-level hypothesis battery (full 10 tests)}
+\begin{table}[htbp]\centering
+\caption{Table S9. Corpus-level hypothesis test results. The Account
+column attributes each hypothesis to the theoretical account it
+operationalises; only the Statistical rows bear directly on the
+environmental co-occurrence account.}
+\begin{tabular}{@{}p{0.9cm}p{4.6cm}p{1.7cm}p{1.9cm}p{3.2cm}@{}}
+\toprule
+\textbf{Hyp.} & \textbf{Description} & \textbf{Account} &
+  \textbf{Result} & \textbf{Key statistic} \\
+\midrule
+$H_{b1}$ & Lightness increases with chromatic pitch order
+  & Structural & Fail & $r = -.53$, $p = .076$ \\
+$H_{b2}$ & Agreement is higher for high-chroma assignments
+  & Hedonic & Fail & $r = .55$, $p = .063$ \\
+$H_{b3}$ & Consonant intervals show larger hue distance than dissonant
+  & Structural & Fail & $t = 1.05$, $p = .34$ \\
+$H_{b4}$ & Hue distribution non-uniform
+  & Statistical & \textbf{Pass} & Rayleigh $R = 0.66$, $p = .003$ \\
+$H_{b5}$ & Sharps differ from naturals in lightness or hue
+  & Cultural & Fail & $p = .53$ / $.95$ \\
+$H_{b6}$ & Interval size predicts between-system variance
+  & Statistical & \textbf{Pass} & $r = -.94$, $p = .001$ \\
+$H_{b7}$ & Perfect fifth $<$ tritone hue distance
+  & Statistical & Inconclusive & $80.7^\circ < 85.7^\circ$ (untested) \\
+$H_{b8}$ & Primary triad (C--E--G) hues $\sim$120$^\circ$ apart
+  & Structural & Fail & mean $66.4^\circ$, dev.\ $53.6^\circ$ \\
+$H_{b9}$ & Agreement correlates with consistency
+  & Statistical & \textbf{Pass} & $r = -.62$, $p = .03$ \\
+$H_{b10}$ & Tradition-specific fifths differ from pooled
+  & Cultural & Fail & $t = 0.15$, $p = .89$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+\section*{S10. Per-family harmonic structure}
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.85\textwidth]{P1_03v2_family_ranking.png}
+\caption{Figure S10. Per-family harmonic structure analysis for three
+families (Esoteric F6, Spectral Analogy F1, Synesthetic F5). Left:
+harmonic structure score (mean hue distance for dissonant minus
+consonant intervals); all three families assign more similar hues to
+consonant than dissonant intervals. Right: Spearman $\rho$ between
+semitone distance and mean hue distance; Spectral Analogy and
+Synesthetic families show substantially stronger interval-to-hue
+structure ($\rho \approx 0.6$) than the Esoteric family.}
+\end{figure}
+
+\clearpage
+\section*{S11. Structural theory pairwise alignment heatmap}
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.75\textwidth]{P1_05_theory_heatmap.png}
+\caption{Figure S11. Pairwise alignment heatmap for the six
+structural theories. Cell colour encodes mean angular distance between
+predicted hue assignments. IRP and FRI form the tightest pair
+(40.1$^\circ$), confirming that they capture the same structural
+intuition through different mathematical formalisms.}
+\end{figure}
+
+\clearpage
+\section*{S12. Structural theory predicted hue assignments}
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.75\textwidth]{P1_05_theory_wheel.png}
+\caption{Figure S12. Predicted hue assignments for the six structural
+theories overlaid on the global consensus wheel. IRP is the closest
+match to the observed historical consensus, though it diverges
+substantially in the middle register (D--G$\sharp$).}
+\end{figure}
+
+\clearpage
+\section*{S13. Per-model language-model predicted hue maps}
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{P1_07_lm_wheels.png}
+\caption{Figure S13. Predicted hue assignments from the three
+language models (MiniLM, MPNet, Nomic) under LLM-generated timbral
+descriptors. Nomic shows the most structured prediction (warm reds at
+lower pitches, cooler hues at higher pitches), consistent with its
+higher geometry alignment ($\rho = .368$, $p = .007$).}
+\end{figure}
+
+\clearpage
+\section*{S14. Cross-linguistic and emotion-mediation control panels}
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{P1_07v2_crossling_emotion.png}
+\caption{Figure S14. Left: geometry alignment across five naming
+conventions (English, Japanese, German, solf\`{e}ge with context, bare
+solf\`{e}ge); pitch--hue geometry is weak across all naming conventions,
+arguing against name-specific artefacts. Right: the small positive
+Spearman correlation ($\rho = .139$, $p < .001$) between pitch--colour
+embedding proximity and shared emotional valence is consistent with
+the hedonic account.}
+\end{figure}
+
+\clearpage
+\section*{S15. Complete per-system mapping panel by reasoning family}
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{P1_families_panel.png}
+\caption{Figure S15. Within-family mapping panel. Each row shows one
+historical system's colour assignments for all 12 pitch classes (C to
+B), grouped by reasoning family (F1--F8). Spectral Analogy (F1) is
+dominated by rainbow order; Synesthetic (F5) tends toward warm hues
+at low pitches and cool hues at high; Pedagogical (F8) shows the
+tightest within-family clustering.}
+\end{figure}
+
 \end{document}

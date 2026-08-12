@@ -28,8 +28,9 @@ traditions is expected; the question is whether it is *structured*.
 **What we found.** It is. Organised into eight reasoning families classified
 from source texts before any agreement was computed, the corpus shows that
 Pedagogical systems — Boomwhackers, Figurenotes, Sudre's Solresol, developed
-independently across centuries — agree 57% above the global baseline, while
-Cosmological systems (Chinese *Wuxing*, Persian, Indian, Diez 1723) agree
+independently across centuries — agree 57% above the global baseline (though
+this ordering does not survive permutation at current family sizes, *n* = 3–5),
+while Cosmological systems (Chinese *Wuxing*, Persian, Indian, Diez 1723) agree
 *less* than the pooled corpus. Four theoretical accounts were tested
 head-to-head: (1) the **structural account** earns partial credit — semitone
 distance predicts hue distance (*r* = .393, permutation *p* = .002) — but
