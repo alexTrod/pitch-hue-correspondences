@@ -1,0 +1,493 @@
+{
+  "metadata": {
+    "title": "Family Assignment for Pitch-Hue Mapping Systems",
+    "description": "Maps each system in pitch_hue_catalogue.json to one of the 8 reasoning families identified in the thesis. Systems with dual membership have primary and secondary family fields.",
+    "created": "2026-03-18",
+    "families": {
+      "F1_spectral_analogy": "Light frequency <-> sound frequency (Newton lineage). ~20 systems.",
+      "F2_circle_of_fifths": "Harmonic relationship -> color wheel (Scriabin lineage). ~5 systems.",
+      "F3_cosmological": "Element/planet/symbol mediation (pre-Newtonian). ~12 systems.",
+      "F4_emotion_mediated": "Mode -> emotion -> color (rasa/affect). ~6 systems.",
+      "F5_synesthetic": "Involuntary neurological individual experience. ~5 systems.",
+      "F6_esoteric": "Theosophical/doctrinal. ~3 systems.",
+      "F7_psychophysical": "Pitch -> lightness (magnitude correspondence). ~6 systems.",
+      "F8_pedagogical": "Arbitrary but optimized for distinguishability. ~3 systems."
+    },
+    "special_categories": {
+      "meta_reference": "Scholarly catalogues/reviews, not mapping systems themselves.",
+      "explicit_rejection": "Artists who explicitly rejected fixed mappings.",
+      "empirical_study_no_mapping": "Studies that measured associations but did not propose a system."
+    },
+    "instructions": "REVIEW NEEDED: Items marked 'REVIEW' in the notes field need your judgment on family assignment. The primary_family is my best guess based on your 8-family document. Confirm or change, especially for dual-membership cases."
+  },
+  "assignments": [
+    {
+      "id": "ancient_persian",
+      "primary_family": "F3_cosmological",
+      "secondary_family": null,
+      "notes": "Elemental mediation. Weakly sourced (Jewanski via Wellek).",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "chinese_wuxing",
+      "primary_family": "F3_cosmological",
+      "secondary_family": null,
+      "notes": "Wuxing five-element system. Pentatonic only.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "aristotle_cureau",
+      "primary_family": "F3_cosmological",
+      "secondary_family": null,
+      "notes": "Brightness scale analogous to musical scale. Cureau extended to intervals.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "indian_navarasa",
+      "primary_family": "F3_cosmological",
+      "secondary_family": "F4_emotion_mediated",
+      "notes": "CONFIRMED: Cosmological framing primary, emotion mediation secondary.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "indian_svara",
+      "primary_family": "F3_cosmological",
+      "secondary_family": null,
+      "notes": "Direct svara-to-color from Naradiyasiksha. Cosmological tradition.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "al_kindi",
+      "primary_family": "F3_cosmological",
+      "secondary_family": null,
+      "notes": "Oud strings linked to planets, elements, colors.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "rudolph_saint_trond",
+      "primary_family": "F3_cosmological",
+      "secondary_family": null,
+      "notes": "Modal colors, medieval cosmological.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "gaffurio_1492",
+      "primary_family": "F3_cosmological",
+      "secondary_family": null,
+      "notes": "Modal colors, Renaissance cosmological.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "zarlino_1558",
+      "primary_family": "F3_cosmological",
+      "secondary_family": null,
+      "notes": "Interval-color system.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "cardanus_1570",
+      "primary_family": "F3_cosmological",
+      "secondary_family": null,
+      "notes": "Interval-color system.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "kircher_1650",
+      "primary_family": "F3_cosmological",
+      "secondary_family": "F1_spectral_analogy",
+      "notes": "CONFIRMED: Cosmological primary, proto-spectral secondary.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "diez_1723",
+      "primary_family": "F3_cosmological",
+      "secondary_family": null,
+      "notes": "Note-color-planet system. Enlightenment era but cosmological logic.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "mizler_1739",
+      "primary_family": "F1_spectral_analogy",
+      "secondary_family": null,
+      "notes": "Newtonian direct descendant.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "kruger_1743",
+      "primary_family": "F1_spectral_analogy",
+      "secondary_family": null,
+      "notes": "Newtonian direct descendant.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "euler_1760",
+      "primary_family": "F1_spectral_analogy",
+      "secondary_family": null,
+      "notes": "Newtonian direct descendant.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "lefebure_1789",
+      "primary_family": "F1_spectral_analogy",
+      "secondary_family": null,
+      "notes": "Newtonian direct descendant.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "sachs_1812",
+      "primary_family": "F5_synesthetic",
+      "secondary_family": null,
+      "notes": "First documented synesthete.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "jameson_1844",
+      "primary_family": "F1_spectral_analogy",
+      "secondary_family": null,
+      "notes": "Chromatic spectral mapping.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "fourier_1846",
+      "primary_family": "F1_spectral_analogy",
+      "secondary_family": null,
+      "notes": "Inverted spectral variant (still F1 logic).",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "sudre_solresol_1862",
+      "primary_family": "F8_pedagogical",
+      "secondary_family": "F1_spectral_analogy",
+      "notes": "CONFIRMED: Pedagogical primary — constructed language, practical intent.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "seemann_1881",
+      "primary_family": "F1_spectral_analogy",
+      "secondary_family": null,
+      "notes": "12-note spectral system.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "bleuler_lehmann_1881",
+      "primary_family": "F5_synesthetic",
+      "secondary_family": null,
+      "notes": "Synesthesia survey — empirical collection of synesthetic associations, not a proposed mapping.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "bishop_1893",
+      "primary_family": "F1_spectral_analogy",
+      "secondary_family": null,
+      "notes": "Color organ, spectral system.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "flournoy_1893",
+      "primary_family": "F5_synesthetic",
+      "secondary_family": null,
+      "notes": "Synesthesia case documentation.",
+      "has_pitch_mappings": false
+    },
+    {
+      "id": "blavatsky_theosophy_1900",
+      "primary_family": "F6_esoteric",
+      "secondary_family": null,
+      "notes": "Theosophical doctrine.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "rosicrucian_1905",
+      "primary_family": "F6_esoteric",
+      "secondary_family": "F1_spectral_analogy",
+      "notes": "CONFIRMED: F6 primary — esoteric justification despite spectral-style output.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "amy_beach_1910",
+      "primary_family": "F5_synesthetic",
+      "secondary_family": null,
+      "notes": "Documented synesthete.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "sabaneyev_scriabin_1911",
+      "primary_family": "F2_circle_of_fifths",
+      "secondary_family": "F6_esoteric",
+      "notes": "Scriabin. Circle of fifths -> color wheel, but influenced by Theosophy. You noted this dual membership.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "kandinsky_1911",
+      "primary_family": "F4_emotion_mediated",
+      "secondary_family": "F6_esoteric",
+      "notes": "Timbre-color based on emotional character. Not pitch-class mapping. Theosophical influence.",
+      "has_pitch_mappings": false
+    },
+    {
+      "id": "de_maistre_1919",
+      "primary_family": "F1_spectral_analogy",
+      "secondary_family": null,
+      "notes": "Spectral system.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "theremin_1922",
+      "primary_family": "F1_spectral_analogy",
+      "secondary_family": null,
+      "notes": "Continuous pitch-to-spectrum via color organ.",
+      "has_pitch_mappings": false
+    },
+    {
+      "id": "klein_1926",
+      "primary_family": "F1_spectral_analogy",
+      "secondary_family": null,
+      "notes": "Spectroscope-based system.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "rejected_fixed_mappings",
+      "primary_family": null,
+      "secondary_family": null,
+      "notes": "EXCLUDE from analysis. Wilfred, Greenewalt, Laszlo, Baranoff-Rossine — explicitly rejected fixed mappings.",
+      "has_pitch_mappings": false
+    },
+    {
+      "id": "belmont_1944",
+      "primary_family": "F1_spectral_analogy",
+      "secondary_family": null,
+      "notes": "Equal-division spectral system.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "aeppli_pre1986",
+      "primary_family": "F1_spectral_analogy",
+      "secondary_family": null,
+      "notes": "Diatonic spectral system.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "galeyev_vanechkina_1975",
+      "primary_family": "F2_circle_of_fifths",
+      "secondary_family": null,
+      "notes": "Prometei Institute, extending Scriabin's system.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "zieverink_2004",
+      "primary_family": "F1_spectral_analogy",
+      "secondary_family": null,
+      "notes": "Physical wavelength transposition. Direct spectral logic even if implementation differs.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "jack_ox_1977",
+      "primary_family": "F2_circle_of_fifths",
+      "secondary_family": null,
+      "notes": "Virtual Color Organ, circle-of-fifths structure.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "lubar_2004",
+      "primary_family": "F2_circle_of_fifths",
+      "secondary_family": null,
+      "notes": "Itten color wheel application.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "japanese_gogyo",
+      "primary_family": "F3_cosmological",
+      "secondary_family": null,
+      "notes": "Adopted wuxing system.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "korean_ohaeng",
+      "primary_family": "F3_cosmological",
+      "secondary_family": null,
+      "notes": "Adopted wuxing system.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "marks_1974",
+      "primary_family": "F7_psychophysical",
+      "secondary_family": null,
+      "notes": "Pitch-brightness correspondence. No hue mapping proposed — lightness only.",
+      "has_pitch_mappings": false
+    },
+    {
+      "id": "hubbard_1996",
+      "primary_family": "F7_psychophysical",
+      "secondary_family": null,
+      "notes": "Pitch-lightness study.",
+      "has_pitch_mappings": false
+    },
+    {
+      "id": "mondloch_maurer_2004",
+      "primary_family": "F7_psychophysical",
+      "secondary_family": null,
+      "notes": "Developmental pitch-lightness study.",
+      "has_pitch_mappings": false
+    },
+    {
+      "id": "palmer_2013",
+      "primary_family": "F4_emotion_mediated",
+      "secondary_family": "F7_psychophysical",
+      "notes": "CONFIRMED: F4 primary — main finding is emotion mediation of hue.",
+      "has_pitch_mappings": false
+    },
+    {
+      "id": "palmer_2016",
+      "primary_family": "F4_emotion_mediated",
+      "secondary_family": null,
+      "notes": "Replication of Palmer 2013.",
+      "has_pitch_mappings": false
+    },
+    {
+      "id": "hamilton_fletcher_2017",
+      "primary_family": "F7_psychophysical",
+      "secondary_family": "F8_pedagogical",
+      "notes": "CONFIRMED: F7 primary — empirical study of correspondences.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "whiteford_2018",
+      "primary_family": "F7_psychophysical",
+      "secondary_family": null,
+      "notes": "Genre-dependent music-color. Lightness effect consistent across genres.",
+      "has_pitch_mappings": false
+    },
+    {
+      "id": "anikin_johansson_2019",
+      "primary_family": "F7_psychophysical",
+      "secondary_family": null,
+      "notes": "IAT confirming pitch-lightness, not pitch-hue.",
+      "has_pitch_mappings": false
+    },
+    {
+      "id": "spence_di_stefano_2022",
+      "primary_family": "F7_psychophysical",
+      "secondary_family": null,
+      "notes": "Comprehensive review. Concludes pitch->lightness is only robust CMC.",
+      "has_pitch_mappings": false
+    },
+    {
+      "id": "loconsole_2025",
+      "primary_family": "F7_psychophysical",
+      "secondary_family": null,
+      "notes": "Even tortoises show pitch-lightness. Confirms cross-species robustness.",
+      "has_pitch_mappings": false
+    },
+    {
+      "id": "sean_day_database",
+      "primary_family": "F5_synesthetic",
+      "secondary_family": null,
+      "notes": "Largest synesthesia database.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "novich_eagleman_2011",
+      "primary_family": "F5_synesthetic",
+      "secondary_family": null,
+      "notes": "Synesthesia Battery consistency study.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "gregersen_2013",
+      "primary_family": "F5_synesthetic",
+      "secondary_family": null,
+      "notes": "Absolute pitch and synesthesia co-occurrence.",
+      "has_pitch_mappings": false
+    },
+    {
+      "id": "mahling_1926",
+      "primary_family": null,
+      "secondary_family": null,
+      "notes": "EXCLUDE — meta-reference / bibliography, not a mapping system.",
+      "has_pitch_mappings": false
+    },
+    {
+      "id": "harbisson_2003",
+      "primary_family": "F1_spectral_analogy",
+      "secondary_family": "F8_pedagogical",
+      "notes": "CONFIRMED: F1 primary — spectral logic.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "boomwhackers_1995",
+      "primary_family": "F8_pedagogical",
+      "secondary_family": "F1_spectral_analogy",
+      "notes": "CONFIRMED: F8 primary — educational distinguishability is the intent.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "figurenotes_1996",
+      "primary_family": "F8_pedagogical",
+      "secondary_family": null,
+      "notes": "Finnish accessibility system. Explicitly no natural-correspondence claim.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "eyemusic_2014",
+      "primary_family": "F8_pedagogical",
+      "secondary_family": null,
+      "notes": "Sensory substitution. Timbre-based not pitch-class. Discriminability-optimized.",
+      "has_pitch_mappings": false
+    },
+    {
+      "id": "chromatone_2020s",
+      "primary_family": "F1_spectral_analogy",
+      "secondary_family": "F8_pedagogical",
+      "notes": "Modern commercial spectral system.",
+      "has_pitch_mappings": true
+    },
+    {
+      "id": "meta_collopy",
+      "primary_family": null,
+      "secondary_family": null,
+      "notes": "EXCLUDE — meta-reference chart, not a mapping system.",
+      "has_pitch_mappings": false
+    },
+    {
+      "id": "meta_jewanski",
+      "primary_family": null,
+      "secondary_family": null,
+      "notes": "EXCLUDE — doctoral dissertation / meta-reference.",
+      "has_pitch_mappings": false
+    },
+    {
+      "id": "meta_peacock",
+      "primary_family": null,
+      "secondary_family": null,
+      "notes": "EXCLUDE — meta-reference.",
+      "has_pitch_mappings": false
+    },
+    {
+      "id": "meta_caivano",
+      "primary_family": null,
+      "secondary_family": null,
+      "notes": "EXCLUDE — meta-reference.",
+      "has_pitch_mappings": false
+    }
+  ],
+  "summary": {
+    "total_systems": 64,
+    "with_family_assignment": 52,
+    "excluded_meta_references": 5,
+    "excluded_explicit_rejection": 1,
+    "with_pitch_mappings": 38,
+    "items_needing_review": 0,
+    "family_counts_primary": {
+      "F1_spectral_analogy": 16,
+      "F2_circle_of_fifths": 5,
+      "F3_cosmological": 12,
+      "F4_emotion_mediated": 3,
+      "F5_synesthetic": 6,
+      "F6_esoteric": 2,
+      "F7_psychophysical": 8,
+      "F8_pedagogical": 5
+    },
+    "review_items": [],
+    "all_reviews_confirmed": "2026-03-18"
+  }
+}

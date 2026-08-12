@@ -1,0 +1,3227 @@
+[
+  {
+    "pitch_class": "C",
+    "frequency_hz": 261.63,
+    "semitone_from_c": 0,
+    "octave_position": 0.0,
+    "sources_with_mappings": [
+      "rimington_1912",
+      "soundmap_contemporary",
+      "field_1835",
+      "newton_optics",
+      "castel_1740",
+      "scriabin_primary",
+      "synesthesia_nature_2017",
+      "finn_1881",
+      "maryon_c1920",
+      "lind_1900",
+      "rimsky_korsakov",
+      "wells_1980",
+      "helmholtz_1867",
+      "pridmore_1992",
+      "ward_cognition_2006"
+    ],
+    "num_sources_mapping": 15,
+    "assignments": [
+      {
+        "source": "scriabin_primary",
+        "color_name": "Red",
+        "lab": {
+          "L": 53.2,
+          "a": 80.1,
+          "b": 67.2,
+          "notes": "Converted from sRGB #ff0000 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 53.2,
+          "C": 104.56,
+          "H": 40.0
+        },
+        "rgb_hex": "#ff0000"
+      },
+      {
+        "source": "newton_optics",
+        "color_name": "Violet",
+        "lab": {
+          "L": 32.6,
+          "a": 62.6,
+          "b": -38.7,
+          "notes": "Converted from spectrum violet as sRGB #8b008b via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 32.6,
+          "C": 73.6,
+          "H": 328.28
+        },
+        "rgb_hex": "#8b008b"
+      },
+      {
+        "source": "rimington_1912",
+        "color_name": "Deep red",
+        "lab": {
+          "L": 28.1,
+          "a": 51.0,
+          "b": 41.3,
+          "notes": "Converted from sRGB #8b0000 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 28.1,
+          "C": 65.63,
+          "H": 39.0
+        },
+        "rgb_hex": "#8b0000"
+      },
+      {
+        "source": "synesthesia_nature_2017",
+        "color_name": "Red",
+        "lab": {
+          "L": 53.2,
+          "a": 80.1,
+          "b": 67.2,
+          "notes": "Converted from sRGB #ff0000 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 53.2,
+          "C": 104.56,
+          "H": 40.0
+        },
+        "rgb_hex": "#ff0000"
+      },
+      {
+        "source": "soundmap_contemporary",
+        "color_name": "Purple",
+        "lab": {
+          "L": 47.6,
+          "a": 35.2,
+          "b": -45.4,
+          "notes": "Converted from sRGB #825ebe via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 47.6,
+          "C": 57.45,
+          "H": 307.79
+        },
+        "rgb_hex": "#825ebe"
+      },
+      {
+        "source": "castel_1740",
+        "color_name": "Blue",
+        "lab": {
+          "L": 32.3,
+          "a": 79.2,
+          "b": -107.9,
+          "notes": "Converted from sRGB #0000ff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 32.3,
+          "C": 133.85,
+          "H": 306.28
+        },
+        "rgb_hex": "#0000ff"
+      },
+      {
+        "source": "ward_cognition_2006",
+        "color_name": "Red (inferred)",
+        "lab": {
+          "L": 53.2,
+          "a": 80.1,
+          "b": 67.2,
+          "notes": "Inferred from study tendencies; do=red pattern; LAB from sRGB #ff0000 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 53.2,
+          "C": 104.56,
+          "H": 40.0
+        },
+        "rgb_hex": "#ff0000"
+      },
+      {
+        "source": "helmholtz_1867",
+        "color_name": "Yellow",
+        "lab": {
+          "L": 86.9,
+          "a": -1.9,
+          "b": 87.1,
+          "notes": "Converted from sRGB #ffd700 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 86.9,
+          "C": 87.12,
+          "H": 91.25
+        },
+        "rgb_hex": "#ffd700"
+      },
+      {
+        "source": "field_1835",
+        "color_name": "Red (low)",
+        "lab": {
+          "L": 39.1,
+          "a": 55.9,
+          "b": 37.6,
+          "notes": "Converted from sRGB #b22222 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 39.1,
+          "C": 67.37,
+          "H": 33.93
+        },
+        "rgb_hex": "#b22222"
+      },
+      {
+        "source": "finn_1881",
+        "color_name": "Red",
+        "lab": {
+          "L": 47.0,
+          "a": 70.9,
+          "b": 33.6,
+          "notes": "Converted from sRGB #dc143c via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 47.0,
+          "C": 78.46,
+          "H": 25.36
+        },
+        "rgb_hex": "#dc143c"
+      },
+      {
+        "source": "lind_1900",
+        "color_name": "Red",
+        "lab": {
+          "L": 42.7,
+          "a": 67.9,
+          "b": 57.0,
+          "notes": "Converted from sRGB #cd0000 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 42.7,
+          "C": 88.65,
+          "H": 40.01
+        },
+        "rgb_hex": "#cd0000"
+      },
+      {
+        "source": "maryon_c1920",
+        "color_name": "Red",
+        "lab": {
+          "L": 47.0,
+          "a": 70.9,
+          "b": 33.6,
+          "notes": "Converted from sRGB #dc143c via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 47.0,
+          "C": 78.46,
+          "H": 25.36
+        },
+        "rgb_hex": "#dc143c"
+      },
+      {
+        "source": "rimsky_korsakov",
+        "color_name": "White",
+        "lab": {
+          "L": 100.0,
+          "a": -0.0,
+          "b": 0.0,
+          "notes": "Converted from sRGB #ffffff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 100.0,
+          "C": 0.0,
+          "H": 180.0
+        },
+        "rgb_hex": "#ffffff"
+      },
+      {
+        "source": "wells_1980",
+        "color_name": "Hue 0\u00b0",
+        "lab": {
+          "L": 53.2,
+          "a": 80.1,
+          "b": 67.2,
+          "notes": "Converted from sRGB #ff0000 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 53.2,
+          "C": 104.56,
+          "H": 40.0
+        },
+        "rgb_hex": "#ff0000"
+      },
+      {
+        "source": "pridmore_1992",
+        "color_name": "Hue 180\u00b0",
+        "lab": {
+          "L": 91.1,
+          "a": -48.1,
+          "b": -14.1,
+          "notes": "Converted from sRGB #00ffff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 91.1,
+          "C": 50.12,
+          "H": 196.34
+        },
+        "rgb_hex": "#00ffff"
+      }
+    ],
+    "coverage": "15/15",
+    "mean_lab": {
+      "L": 53.81,
+      "a": 50.93,
+      "b": 23.53
+    },
+    "mean_lch": {
+      "L": 53.81,
+      "C": 79.93,
+      "H": 27.78
+    },
+    "std_dev_lab": {
+      "L": 21.08,
+      "a": 37.32,
+      "b": 52.52
+    },
+    "hue_std_circular_deg": 62.52,
+    "lab_variance_magnitude": 67.79,
+    "mean_delta_e_ciede2000": 37.74,
+    "agreement_score": 0.24,
+    "agreement_score_formula": "agreement_score = 1 / (1 + mean_delta_e_ciede2000 / 12); perceptual (CIEDE2000). Legacy: agreement_score_lab from LAB variance.",
+    "agreement_score_lab": 0.27,
+    "consensus_assessment": "low (sources strongly disagree)",
+    "observations": "15 source(s) map this pitch; mean CIEDE2000 37.7; hue std 62.5 deg. Colors perceptually distinct."
+  },
+  {
+    "pitch_class": "C#",
+    "frequency_hz": 277.18,
+    "semitone_from_c": 1,
+    "octave_position": 0.08,
+    "sources_with_mappings": [
+      "rimington_1912",
+      "soundmap_contemporary",
+      "field_1835",
+      "castel_1740",
+      "scriabin_primary",
+      "finn_1881",
+      "maryon_c1920",
+      "lind_1900",
+      "rimsky_korsakov",
+      "wells_1980",
+      "helmholtz_1867",
+      "pridmore_1992"
+    ],
+    "num_sources_mapping": 12,
+    "assignments": [
+      {
+        "source": "scriabin_primary",
+        "color_name": "Violet",
+        "lab": {
+          "L": 32.6,
+          "a": 62.6,
+          "b": -38.7,
+          "notes": "Converted from sRGB #8b008b via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 32.6,
+          "C": 73.6,
+          "H": 328.28
+        },
+        "rgb_hex": "#8b008b"
+      },
+      {
+        "source": "rimington_1912",
+        "color_name": "Crimson",
+        "lab": {
+          "L": 47.0,
+          "a": 70.9,
+          "b": 33.6,
+          "notes": "Converted from sRGB #dc143c via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 47.0,
+          "C": 78.46,
+          "H": 25.36
+        },
+        "rgb_hex": "#dc143c"
+      },
+      {
+        "source": "soundmap_contemporary",
+        "color_name": "Blue",
+        "lab": {
+          "L": 47.5,
+          "a": 22.7,
+          "b": -61.9,
+          "notes": "Converted from sRGB #3e6ada via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 47.5,
+          "C": 65.93,
+          "H": 290.14
+        },
+        "rgb_hex": "#3e6ada"
+      },
+      {
+        "source": "castel_1740",
+        "color_name": "Blue-green / cyan",
+        "lab": {
+          "L": 52.2,
+          "a": -30.6,
+          "b": -9.0,
+          "notes": "Converted from sRGB #008b8b via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 52.2,
+          "C": 31.9,
+          "H": 196.39
+        },
+        "rgb_hex": "#008b8b"
+      },
+      {
+        "source": "helmholtz_1867",
+        "color_name": "Green",
+        "lab": {
+          "L": 50.6,
+          "a": -49.6,
+          "b": 45.0,
+          "notes": "Converted from sRGB #228b22 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 50.6,
+          "C": 66.97,
+          "H": 137.78
+        },
+        "rgb_hex": "#228b22"
+      },
+      {
+        "source": "field_1835",
+        "color_name": "Orange-red",
+        "lab": {
+          "L": 57.6,
+          "a": 67.8,
+          "b": 69.0,
+          "notes": "Converted from sRGB #ff4500 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 57.6,
+          "C": 96.74,
+          "H": 45.5
+        },
+        "rgb_hex": "#ff4500"
+      },
+      {
+        "source": "finn_1881",
+        "color_name": "Sea green / blue-green",
+        "lab": {
+          "L": 51.5,
+          "a": -39.7,
+          "b": 20.1,
+          "notes": "Converted from sRGB #2e8b57 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 51.5,
+          "C": 44.5,
+          "H": 153.15
+        },
+        "rgb_hex": "#2e8b57"
+      },
+      {
+        "source": "lind_1900",
+        "color_name": "Red-orange",
+        "lab": {
+          "L": 57.6,
+          "a": 67.8,
+          "b": 69.0,
+          "notes": "Converted from sRGB #ff4500 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 57.6,
+          "C": 96.74,
+          "H": 45.5
+        },
+        "rgb_hex": "#ff4500"
+      },
+      {
+        "source": "maryon_c1920",
+        "color_name": "Red-orange",
+        "lab": {
+          "L": 57.6,
+          "a": 67.8,
+          "b": 69.0,
+          "notes": "Converted from sRGB #ff4500 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 57.6,
+          "C": 96.74,
+          "H": 45.5
+        },
+        "rgb_hex": "#ff4500"
+      },
+      {
+        "source": "rimsky_korsakov",
+        "color_name": "Darkish warm",
+        "lab": {
+          "L": 37.5,
+          "a": 26.4,
+          "b": 41.0,
+          "notes": "Converted from sRGB #8b4513 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 37.5,
+          "C": 48.76,
+          "H": 57.22
+        },
+        "rgb_hex": "#8b4513"
+      },
+      {
+        "source": "wells_1980",
+        "color_name": "Hue 30\u00b0",
+        "lab": {
+          "L": 67.1,
+          "a": 42.8,
+          "b": 74.0,
+          "notes": "Converted from sRGB #ff8000 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 67.1,
+          "C": 85.49,
+          "H": 59.96
+        },
+        "rgb_hex": "#ff8000"
+      },
+      {
+        "source": "pridmore_1992",
+        "color_name": "Hue 210\u00b0",
+        "lab": {
+          "L": 54.7,
+          "a": 18.8,
+          "b": -70.9,
+          "notes": "Converted from sRGB #0080ff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 54.7,
+          "C": 73.35,
+          "H": 284.85
+        },
+        "rgb_hex": "#0080ff"
+      }
+    ],
+    "coverage": "12/15",
+    "mean_lab": {
+      "L": 51.12,
+      "a": 27.31,
+      "b": 20.02
+    },
+    "mean_lch": {
+      "L": 51.12,
+      "C": 71.6,
+      "H": 42.72
+    },
+    "std_dev_lab": {
+      "L": 8.92,
+      "a": 42.97,
+      "b": 50.52
+    },
+    "hue_std_circular_deg": 85.34,
+    "lab_variance_magnitude": 66.92,
+    "mean_delta_e_ciede2000": 42.05,
+    "agreement_score": 0.22,
+    "agreement_score_formula": "agreement_score = 1 / (1 + mean_delta_e_ciede2000 / 12); perceptual (CIEDE2000). Legacy: agreement_score_lab from LAB variance.",
+    "agreement_score_lab": 0.27,
+    "consensus_assessment": "low (sources strongly disagree)",
+    "observations": "12 source(s) map this pitch; mean CIEDE2000 42.0; hue std 85.3 deg. Colors perceptually distinct."
+  },
+  {
+    "pitch_class": "D",
+    "frequency_hz": 293.66,
+    "semitone_from_c": 2,
+    "octave_position": 0.17,
+    "sources_with_mappings": [
+      "rimington_1912",
+      "soundmap_contemporary",
+      "field_1835",
+      "newton_optics",
+      "castel_1740",
+      "scriabin_primary",
+      "synesthesia_nature_2017",
+      "finn_1881",
+      "maryon_c1920",
+      "lind_1900",
+      "rimsky_korsakov",
+      "wells_1980",
+      "helmholtz_1867",
+      "pridmore_1992",
+      "ward_cognition_2006"
+    ],
+    "num_sources_mapping": 15,
+    "assignments": [
+      {
+        "source": "scriabin_primary",
+        "color_name": "Yellow",
+        "lab": {
+          "L": 97.1,
+          "a": -21.6,
+          "b": 94.5,
+          "notes": "Converted from sRGB #ffff00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 97.1,
+          "C": 96.94,
+          "H": 102.88
+        },
+        "rgb_hex": "#ffff00"
+      },
+      {
+        "source": "newton_optics",
+        "color_name": "Red",
+        "lab": {
+          "L": 53.2,
+          "a": 80.1,
+          "b": 67.2,
+          "notes": "Converted from sRGB #ff0000 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 53.2,
+          "C": 104.56,
+          "H": 40.0
+        },
+        "rgb_hex": "#ff0000"
+      },
+      {
+        "source": "rimington_1912",
+        "color_name": "Orange-crimson",
+        "lab": {
+          "L": 57.6,
+          "a": 67.8,
+          "b": 69.0,
+          "notes": "Converted from sRGB #ff4500 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 57.6,
+          "C": 96.74,
+          "H": 45.5
+        },
+        "rgb_hex": "#ff4500"
+      },
+      {
+        "source": "synesthesia_nature_2017",
+        "color_name": "Yellow",
+        "lab": {
+          "L": 97.1,
+          "a": -21.6,
+          "b": 94.5,
+          "notes": "Converted from sRGB #ffff00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 97.1,
+          "C": 96.94,
+          "H": 102.88
+        },
+        "rgb_hex": "#ffff00"
+      },
+      {
+        "source": "soundmap_contemporary",
+        "color_name": "Bright Blue",
+        "lab": {
+          "L": 58.6,
+          "a": 10.2,
+          "b": -64.7,
+          "notes": "Converted from sRGB #008eff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 58.6,
+          "C": 65.5,
+          "H": 278.96
+        },
+        "rgb_hex": "#008eff"
+      },
+      {
+        "source": "castel_1740",
+        "color_name": "Green",
+        "lab": {
+          "L": 50.6,
+          "a": -49.6,
+          "b": 45.0,
+          "notes": "Converted from sRGB #228b22 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 50.6,
+          "C": 66.97,
+          "H": 137.78
+        },
+        "rgb_hex": "#228b22"
+      },
+      {
+        "source": "ward_cognition_2006",
+        "color_name": "Yellow (inferred)",
+        "lab": {
+          "L": 97.1,
+          "a": -21.6,
+          "b": 94.5,
+          "notes": "Inferred from rainbow tendency; LAB from sRGB #ffff00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 97.1,
+          "C": 96.94,
+          "H": 102.88
+        },
+        "rgb_hex": "#ffff00"
+      },
+      {
+        "source": "helmholtz_1867",
+        "color_name": "Greenish-blue",
+        "lab": {
+          "L": 52.2,
+          "a": -30.6,
+          "b": -9.0,
+          "notes": "Converted from sRGB #008b8b via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 52.2,
+          "C": 31.9,
+          "H": 196.39
+        },
+        "rgb_hex": "#008b8b"
+      },
+      {
+        "source": "field_1835",
+        "color_name": "Orange",
+        "lab": {
+          "L": 69.5,
+          "a": 36.8,
+          "b": 75.5,
+          "notes": "Converted from sRGB #ff8c00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 69.5,
+          "C": 83.99,
+          "H": 64.01
+        },
+        "rgb_hex": "#ff8c00"
+      },
+      {
+        "source": "finn_1881",
+        "color_name": "Orange",
+        "lab": {
+          "L": 69.5,
+          "a": 36.8,
+          "b": 75.5,
+          "notes": "Converted from sRGB #ff8c00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 69.5,
+          "C": 83.99,
+          "H": 64.01
+        },
+        "rgb_hex": "#ff8c00"
+      },
+      {
+        "source": "lind_1900",
+        "color_name": "Orange",
+        "lab": {
+          "L": 69.5,
+          "a": 36.8,
+          "b": 75.5,
+          "notes": "Converted from sRGB #ff8c00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 69.5,
+          "C": 83.99,
+          "H": 64.01
+        },
+        "rgb_hex": "#ff8c00"
+      },
+      {
+        "source": "maryon_c1920",
+        "color_name": "Orange",
+        "lab": {
+          "L": 69.5,
+          "a": 36.8,
+          "b": 75.5,
+          "notes": "Converted from sRGB #ff8c00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 69.5,
+          "C": 83.99,
+          "H": 64.01
+        },
+        "rgb_hex": "#ff8c00"
+      },
+      {
+        "source": "rimsky_korsakov",
+        "color_name": "Yellowish",
+        "lab": {
+          "L": 86.9,
+          "a": -1.9,
+          "b": 87.1,
+          "notes": "Converted from sRGB #ffd700 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 86.9,
+          "C": 87.12,
+          "H": 91.25
+        },
+        "rgb_hex": "#ffd700"
+      },
+      {
+        "source": "wells_1980",
+        "color_name": "Hue 60\u00b0",
+        "lab": {
+          "L": 97.1,
+          "a": -21.6,
+          "b": 94.5,
+          "notes": "Converted from sRGB #ffff00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 97.1,
+          "C": 96.94,
+          "H": 102.88
+        },
+        "rgb_hex": "#ffff00"
+      },
+      {
+        "source": "pridmore_1992",
+        "color_name": "Hue 240\u00b0",
+        "lab": {
+          "L": 32.3,
+          "a": 79.2,
+          "b": -107.9,
+          "notes": "Converted from sRGB #0000ff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 32.3,
+          "C": 133.85,
+          "H": 306.28
+        },
+        "rgb_hex": "#0000ff"
+      }
+    ],
+    "coverage": "15/15",
+    "mean_lab": {
+      "L": 70.52,
+      "a": 14.4,
+      "b": 51.11
+    },
+    "mean_lch": {
+      "L": 70.52,
+      "C": 87.36,
+      "H": 80.89
+    },
+    "std_dev_lab": {
+      "L": 19.83,
+      "a": 40.79,
+      "b": 60.07
+    },
+    "hue_std_circular_deg": 60.72,
+    "lab_variance_magnitude": 75.27,
+    "mean_delta_e_ciede2000": 42.88,
+    "agreement_score": 0.22,
+    "agreement_score_formula": "agreement_score = 1 / (1 + mean_delta_e_ciede2000 / 12); perceptual (CIEDE2000). Legacy: agreement_score_lab from LAB variance.",
+    "agreement_score_lab": 0.25,
+    "consensus_assessment": "low (sources strongly disagree)",
+    "observations": "15 source(s) map this pitch; mean CIEDE2000 42.9; hue std 60.7 deg. Colors perceptually distinct."
+  },
+  {
+    "pitch_class": "D#",
+    "frequency_hz": 311.13,
+    "semitone_from_c": 3,
+    "octave_position": 0.25,
+    "sources_with_mappings": [
+      "rimington_1912",
+      "soundmap_contemporary",
+      "field_1835",
+      "castel_1740",
+      "scriabin_primary",
+      "finn_1881",
+      "maryon_c1920",
+      "lind_1900",
+      "rimsky_korsakov",
+      "wells_1980",
+      "helmholtz_1867",
+      "pridmore_1992"
+    ],
+    "num_sources_mapping": 12,
+    "assignments": [
+      {
+        "source": "scriabin_primary",
+        "color_name": "Gray / flesh with steel",
+        "lab": {
+          "L": 52.8,
+          "a": -2.1,
+          "b": -10.6,
+          "notes": "Converted from sRGB #708090 (steel gray) via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 52.8,
+          "C": 10.81,
+          "H": 258.79
+        },
+        "rgb_hex": "#708090"
+      },
+      {
+        "source": "rimington_1912",
+        "color_name": "Orange",
+        "lab": {
+          "L": 74.9,
+          "a": 23.9,
+          "b": 78.9,
+          "notes": "Converted from sRGB #ffa500 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 74.9,
+          "C": 82.44,
+          "H": 73.15
+        },
+        "rgb_hex": "#ffa500"
+      },
+      {
+        "source": "soundmap_contemporary",
+        "color_name": "Cyan",
+        "lab": {
+          "L": 76.3,
+          "a": -20.4,
+          "b": -35.0,
+          "notes": "Converted from sRGB #42cafc via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 76.3,
+          "C": 40.51,
+          "H": 239.76
+        },
+        "rgb_hex": "#42cafc"
+      },
+      {
+        "source": "castel_1740",
+        "color_name": "Yellow-green",
+        "lab": {
+          "L": 76.5,
+          "a": -38.0,
+          "b": 66.6,
+          "notes": "Converted from sRGB #9acd32 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 76.5,
+          "C": 76.68,
+          "H": 119.71
+        },
+        "rgb_hex": "#9acd32"
+      },
+      {
+        "source": "helmholtz_1867",
+        "color_name": "Cyanogen-blue",
+        "lab": {
+          "L": 72.5,
+          "a": -17.7,
+          "b": -42.5,
+          "notes": "Converted from sRGB #00bfff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 72.5,
+          "C": 46.04,
+          "H": 247.39
+        },
+        "rgb_hex": "#00bfff"
+      },
+      {
+        "source": "field_1835",
+        "color_name": "Yellow",
+        "lab": {
+          "L": 86.9,
+          "a": -1.9,
+          "b": 87.1,
+          "notes": "Converted from sRGB #ffd700 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 86.9,
+          "C": 87.12,
+          "H": 91.25
+        },
+        "rgb_hex": "#ffd700"
+      },
+      {
+        "source": "finn_1881",
+        "color_name": "Olive / yellow-green",
+        "lab": {
+          "L": 51.9,
+          "a": -12.9,
+          "b": 56.7,
+          "notes": "Converted from sRGB #808000 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 51.9,
+          "C": 58.15,
+          "H": 102.82
+        },
+        "rgb_hex": "#808000"
+      },
+      {
+        "source": "lind_1900",
+        "color_name": "Orange-yellow",
+        "lab": {
+          "L": 70.8,
+          "a": 8.5,
+          "b": 68.8,
+          "notes": "Converted from sRGB #daa520 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 70.8,
+          "C": 69.32,
+          "H": 82.96
+        },
+        "rgb_hex": "#daa520"
+      },
+      {
+        "source": "maryon_c1920",
+        "color_name": "Orange-yellow",
+        "lab": {
+          "L": 70.8,
+          "a": 8.5,
+          "b": 68.8,
+          "notes": "Converted from sRGB #daa520 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 70.8,
+          "C": 69.32,
+          "H": 82.96
+        },
+        "rgb_hex": "#daa520"
+      },
+      {
+        "source": "rimsky_korsakov",
+        "color_name": "Grey-bluish",
+        "lab": {
+          "L": 52.8,
+          "a": -2.1,
+          "b": -10.6,
+          "notes": "Converted from sRGB #708090 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 52.8,
+          "C": 10.81,
+          "H": 258.79
+        },
+        "rgb_hex": "#708090"
+      },
+      {
+        "source": "wells_1980",
+        "color_name": "Hue 90\u00b0",
+        "lab": {
+          "L": 89.9,
+          "a": -67.8,
+          "b": 85.8,
+          "notes": "Converted from sRGB #80ff00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 89.9,
+          "C": 109.35,
+          "H": 128.32
+        },
+        "rgb_hex": "#80ff00"
+      },
+      {
+        "source": "pridmore_1992",
+        "color_name": "Hue 270\u00b0",
+        "lab": {
+          "L": 40.9,
+          "a": 83.2,
+          "b": -93.3,
+          "notes": "Converted from sRGB #8000ff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 40.9,
+          "C": 125.01,
+          "H": 311.72
+        },
+        "rgb_hex": "#8000ff"
+      }
+    ],
+    "coverage": "12/15",
+    "mean_lab": {
+      "L": 68.08,
+      "a": -3.23,
+      "b": 26.72
+    },
+    "mean_lch": {
+      "L": 68.08,
+      "C": 65.46,
+      "H": 124.69
+    },
+    "std_dev_lab": {
+      "L": 14.48,
+      "a": 34.72,
+      "b": 58.94
+    },
+    "hue_std_circular_deg": 101.19,
+    "lab_variance_magnitude": 69.92,
+    "mean_delta_e_ciede2000": 41.23,
+    "agreement_score": 0.23,
+    "agreement_score_formula": "agreement_score = 1 / (1 + mean_delta_e_ciede2000 / 12); perceptual (CIEDE2000). Legacy: agreement_score_lab from LAB variance.",
+    "agreement_score_lab": 0.26,
+    "consensus_assessment": "low (sources strongly disagree)",
+    "observations": "12 source(s) map this pitch; mean CIEDE2000 41.2; hue std 101.2 deg. Colors perceptually distinct."
+  },
+  {
+    "pitch_class": "E",
+    "frequency_hz": 329.63,
+    "semitone_from_c": 4,
+    "octave_position": 0.33,
+    "sources_with_mappings": [
+      "rimington_1912",
+      "soundmap_contemporary",
+      "field_1835",
+      "newton_optics",
+      "castel_1740",
+      "scriabin_primary",
+      "synesthesia_nature_2017",
+      "finn_1881",
+      "maryon_c1920",
+      "lind_1900",
+      "rimsky_korsakov",
+      "wells_1980",
+      "helmholtz_1867",
+      "pridmore_1992",
+      "ward_cognition_2006"
+    ],
+    "num_sources_mapping": 15,
+    "assignments": [
+      {
+        "source": "scriabin_primary",
+        "color_name": "Sky Blue",
+        "lab": {
+          "L": 79.2,
+          "a": -14.8,
+          "b": -21.3,
+          "notes": "Converted from sRGB #87ceeb via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 79.2,
+          "C": 25.94,
+          "H": 235.21
+        },
+        "rgb_hex": "#87ceeb"
+      },
+      {
+        "source": "newton_optics",
+        "color_name": "Orange",
+        "lab": {
+          "L": 74.9,
+          "a": 23.9,
+          "b": 78.9,
+          "notes": "Converted from sRGB #ffa500 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 74.9,
+          "C": 82.44,
+          "H": 73.15
+        },
+        "rgb_hex": "#ffa500"
+      },
+      {
+        "source": "rimington_1912",
+        "color_name": "Yellow",
+        "lab": {
+          "L": 97.1,
+          "a": -21.6,
+          "b": 94.5,
+          "notes": "Converted from sRGB #ffff00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 97.1,
+          "C": 96.94,
+          "H": 102.88
+        },
+        "rgb_hex": "#ffff00"
+      },
+      {
+        "source": "synesthesia_nature_2017",
+        "color_name": "Green (intermediate)",
+        "lab": {
+          "L": 87.7,
+          "a": -86.2,
+          "b": 83.2,
+          "notes": "Converted from sRGB #00ff00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 87.7,
+          "C": 119.8,
+          "H": 136.01
+        },
+        "rgb_hex": "#00ff00"
+      },
+      {
+        "source": "soundmap_contemporary",
+        "color_name": "Turquoise",
+        "lab": {
+          "L": 83.4,
+          "a": -55.7,
+          "b": 10.2,
+          "notes": "Converted from sRGB #2ceabb via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 83.4,
+          "C": 56.63,
+          "H": 169.62
+        },
+        "rgb_hex": "#2ceabb"
+      },
+      {
+        "source": "castel_1740",
+        "color_name": "Yellow",
+        "lab": {
+          "L": 97.1,
+          "a": -21.6,
+          "b": 94.5,
+          "notes": "Converted from sRGB #ffff00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 97.1,
+          "C": 96.94,
+          "H": 102.88
+        },
+        "rgb_hex": "#ffff00"
+      },
+      {
+        "source": "ward_cognition_2006",
+        "color_name": "Green (inferred)",
+        "lab": {
+          "L": 87.7,
+          "a": -86.2,
+          "b": 83.2,
+          "notes": "Inferred; LAB from sRGB #00ff00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 87.7,
+          "C": 119.8,
+          "H": 136.01
+        },
+        "rgb_hex": "#00ff00"
+      },
+      {
+        "source": "helmholtz_1867",
+        "color_name": "Indigo-blue",
+        "lab": {
+          "L": 20.5,
+          "a": 51.7,
+          "b": -53.3,
+          "notes": "Converted from sRGB #4b0082 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 20.5,
+          "C": 74.25,
+          "H": 314.13
+        },
+        "rgb_hex": "#4b0082"
+      },
+      {
+        "source": "field_1835",
+        "color_name": "Yellow-green",
+        "lab": {
+          "L": 76.5,
+          "a": -38.0,
+          "b": 66.6,
+          "notes": "Converted from sRGB #9acd32 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 76.5,
+          "C": 76.68,
+          "H": 119.71
+        },
+        "rgb_hex": "#9acd32"
+      },
+      {
+        "source": "finn_1881",
+        "color_name": "Yellow-green",
+        "lab": {
+          "L": 76.5,
+          "a": -38.0,
+          "b": 66.6,
+          "notes": "Converted from sRGB #9acd32 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 76.5,
+          "C": 76.68,
+          "H": 119.71
+        },
+        "rgb_hex": "#9acd32"
+      },
+      {
+        "source": "lind_1900",
+        "color_name": "Yellow",
+        "lab": {
+          "L": 86.9,
+          "a": -1.9,
+          "b": 87.1,
+          "notes": "Converted from sRGB #ffd700 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 86.9,
+          "C": 87.12,
+          "H": 91.25
+        },
+        "rgb_hex": "#ffd700"
+      },
+      {
+        "source": "maryon_c1920",
+        "color_name": "Yellow",
+        "lab": {
+          "L": 86.9,
+          "a": -1.9,
+          "b": 87.1,
+          "notes": "Converted from sRGB #ffd700 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 86.9,
+          "C": 87.12,
+          "H": 91.25
+        },
+        "rgb_hex": "#ffd700"
+      },
+      {
+        "source": "rimsky_korsakov",
+        "color_name": "Blue / sapphire",
+        "lab": {
+          "L": 15.9,
+          "a": 31.7,
+          "b": -49.6,
+          "notes": "Converted from sRGB #191970 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 15.9,
+          "C": 58.86,
+          "H": 302.58
+        },
+        "rgb_hex": "#191970"
+      },
+      {
+        "source": "wells_1980",
+        "color_name": "Hue 120\u00b0",
+        "lab": {
+          "L": 87.7,
+          "a": -86.2,
+          "b": 83.2,
+          "notes": "Converted from sRGB #00ff00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 87.7,
+          "C": 119.8,
+          "H": 136.01
+        },
+        "rgb_hex": "#00ff00"
+      },
+      {
+        "source": "pridmore_1992",
+        "color_name": "Hue 300\u00b0",
+        "lab": {
+          "L": 60.3,
+          "a": 98.2,
+          "b": -60.8,
+          "notes": "Converted from sRGB #ff00ff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 60.3,
+          "C": 115.5,
+          "H": 328.24
+        },
+        "rgb_hex": "#ff00ff"
+      }
+    ],
+    "coverage": "15/15",
+    "mean_lab": {
+      "L": 74.55,
+      "a": -16.44,
+      "b": 43.34
+    },
+    "mean_lch": {
+      "L": 74.55,
+      "C": 86.3,
+      "H": 115.16
+    },
+    "std_dev_lab": {
+      "L": 23.82,
+      "a": 51.17,
+      "b": 57.89
+    },
+    "hue_std_circular_deg": 73.23,
+    "lab_variance_magnitude": 80.85,
+    "mean_delta_e_ciede2000": 48.05,
+    "agreement_score": 0.2,
+    "agreement_score_formula": "agreement_score = 1 / (1 + mean_delta_e_ciede2000 / 12); perceptual (CIEDE2000). Legacy: agreement_score_lab from LAB variance.",
+    "agreement_score_lab": 0.24,
+    "consensus_assessment": "low (sources strongly disagree)",
+    "observations": "15 source(s) map this pitch; mean CIEDE2000 48.1; hue std 73.2 deg. Colors perceptually distinct."
+  },
+  {
+    "pitch_class": "F",
+    "frequency_hz": 349.23,
+    "semitone_from_c": 5,
+    "octave_position": 0.42,
+    "sources_with_mappings": [
+      "rimington_1912",
+      "soundmap_contemporary",
+      "field_1835",
+      "newton_optics",
+      "castel_1740",
+      "scriabin_primary",
+      "synesthesia_nature_2017",
+      "finn_1881",
+      "maryon_c1920",
+      "lind_1900",
+      "rimsky_korsakov",
+      "wells_1980",
+      "helmholtz_1867",
+      "pridmore_1992",
+      "ward_cognition_2006"
+    ],
+    "num_sources_mapping": 15,
+    "assignments": [
+      {
+        "source": "scriabin_primary",
+        "color_name": "Crimson / Deep Red",
+        "lab": {
+          "L": 47.0,
+          "a": 70.9,
+          "b": 33.6,
+          "notes": "Converted from sRGB #dc143c via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 47.0,
+          "C": 78.46,
+          "H": 25.36
+        },
+        "rgb_hex": "#dc143c"
+      },
+      {
+        "source": "newton_optics",
+        "color_name": "Yellow",
+        "lab": {
+          "L": 97.1,
+          "a": -21.6,
+          "b": 94.5,
+          "notes": "Converted from sRGB #ffff00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 97.1,
+          "C": 96.94,
+          "H": 102.88
+        },
+        "rgb_hex": "#ffff00"
+      },
+      {
+        "source": "rimington_1912",
+        "color_name": "Yellow-green",
+        "lab": {
+          "L": 76.5,
+          "a": -38.0,
+          "b": 66.6,
+          "notes": "Converted from sRGB #9acd32 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 76.5,
+          "C": 76.68,
+          "H": 119.71
+        },
+        "rgb_hex": "#9acd32"
+      },
+      {
+        "source": "synesthesia_nature_2017",
+        "color_name": "Green-blue (intermediate)",
+        "lab": {
+          "L": 83.4,
+          "a": -55.7,
+          "b": 10.2,
+          "notes": "Converted from sRGB #2ceabb (turquoise) via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 83.4,
+          "C": 56.63,
+          "H": 169.62
+        },
+        "rgb_hex": "#2ceabb"
+      },
+      {
+        "source": "soundmap_contemporary",
+        "color_name": "Lime Green",
+        "lab": {
+          "L": 86.2,
+          "a": -61.5,
+          "b": 71.6,
+          "notes": "Converted from sRGB #7ff23e via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 86.2,
+          "C": 94.39,
+          "H": 130.66
+        },
+        "rgb_hex": "#7ff23e"
+      },
+      {
+        "source": "castel_1740",
+        "color_name": "Orange",
+        "lab": {
+          "L": 74.9,
+          "a": 23.9,
+          "b": 78.9,
+          "notes": "Converted from sRGB #ffa500 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 74.9,
+          "C": 82.44,
+          "H": 73.15
+        },
+        "rgb_hex": "#ffa500"
+      },
+      {
+        "source": "ward_cognition_2006",
+        "color_name": "Cyan (inferred)",
+        "lab": {
+          "L": 91.1,
+          "a": -48.1,
+          "b": -14.1,
+          "notes": "Inferred; LAB from sRGB #00ffff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 91.1,
+          "C": 50.12,
+          "H": 196.34
+        },
+        "rgb_hex": "#00ffff"
+      },
+      {
+        "source": "helmholtz_1867",
+        "color_name": "Violet",
+        "lab": {
+          "L": 32.6,
+          "a": 62.6,
+          "b": -38.7,
+          "notes": "Converted from sRGB #8b008b via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 32.6,
+          "C": 73.6,
+          "H": 328.28
+        },
+        "rgb_hex": "#8b008b"
+      },
+      {
+        "source": "field_1835",
+        "color_name": "Green",
+        "lab": {
+          "L": 50.6,
+          "a": -49.6,
+          "b": 45.0,
+          "notes": "Converted from sRGB #228b22 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 50.6,
+          "C": 66.97,
+          "H": 137.78
+        },
+        "rgb_hex": "#228b22"
+      },
+      {
+        "source": "finn_1881",
+        "color_name": "Green",
+        "lab": {
+          "L": 50.6,
+          "a": -49.6,
+          "b": 45.0,
+          "notes": "Converted from sRGB #228b22 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 50.6,
+          "C": 66.97,
+          "H": 137.78
+        },
+        "rgb_hex": "#228b22"
+      },
+      {
+        "source": "lind_1900",
+        "color_name": "Green",
+        "lab": {
+          "L": 50.6,
+          "a": -49.6,
+          "b": 45.0,
+          "notes": "Converted from sRGB #228b22 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 50.6,
+          "C": 66.97,
+          "H": 137.78
+        },
+        "rgb_hex": "#228b22"
+      },
+      {
+        "source": "maryon_c1920",
+        "color_name": "Yellow-green",
+        "lab": {
+          "L": 76.5,
+          "a": -38.0,
+          "b": 66.6,
+          "notes": "Converted from sRGB #9acd32 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 76.5,
+          "C": 76.68,
+          "H": 119.71
+        },
+        "rgb_hex": "#9acd32"
+      },
+      {
+        "source": "rimsky_korsakov",
+        "color_name": "Green",
+        "lab": {
+          "L": 50.6,
+          "a": -49.6,
+          "b": 45.0,
+          "notes": "Converted from sRGB #228b22 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 50.6,
+          "C": 66.97,
+          "H": 137.78
+        },
+        "rgb_hex": "#228b22"
+      },
+      {
+        "source": "wells_1980",
+        "color_name": "Hue 150\u00b0",
+        "lab": {
+          "L": 88.5,
+          "a": -76.7,
+          "b": 46.6,
+          "notes": "Converted from sRGB #00ff80 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 88.5,
+          "C": 89.75,
+          "H": 148.72
+        },
+        "rgb_hex": "#00ff80"
+      },
+      {
+        "source": "pridmore_1992",
+        "color_name": "Hue 330\u00b0",
+        "lab": {
+          "L": 54.9,
+          "a": 84.5,
+          "b": 4.1,
+          "notes": "Converted from sRGB #ff0080 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 54.9,
+          "C": 84.6,
+          "H": 2.78
+        },
+        "rgb_hex": "#ff0080"
+      }
+    ],
+    "coverage": "15/15",
+    "mean_lab": {
+      "L": 67.41,
+      "a": -19.74,
+      "b": 39.99
+    },
+    "mean_lch": {
+      "L": 67.41,
+      "C": 75.21,
+      "H": 121.48
+    },
+    "std_dev_lab": {
+      "L": 19.38,
+      "a": 51.05,
+      "b": 35.0
+    },
+    "hue_std_circular_deg": 59.32,
+    "lab_variance_magnitude": 64.86,
+    "mean_delta_e_ciede2000": 45.54,
+    "agreement_score": 0.21,
+    "agreement_score_formula": "agreement_score = 1 / (1 + mean_delta_e_ciede2000 / 12); perceptual (CIEDE2000). Legacy: agreement_score_lab from LAB variance.",
+    "agreement_score_lab": 0.28,
+    "consensus_assessment": "low (sources strongly disagree)",
+    "observations": "15 source(s) map this pitch; mean CIEDE2000 45.5; hue std 59.3 deg. Colors perceptually distinct."
+  },
+  {
+    "pitch_class": "F#",
+    "frequency_hz": 369.99,
+    "semitone_from_c": 6,
+    "octave_position": 0.5,
+    "sources_with_mappings": [
+      "rimington_1912",
+      "soundmap_contemporary",
+      "field_1835",
+      "castel_1740",
+      "scriabin_primary",
+      "finn_1881",
+      "maryon_c1920",
+      "lind_1900",
+      "rimsky_korsakov",
+      "wells_1980",
+      "helmholtz_1867",
+      "pridmore_1992"
+    ],
+    "num_sources_mapping": 12,
+    "assignments": [
+      {
+        "source": "scriabin_primary",
+        "color_name": "Bright Blue",
+        "lab": {
+          "L": 47.8,
+          "a": 26.3,
+          "b": -65.3,
+          "notes": "Converted from sRGB #4169e1 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 47.8,
+          "C": 70.4,
+          "H": 291.94
+        },
+        "rgb_hex": "#4169e1"
+      },
+      {
+        "source": "rimington_1912",
+        "color_name": "Green",
+        "lab": {
+          "L": 51.5,
+          "a": -39.7,
+          "b": 20.1,
+          "notes": "Converted from sRGB #2e8b57 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 51.5,
+          "C": 44.5,
+          "H": 153.15
+        },
+        "rgb_hex": "#2e8b57"
+      },
+      {
+        "source": "soundmap_contemporary",
+        "color_name": "Yellow",
+        "lab": {
+          "L": 92.0,
+          "a": -19.3,
+          "b": 90.2,
+          "notes": "Converted from sRGB #f2ef00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 92.0,
+          "C": 92.24,
+          "H": 102.08
+        },
+        "rgb_hex": "#f2ef00"
+      },
+      {
+        "source": "castel_1740",
+        "color_name": "Red-orange",
+        "lab": {
+          "L": 57.6,
+          "a": 67.8,
+          "b": 69.0,
+          "notes": "Converted from sRGB #ff4500 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 57.6,
+          "C": 96.74,
+          "H": 45.5
+        },
+        "rgb_hex": "#ff4500"
+      },
+      {
+        "source": "helmholtz_1867",
+        "color_name": "Ultra-violet",
+        "lab": {
+          "L": 20.5,
+          "a": 51.7,
+          "b": -53.3,
+          "notes": "Converted from sRGB #4b0082 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 20.5,
+          "C": 74.25,
+          "H": 314.13
+        },
+        "rgb_hex": "#4b0082"
+      },
+      {
+        "source": "field_1835",
+        "color_name": "Cyan-green",
+        "lab": {
+          "L": 65.8,
+          "a": -37.5,
+          "b": -6.3,
+          "notes": "Converted from sRGB #20b2aa via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 65.8,
+          "C": 38.03,
+          "H": 189.54
+        },
+        "rgb_hex": "#20b2aa"
+      },
+      {
+        "source": "finn_1881",
+        "color_name": "Orange",
+        "lab": {
+          "L": 69.5,
+          "a": 36.8,
+          "b": 75.5,
+          "notes": "Converted from sRGB #ff8c00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 69.5,
+          "C": 83.99,
+          "H": 64.01
+        },
+        "rgb_hex": "#ff8c00"
+      },
+      {
+        "source": "lind_1900",
+        "color_name": "Green-blue",
+        "lab": {
+          "L": 65.8,
+          "a": -37.5,
+          "b": -6.3,
+          "notes": "Converted from sRGB #20b2aa via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 65.8,
+          "C": 38.03,
+          "H": 189.54
+        },
+        "rgb_hex": "#20b2aa"
+      },
+      {
+        "source": "maryon_c1920",
+        "color_name": "Green",
+        "lab": {
+          "L": 50.6,
+          "a": -49.6,
+          "b": 45.0,
+          "notes": "Converted from sRGB #228b22 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 50.6,
+          "C": 66.97,
+          "H": 137.78
+        },
+        "rgb_hex": "#228b22"
+      },
+      {
+        "source": "rimsky_korsakov",
+        "color_name": "Greyish-green",
+        "lab": {
+          "L": 42.2,
+          "a": -18.8,
+          "b": 30.6,
+          "notes": "Converted from sRGB #556b2f via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 42.2,
+          "C": 35.91,
+          "H": 121.57
+        },
+        "rgb_hex": "#556b2f"
+      },
+      {
+        "source": "wells_1980",
+        "color_name": "Hue 180\u00b0",
+        "lab": {
+          "L": 91.1,
+          "a": -48.1,
+          "b": -14.1,
+          "notes": "Converted from sRGB #00ffff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 91.1,
+          "C": 50.12,
+          "H": 196.34
+        },
+        "rgb_hex": "#00ffff"
+      },
+      {
+        "source": "pridmore_1992",
+        "color_name": "Hue 0\u00b0",
+        "lab": {
+          "L": 53.2,
+          "a": 80.1,
+          "b": 67.2,
+          "notes": "Converted from sRGB #ff0000 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 53.2,
+          "C": 104.56,
+          "H": 40.0
+        },
+        "rgb_hex": "#ff0000"
+      }
+    ],
+    "coverage": "12/15",
+    "mean_lab": {
+      "L": 58.97,
+      "a": 1.02,
+      "b": 21.03
+    },
+    "mean_lch": {
+      "L": 58.97,
+      "C": 66.31,
+      "H": 128.21
+    },
+    "std_dev_lab": {
+      "L": 19.09,
+      "a": 46.19,
+      "b": 48.78
+    },
+    "hue_std_circular_deg": 87.34,
+    "lab_variance_magnitude": 69.84,
+    "mean_delta_e_ciede2000": 46.59,
+    "agreement_score": 0.2,
+    "agreement_score_formula": "agreement_score = 1 / (1 + mean_delta_e_ciede2000 / 12); perceptual (CIEDE2000). Legacy: agreement_score_lab from LAB variance.",
+    "agreement_score_lab": 0.26,
+    "consensus_assessment": "low (sources strongly disagree)",
+    "observations": "12 source(s) map this pitch; mean CIEDE2000 46.6; hue std 87.3 deg. Colors perceptually distinct."
+  },
+  {
+    "pitch_class": "G",
+    "frequency_hz": 392.0,
+    "semitone_from_c": 7,
+    "octave_position": 0.58,
+    "sources_with_mappings": [
+      "rimington_1912",
+      "soundmap_contemporary",
+      "field_1835",
+      "newton_optics",
+      "castel_1740",
+      "scriabin_primary",
+      "synesthesia_nature_2017",
+      "finn_1881",
+      "maryon_c1920",
+      "lind_1900",
+      "rimsky_korsakov",
+      "wells_1980",
+      "helmholtz_1867",
+      "pridmore_1992",
+      "ward_cognition_2006"
+    ],
+    "num_sources_mapping": 15,
+    "assignments": [
+      {
+        "source": "scriabin_primary",
+        "color_name": "Orange",
+        "lab": {
+          "L": 74.9,
+          "a": 23.9,
+          "b": 78.9,
+          "notes": "Converted from sRGB #ffa500 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 74.9,
+          "C": 82.44,
+          "H": 73.15
+        },
+        "rgb_hex": "#ffa500"
+      },
+      {
+        "source": "newton_optics",
+        "color_name": "Green",
+        "lab": {
+          "L": 87.7,
+          "a": -86.2,
+          "b": 83.2,
+          "notes": "Converted from sRGB #00ff00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 87.7,
+          "C": 119.8,
+          "H": 136.01
+        },
+        "rgb_hex": "#00ff00"
+      },
+      {
+        "source": "rimington_1912",
+        "color_name": "Bluish green",
+        "lab": {
+          "L": 65.8,
+          "a": -37.5,
+          "b": -6.3,
+          "notes": "Converted from sRGB #20b2aa (light sea green) via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 65.8,
+          "C": 38.03,
+          "H": 189.54
+        },
+        "rgb_hex": "#20b2aa"
+      },
+      {
+        "source": "synesthesia_nature_2017",
+        "color_name": "Blue (intermediate)",
+        "lab": {
+          "L": 32.3,
+          "a": 79.2,
+          "b": -107.9,
+          "notes": "Converted from sRGB #0000ff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 32.3,
+          "C": 133.85,
+          "H": 306.28
+        },
+        "rgb_hex": "#0000ff"
+      },
+      {
+        "source": "soundmap_contemporary",
+        "color_name": "Orange",
+        "lab": {
+          "L": 78.9,
+          "a": 15.1,
+          "b": 80.9,
+          "notes": "Converted from sRGB #ffb607 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 78.9,
+          "C": 82.3,
+          "H": 79.43
+        },
+        "rgb_hex": "#ffb607"
+      },
+      {
+        "source": "castel_1740",
+        "color_name": "Red",
+        "lab": {
+          "L": 53.2,
+          "a": 80.1,
+          "b": 67.2,
+          "notes": "Converted from sRGB #ff0000 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 53.2,
+          "C": 104.56,
+          "H": 40.0
+        },
+        "rgb_hex": "#ff0000"
+      },
+      {
+        "source": "ward_cognition_2006",
+        "color_name": "Blue (inferred)",
+        "lab": {
+          "L": 32.3,
+          "a": 79.2,
+          "b": -107.9,
+          "notes": "Inferred; LAB from sRGB #0000ff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 32.3,
+          "C": 133.85,
+          "H": 306.28
+        },
+        "rgb_hex": "#0000ff"
+      },
+      {
+        "source": "helmholtz_1867",
+        "color_name": "Red",
+        "lab": {
+          "L": 49.0,
+          "a": 71.8,
+          "b": 54.7,
+          "notes": "Converted from sRGB #e61919 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 49.0,
+          "C": 90.26,
+          "H": 37.3
+        },
+        "rgb_hex": "#e61919"
+      },
+      {
+        "source": "field_1835",
+        "color_name": "Blue",
+        "lab": {
+          "L": 59.4,
+          "a": 10.0,
+          "b": -63.4,
+          "notes": "Converted from sRGB #1e90ff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 59.4,
+          "C": 64.18,
+          "H": 278.96
+        },
+        "rgb_hex": "#1e90ff"
+      },
+      {
+        "source": "finn_1881",
+        "color_name": "Turquoise blue",
+        "lab": {
+          "L": 81.3,
+          "a": -44.1,
+          "b": -4.0,
+          "notes": "Converted from sRGB #40e0d0 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 81.3,
+          "C": 44.28,
+          "H": 185.18
+        },
+        "rgb_hex": "#40e0d0"
+      },
+      {
+        "source": "lind_1900",
+        "color_name": "Blue",
+        "lab": {
+          "L": 59.4,
+          "a": 10.0,
+          "b": -63.4,
+          "notes": "Converted from sRGB #1e90ff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 59.4,
+          "C": 64.18,
+          "H": 278.96
+        },
+        "rgb_hex": "#1e90ff"
+      },
+      {
+        "source": "maryon_c1920",
+        "color_name": "Blue-green",
+        "lab": {
+          "L": 52.2,
+          "a": -30.6,
+          "b": -9.0,
+          "notes": "Converted from sRGB #008b8b via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 52.2,
+          "C": 31.9,
+          "H": 196.39
+        },
+        "rgb_hex": "#008b8b"
+      },
+      {
+        "source": "rimsky_korsakov",
+        "color_name": "Brownish-gold",
+        "lab": {
+          "L": 70.8,
+          "a": 8.5,
+          "b": 68.8,
+          "notes": "Converted from sRGB #daa520 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 70.8,
+          "C": 69.32,
+          "H": 82.96
+        },
+        "rgb_hex": "#daa520"
+      },
+      {
+        "source": "wells_1980",
+        "color_name": "Hue 210\u00b0",
+        "lab": {
+          "L": 54.7,
+          "a": 18.8,
+          "b": -70.9,
+          "notes": "Converted from sRGB #0080ff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 54.7,
+          "C": 73.35,
+          "H": 284.85
+        },
+        "rgb_hex": "#0080ff"
+      },
+      {
+        "source": "pridmore_1992",
+        "color_name": "Hue 30\u00b0",
+        "lab": {
+          "L": 67.1,
+          "a": 42.8,
+          "b": 74.0,
+          "notes": "Converted from sRGB #ff8000 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 67.1,
+          "C": 85.49,
+          "H": 59.96
+        },
+        "rgb_hex": "#ff8000"
+      }
+    ],
+    "coverage": "15/15",
+    "mean_lab": {
+      "L": 61.27,
+      "a": 16.07,
+      "b": 4.99
+    },
+    "mean_lch": {
+      "L": 61.27,
+      "C": 81.19,
+      "H": 40.93
+    },
+    "std_dev_lab": {
+      "L": 15.85,
+      "a": 48.46,
+      "b": 70.01
+    },
+    "hue_std_circular_deg": 133.58,
+    "lab_variance_magnitude": 86.61,
+    "mean_delta_e_ciede2000": 46.17,
+    "agreement_score": 0.21,
+    "agreement_score_formula": "agreement_score = 1 / (1 + mean_delta_e_ciede2000 / 12); perceptual (CIEDE2000). Legacy: agreement_score_lab from LAB variance.",
+    "agreement_score_lab": 0.22,
+    "consensus_assessment": "low (sources strongly disagree)",
+    "observations": "15 source(s) map this pitch; mean CIEDE2000 46.2; hue std 133.6 deg. Colors perceptually distinct."
+  },
+  {
+    "pitch_class": "G#",
+    "frequency_hz": 415.3,
+    "semitone_from_c": 8,
+    "octave_position": 0.67,
+    "sources_with_mappings": [
+      "rimington_1912",
+      "soundmap_contemporary",
+      "field_1835",
+      "castel_1740",
+      "scriabin_primary",
+      "finn_1881",
+      "maryon_c1920",
+      "lind_1900",
+      "rimsky_korsakov",
+      "wells_1980",
+      "helmholtz_1867",
+      "pridmore_1992"
+    ],
+    "num_sources_mapping": 12,
+    "assignments": [
+      {
+        "source": "scriabin_primary",
+        "color_name": "Purple / Lilac",
+        "lab": {
+          "L": 55.0,
+          "a": 36.8,
+          "b": -50.1,
+          "notes": "Converted from sRGB #9370db via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 55.0,
+          "C": 62.16,
+          "H": 306.3
+        },
+        "rgb_hex": "#9370db"
+      },
+      {
+        "source": "rimington_1912",
+        "color_name": "Blue-green",
+        "lab": {
+          "L": 52.2,
+          "a": -30.6,
+          "b": -9.0,
+          "notes": "Converted from sRGB #008b8b (dark cyan) via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 52.2,
+          "C": 31.9,
+          "H": 196.39
+        },
+        "rgb_hex": "#008b8b"
+      },
+      {
+        "source": "soundmap_contemporary",
+        "color_name": "Dark Orange",
+        "lab": {
+          "L": 64.4,
+          "a": 48.7,
+          "b": 72.1,
+          "notes": "Converted from sRGB #fe7302 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 64.4,
+          "C": 87.01,
+          "H": 55.96
+        },
+        "rgb_hex": "#fe7302"
+      },
+      {
+        "source": "castel_1740",
+        "color_name": "Crimson / purple-red",
+        "lab": {
+          "L": 47.0,
+          "a": 70.9,
+          "b": 33.6,
+          "notes": "Converted from sRGB #dc143c via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 47.0,
+          "C": 78.46,
+          "H": 25.36
+        },
+        "rgb_hex": "#dc143c"
+      },
+      {
+        "source": "helmholtz_1867",
+        "color_name": "Red",
+        "lab": {
+          "L": 49.0,
+          "a": 71.8,
+          "b": 54.7,
+          "notes": "Converted from sRGB #e61919 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 49.0,
+          "C": 90.26,
+          "H": 37.3
+        },
+        "rgb_hex": "#e61919"
+      },
+      {
+        "source": "field_1835",
+        "color_name": "Blue",
+        "lab": {
+          "L": 59.4,
+          "a": 10.0,
+          "b": -63.4,
+          "notes": "Converted from sRGB #1e90ff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 59.4,
+          "C": 64.18,
+          "H": 278.96
+        },
+        "rgb_hex": "#1e90ff"
+      },
+      {
+        "source": "finn_1881",
+        "color_name": "Crimson",
+        "lab": {
+          "L": 47.0,
+          "a": 70.9,
+          "b": 33.6,
+          "notes": "Converted from sRGB #dc143c via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 47.0,
+          "C": 78.46,
+          "H": 25.36
+        },
+        "rgb_hex": "#dc143c"
+      },
+      {
+        "source": "lind_1900",
+        "color_name": "Blue-indigo",
+        "lab": {
+          "L": 47.8,
+          "a": 26.3,
+          "b": -65.3,
+          "notes": "Converted from sRGB #4169e1 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 47.8,
+          "C": 70.4,
+          "H": 291.94
+        },
+        "rgb_hex": "#4169e1"
+      },
+      {
+        "source": "maryon_c1920",
+        "color_name": "Blue",
+        "lab": {
+          "L": 59.4,
+          "a": 10.0,
+          "b": -63.4,
+          "notes": "Converted from sRGB #1e90ff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 59.4,
+          "C": 64.18,
+          "H": 278.96
+        },
+        "rgb_hex": "#1e90ff"
+      },
+      {
+        "source": "rimsky_korsakov",
+        "color_name": "Greyish-violet",
+        "lab": {
+          "L": 55.0,
+          "a": 36.8,
+          "b": -50.1,
+          "notes": "Converted from sRGB #9370db via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 55.0,
+          "C": 62.16,
+          "H": 306.3
+        },
+        "rgb_hex": "#9370db"
+      },
+      {
+        "source": "wells_1980",
+        "color_name": "Hue 240\u00b0",
+        "lab": {
+          "L": 32.3,
+          "a": 79.2,
+          "b": -107.9,
+          "notes": "Converted from sRGB #0000ff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 32.3,
+          "C": 133.85,
+          "H": 306.28
+        },
+        "rgb_hex": "#0000ff"
+      },
+      {
+        "source": "pridmore_1992",
+        "color_name": "Hue 60\u00b0",
+        "lab": {
+          "L": 97.1,
+          "a": -21.6,
+          "b": 94.5,
+          "notes": "Converted from sRGB #ffff00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 97.1,
+          "C": 96.94,
+          "H": 102.88
+        },
+        "rgb_hex": "#ffff00"
+      }
+    ],
+    "coverage": "12/15",
+    "mean_lab": {
+      "L": 55.47,
+      "a": 34.1,
+      "b": -10.06
+    },
+    "mean_lch": {
+      "L": 55.47,
+      "C": 76.66,
+      "H": 332.24
+    },
+    "std_dev_lab": {
+      "L": 14.82,
+      "a": 35.24,
+      "b": 62.72
+    },
+    "hue_std_circular_deg": 75.65,
+    "lab_variance_magnitude": 73.45,
+    "mean_delta_e_ciede2000": 41.53,
+    "agreement_score": 0.22,
+    "agreement_score_formula": "agreement_score = 1 / (1 + mean_delta_e_ciede2000 / 12); perceptual (CIEDE2000). Legacy: agreement_score_lab from LAB variance.",
+    "agreement_score_lab": 0.25,
+    "consensus_assessment": "low (sources strongly disagree)",
+    "observations": "12 source(s) map this pitch; mean CIEDE2000 41.5; hue std 75.7 deg. Colors perceptually distinct."
+  },
+  {
+    "pitch_class": "A",
+    "frequency_hz": 440.0,
+    "semitone_from_c": 9,
+    "octave_position": 0.75,
+    "sources_with_mappings": [
+      "rimington_1912",
+      "soundmap_contemporary",
+      "field_1835",
+      "newton_optics",
+      "castel_1740",
+      "scriabin_primary",
+      "synesthesia_nature_2017",
+      "finn_1881",
+      "maryon_c1920",
+      "lind_1900",
+      "rimsky_korsakov",
+      "wells_1980",
+      "helmholtz_1867",
+      "pridmore_1992",
+      "ward_cognition_2006"
+    ],
+    "num_sources_mapping": 15,
+    "assignments": [
+      {
+        "source": "scriabin_primary",
+        "color_name": "Green",
+        "lab": {
+          "L": 50.6,
+          "a": -49.6,
+          "b": 45.0,
+          "notes": "Converted from sRGB #228b22 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 50.6,
+          "C": 66.97,
+          "H": 137.78
+        },
+        "rgb_hex": "#228b22"
+      },
+      {
+        "source": "newton_optics",
+        "color_name": "Blue",
+        "lab": {
+          "L": 32.3,
+          "a": 79.2,
+          "b": -107.9,
+          "notes": "Converted from sRGB #0000ff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 32.3,
+          "C": 133.85,
+          "H": 306.28
+        },
+        "rgb_hex": "#0000ff"
+      },
+      {
+        "source": "rimington_1912",
+        "color_name": "Indigo",
+        "lab": {
+          "L": 20.5,
+          "a": 51.7,
+          "b": -53.3,
+          "notes": "Converted from sRGB #4b0082 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 20.5,
+          "C": 74.25,
+          "H": 314.13
+        },
+        "rgb_hex": "#4b0082"
+      },
+      {
+        "source": "synesthesia_nature_2017",
+        "color_name": "Indigo (intermediate)",
+        "lab": {
+          "L": 20.5,
+          "a": 51.7,
+          "b": -53.3,
+          "notes": "Converted from sRGB #4b0082 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 20.5,
+          "C": 74.25,
+          "H": 314.13
+        },
+        "rgb_hex": "#4b0082"
+      },
+      {
+        "source": "soundmap_contemporary",
+        "color_name": "Red",
+        "lab": {
+          "L": 57.9,
+          "a": 65.3,
+          "b": 37.9,
+          "notes": "Converted from sRGB #f94c4d via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 57.9,
+          "C": 75.5,
+          "H": 30.13
+        },
+        "rgb_hex": "#f94c4d"
+      },
+      {
+        "source": "castel_1740",
+        "color_name": "Purple",
+        "lab": {
+          "L": 32.6,
+          "a": 62.6,
+          "b": -38.7,
+          "notes": "Converted from sRGB #8b008b via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 32.6,
+          "C": 73.6,
+          "H": 328.28
+        },
+        "rgb_hex": "#8b008b"
+      },
+      {
+        "source": "ward_cognition_2006",
+        "color_name": "Violet (inferred)",
+        "lab": {
+          "L": 69.7,
+          "a": 56.4,
+          "b": -36.8,
+          "notes": "Inferred; LAB from sRGB #ee82ee via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 69.7,
+          "C": 67.34,
+          "H": 326.88
+        },
+        "rgb_hex": "#ee82ee"
+      },
+      {
+        "source": "helmholtz_1867",
+        "color_name": "Red",
+        "lab": {
+          "L": 49.0,
+          "a": 71.8,
+          "b": 54.7,
+          "notes": "Converted from sRGB #e61919 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 49.0,
+          "C": 90.26,
+          "H": 37.3
+        },
+        "rgb_hex": "#e61919"
+      },
+      {
+        "source": "field_1835",
+        "color_name": "Indigo",
+        "lab": {
+          "L": 20.5,
+          "a": 51.7,
+          "b": -53.3,
+          "notes": "Converted from sRGB #4b0082 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 20.5,
+          "C": 74.25,
+          "H": 314.13
+        },
+        "rgb_hex": "#4b0082"
+      },
+      {
+        "source": "finn_1881",
+        "color_name": "Indigo",
+        "lab": {
+          "L": 20.5,
+          "a": 51.7,
+          "b": -53.3,
+          "notes": "Converted from sRGB #4b0082 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 20.5,
+          "C": 74.25,
+          "H": 314.13
+        },
+        "rgb_hex": "#4b0082"
+      },
+      {
+        "source": "lind_1900",
+        "color_name": "Indigo",
+        "lab": {
+          "L": 20.5,
+          "a": 51.7,
+          "b": -53.3,
+          "notes": "Converted from sRGB #4b0082 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 20.5,
+          "C": 74.25,
+          "H": 314.13
+        },
+        "rgb_hex": "#4b0082"
+      },
+      {
+        "source": "maryon_c1920",
+        "color_name": "Blue-violet",
+        "lab": {
+          "L": 42.2,
+          "a": 69.8,
+          "b": -74.8,
+          "notes": "Converted from sRGB #8a2be2 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 42.2,
+          "C": 102.31,
+          "H": 313.02
+        },
+        "rgb_hex": "#8a2be2"
+      },
+      {
+        "source": "rimsky_korsakov",
+        "color_name": "Pink",
+        "lab": {
+          "L": 83.6,
+          "a": 24.1,
+          "b": 3.3,
+          "notes": "Converted from sRGB #ffc0cb via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 83.6,
+          "C": 24.32,
+          "H": 7.8
+        },
+        "rgb_hex": "#ffc0cb"
+      },
+      {
+        "source": "wells_1980",
+        "color_name": "Hue 270\u00b0",
+        "lab": {
+          "L": 40.9,
+          "a": 83.2,
+          "b": -93.3,
+          "notes": "Converted from sRGB #8000ff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 40.9,
+          "C": 125.01,
+          "H": 311.72
+        },
+        "rgb_hex": "#8000ff"
+      },
+      {
+        "source": "pridmore_1992",
+        "color_name": "Hue 90\u00b0",
+        "lab": {
+          "L": 89.9,
+          "a": -67.8,
+          "b": 85.8,
+          "notes": "Converted from sRGB #80ff00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 89.9,
+          "C": 109.35,
+          "H": 128.32
+        },
+        "rgb_hex": "#80ff00"
+      }
+    ],
+    "coverage": "15/15",
+    "mean_lab": {
+      "L": 43.41,
+      "a": 43.57,
+      "b": -26.09
+    },
+    "mean_lch": {
+      "L": 43.41,
+      "C": 82.65,
+      "H": 333.19
+    },
+    "std_dev_lab": {
+      "L": 22.56,
+      "a": 42.52,
+      "b": 55.75
+    },
+    "hue_std_circular_deg": 55.32,
+    "lab_variance_magnitude": 73.65,
+    "mean_delta_e_ciede2000": 42.53,
+    "agreement_score": 0.22,
+    "agreement_score_formula": "agreement_score = 1 / (1 + mean_delta_e_ciede2000 / 12); perceptual (CIEDE2000). Legacy: agreement_score_lab from LAB variance.",
+    "agreement_score_lab": 0.25,
+    "consensus_assessment": "low (sources strongly disagree)",
+    "observations": "15 source(s) map this pitch; mean CIEDE2000 42.5; hue std 55.3 deg. Colors perceptually distinct."
+  },
+  {
+    "pitch_class": "A#",
+    "frequency_hz": 466.16,
+    "semitone_from_c": 10,
+    "octave_position": 0.83,
+    "sources_with_mappings": [
+      "rimington_1912",
+      "soundmap_contemporary",
+      "field_1835",
+      "castel_1740",
+      "scriabin_primary",
+      "finn_1881",
+      "maryon_c1920",
+      "lind_1900",
+      "rimsky_korsakov",
+      "wells_1980",
+      "helmholtz_1867",
+      "pridmore_1992"
+    ],
+    "num_sources_mapping": 12,
+    "assignments": [
+      {
+        "source": "scriabin_primary",
+        "color_name": "Rose / Steel",
+        "lab": {
+          "L": 44.8,
+          "a": 71.0,
+          "b": -15.2,
+          "notes": "Converted from sRGB #c71585 (rose) via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 44.8,
+          "C": 72.61,
+          "H": 347.92
+        },
+        "rgb_hex": "#c71585"
+      },
+      {
+        "source": "rimington_1912",
+        "color_name": "Deep blue",
+        "lab": {
+          "L": 15.9,
+          "a": 31.7,
+          "b": -49.6,
+          "notes": "Converted from sRGB #191970 (midnight blue) via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 15.9,
+          "C": 58.86,
+          "H": 302.58
+        },
+        "rgb_hex": "#191970"
+      },
+      {
+        "source": "soundmap_contemporary",
+        "color_name": "Pink",
+        "lab": {
+          "L": 61.9,
+          "a": 61.2,
+          "b": 5.2,
+          "notes": "Converted from sRGB #f7618f via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 61.9,
+          "C": 61.42,
+          "H": 4.86
+        },
+        "rgb_hex": "#f7618f"
+      },
+      {
+        "source": "castel_1740",
+        "color_name": "Violet",
+        "lab": {
+          "L": 20.5,
+          "a": 51.7,
+          "b": -53.3,
+          "notes": "Converted from sRGB #4b0082 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 20.5,
+          "C": 74.25,
+          "H": 314.13
+        },
+        "rgb_hex": "#4b0082"
+      },
+      {
+        "source": "helmholtz_1867",
+        "color_name": "Orange-red",
+        "lab": {
+          "L": 57.6,
+          "a": 67.8,
+          "b": 69.0,
+          "notes": "Converted from sRGB #ff4500 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 57.6,
+          "C": 96.74,
+          "H": 45.5
+        },
+        "rgb_hex": "#ff4500"
+      },
+      {
+        "source": "field_1835",
+        "color_name": "Violet",
+        "lab": {
+          "L": 32.6,
+          "a": 62.6,
+          "b": -38.7,
+          "notes": "Converted from sRGB #8b008b via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 32.6,
+          "C": 73.6,
+          "H": 328.28
+        },
+        "rgb_hex": "#8b008b"
+      },
+      {
+        "source": "finn_1881",
+        "color_name": "Agate / blue-violet",
+        "lab": {
+          "L": 42.2,
+          "a": 69.8,
+          "b": -74.8,
+          "notes": "Converted from sRGB #8a2be2 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 42.2,
+          "C": 102.31,
+          "H": 313.02
+        },
+        "rgb_hex": "#8a2be2"
+      },
+      {
+        "source": "lind_1900",
+        "color_name": "Indigo-violet",
+        "lab": {
+          "L": 45.3,
+          "a": 36.0,
+          "b": -57.8,
+          "notes": "Converted from sRGB #6a5acd via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 45.3,
+          "C": 68.09,
+          "H": 301.92
+        },
+        "rgb_hex": "#6a5acd"
+      },
+      {
+        "source": "maryon_c1920",
+        "color_name": "Violet",
+        "lab": {
+          "L": 32.6,
+          "a": 62.6,
+          "b": -38.7,
+          "notes": "Converted from sRGB #8b008b via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 32.6,
+          "C": 73.6,
+          "H": 328.28
+        },
+        "rgb_hex": "#8b008b"
+      },
+      {
+        "source": "rimsky_korsakov",
+        "color_name": "Darkish",
+        "lab": {
+          "L": 19.4,
+          "a": -0.0,
+          "b": 0.0,
+          "notes": "Converted from sRGB #2f2f2f via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 19.4,
+          "C": 0.0,
+          "H": 180.0
+        },
+        "rgb_hex": "#2f2f2f"
+      },
+      {
+        "source": "wells_1980",
+        "color_name": "Hue 300\u00b0",
+        "lab": {
+          "L": 60.3,
+          "a": 98.2,
+          "b": -60.8,
+          "notes": "Converted from sRGB #ff00ff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 60.3,
+          "C": 115.5,
+          "H": 328.24
+        },
+        "rgb_hex": "#ff00ff"
+      },
+      {
+        "source": "pridmore_1992",
+        "color_name": "Hue 120\u00b0",
+        "lab": {
+          "L": 87.7,
+          "a": -86.2,
+          "b": 83.2,
+          "notes": "Converted from sRGB #00ff00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 87.7,
+          "C": 119.8,
+          "H": 136.01
+        },
+        "rgb_hex": "#00ff00"
+      }
+    ],
+    "coverage": "12/15",
+    "mean_lab": {
+      "L": 43.4,
+      "a": 43.87,
+      "b": -19.29
+    },
+    "mean_lch": {
+      "L": 43.4,
+      "C": 76.4,
+      "H": 330.01
+    },
+    "std_dev_lab": {
+      "L": 20.18,
+      "a": 45.69,
+      "b": 48.65
+    },
+    "hue_std_circular_deg": 60.49,
+    "lab_variance_magnitude": 69.73,
+    "mean_delta_e_ciede2000": 39.59,
+    "agreement_score": 0.23,
+    "agreement_score_formula": "agreement_score = 1 / (1 + mean_delta_e_ciede2000 / 12); perceptual (CIEDE2000). Legacy: agreement_score_lab from LAB variance.",
+    "agreement_score_lab": 0.26,
+    "consensus_assessment": "low (sources strongly disagree)",
+    "observations": "12 source(s) map this pitch; mean CIEDE2000 39.6; hue std 60.5 deg. Colors perceptually distinct."
+  },
+  {
+    "pitch_class": "B",
+    "frequency_hz": 493.88,
+    "semitone_from_c": 11,
+    "octave_position": 0.92,
+    "sources_with_mappings": [
+      "rimington_1912",
+      "soundmap_contemporary",
+      "field_1835",
+      "newton_optics",
+      "castel_1740",
+      "scriabin_primary",
+      "synesthesia_nature_2017",
+      "finn_1881",
+      "maryon_c1920",
+      "lind_1900",
+      "rimsky_korsakov",
+      "wells_1980",
+      "helmholtz_1867",
+      "pridmore_1992",
+      "ward_cognition_2006"
+    ],
+    "num_sources_mapping": 15,
+    "assignments": [
+      {
+        "source": "scriabin_primary",
+        "color_name": "Blue",
+        "lab": {
+          "L": 32.3,
+          "a": 79.2,
+          "b": -107.9,
+          "notes": "Converted from sRGB #0000ff via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 32.3,
+          "C": 133.85,
+          "H": 306.28
+        },
+        "rgb_hex": "#0000ff"
+      },
+      {
+        "source": "newton_optics",
+        "color_name": "Indigo",
+        "lab": {
+          "L": 20.5,
+          "a": 51.7,
+          "b": -53.3,
+          "notes": "Converted from sRGB #4b0082 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 20.5,
+          "C": 74.25,
+          "H": 314.13
+        },
+        "rgb_hex": "#4b0082"
+      },
+      {
+        "source": "rimington_1912",
+        "color_name": "Violet",
+        "lab": {
+          "L": 32.6,
+          "a": 62.6,
+          "b": -38.7,
+          "notes": "Converted from sRGB #8b008b via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 32.6,
+          "C": 73.6,
+          "H": 328.28
+        },
+        "rgb_hex": "#8b008b"
+      },
+      {
+        "source": "synesthesia_nature_2017",
+        "color_name": "Violet",
+        "lab": {
+          "L": 69.7,
+          "a": 56.4,
+          "b": -36.8,
+          "notes": "Converted from sRGB #ee82ee via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 69.7,
+          "C": 67.34,
+          "H": 326.88
+        },
+        "rgb_hex": "#ee82ee"
+      },
+      {
+        "source": "soundmap_contemporary",
+        "color_name": "Magenta",
+        "lab": {
+          "L": 56.8,
+          "a": 60.8,
+          "b": -30.2,
+          "notes": "Converted from sRGB #d458be via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 56.8,
+          "C": 67.89,
+          "H": 333.59
+        },
+        "rgb_hex": "#d458be"
+      },
+      {
+        "source": "castel_1740",
+        "color_name": "Blue-violet",
+        "lab": {
+          "L": 47.8,
+          "a": 26.3,
+          "b": -65.3,
+          "notes": "Converted from sRGB #4169e1 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 47.8,
+          "C": 70.4,
+          "H": 291.94
+        },
+        "rgb_hex": "#4169e1"
+      },
+      {
+        "source": "ward_cognition_2006",
+        "color_name": "Violet (inferred)",
+        "lab": {
+          "L": 69.7,
+          "a": 56.4,
+          "b": -36.8,
+          "notes": "Inferred; si=violet tendency; LAB from sRGB #ee82ee via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 69.7,
+          "C": 67.34,
+          "H": 326.88
+        },
+        "rgb_hex": "#ee82ee"
+      },
+      {
+        "source": "helmholtz_1867",
+        "color_name": "Orange",
+        "lab": {
+          "L": 69.5,
+          "a": 36.8,
+          "b": 75.5,
+          "notes": "Converted from sRGB #ff8c00 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 69.5,
+          "C": 83.99,
+          "H": 64.01
+        },
+        "rgb_hex": "#ff8c00"
+      },
+      {
+        "source": "field_1835",
+        "color_name": "Violet (high)",
+        "lab": {
+          "L": 32.6,
+          "a": 62.6,
+          "b": -38.7,
+          "notes": "Converted from sRGB #8b008b via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 32.6,
+          "C": 73.6,
+          "H": 328.28
+        },
+        "rgb_hex": "#8b008b"
+      },
+      {
+        "source": "finn_1881",
+        "color_name": "Purple",
+        "lab": {
+          "L": 29.8,
+          "a": 58.9,
+          "b": -36.5,
+          "notes": "Converted from sRGB #800080 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 29.8,
+          "C": 69.29,
+          "H": 328.21
+        },
+        "rgb_hex": "#800080"
+      },
+      {
+        "source": "lind_1900",
+        "color_name": "Violet",
+        "lab": {
+          "L": 32.6,
+          "a": 62.6,
+          "b": -38.7,
+          "notes": "Converted from sRGB #8b008b via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 32.6,
+          "C": 73.6,
+          "H": 328.28
+        },
+        "rgb_hex": "#8b008b"
+      },
+      {
+        "source": "maryon_c1920",
+        "color_name": "Violet-red",
+        "lab": {
+          "L": 44.8,
+          "a": 71.0,
+          "b": -15.2,
+          "notes": "Converted from sRGB #c71585 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 44.8,
+          "C": 72.61,
+          "H": 347.92
+        },
+        "rgb_hex": "#c71585"
+      },
+      {
+        "source": "rimsky_korsakov",
+        "color_name": "Dark blue",
+        "lab": {
+          "L": 14.8,
+          "a": 50.4,
+          "b": -68.7,
+          "notes": "Converted from sRGB #00008b via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 14.8,
+          "C": 85.2,
+          "H": 306.26
+        },
+        "rgb_hex": "#00008b"
+      },
+      {
+        "source": "wells_1980",
+        "color_name": "Hue 330\u00b0",
+        "lab": {
+          "L": 54.9,
+          "a": 84.5,
+          "b": 4.1,
+          "notes": "Converted from sRGB #ff0080 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 54.9,
+          "C": 84.6,
+          "H": 2.78
+        },
+        "rgb_hex": "#ff0080"
+      },
+      {
+        "source": "pridmore_1992",
+        "color_name": "Hue 150\u00b0",
+        "lab": {
+          "L": 88.5,
+          "a": -76.7,
+          "b": 46.6,
+          "notes": "Converted from sRGB #00ff80 via CIE XYZ D65"
+        },
+        "lch": {
+          "L": 88.5,
+          "C": 89.75,
+          "H": 148.72
+        },
+        "rgb_hex": "#00ff80"
+      }
+    ],
+    "coverage": "15/15",
+    "mean_lab": {
+      "L": 46.46,
+      "a": 49.57,
+      "b": -29.37
+    },
+    "mean_lch": {
+      "L": 46.46,
+      "C": 79.15,
+      "H": 330.03
+    },
+    "std_dev_lab": {
+      "L": 20.48,
+      "a": 36.54,
+      "b": 43.27
+    },
+    "hue_std_circular_deg": 43.15,
+    "lab_variance_magnitude": 60.22,
+    "mean_delta_e_ciede2000": 36.15,
+    "agreement_score": 0.25,
+    "agreement_score_formula": "agreement_score = 1 / (1 + mean_delta_e_ciede2000 / 12); perceptual (CIEDE2000). Legacy: agreement_score_lab from LAB variance.",
+    "agreement_score_lab": 0.29,
+    "consensus_assessment": "low (sources strongly disagree)",
+    "observations": "15 source(s) map this pitch; mean CIEDE2000 36.1; hue std 43.1 deg. Colors perceptually distinct."
+  }
+]

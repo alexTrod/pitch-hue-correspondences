@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "description": "Maps phase1_collected_mappings.json source_id to catalogue id and primary_family for Phase 2 per-family analysis.",
+    "created": "2026-03-18"
+  },
+  "bridge": [
+    {"phase1_source_id": "scriabin_primary", "catalogue_id": "sabaneyev_scriabin_1911", "primary_family": "F2_circle_of_fifths"},
+    {"phase1_source_id": "newton_optics", "catalogue_id": "mizler_1739", "primary_family": "F1_spectral_analogy"},
+    {"phase1_source_id": "rimington_1912", "catalogue_id": null, "primary_family": "F1_spectral_analogy"},
+    {"phase1_source_id": "castel_1740", "catalogue_id": null, "primary_family": "F1_spectral_analogy"},
+    {"phase1_source_id": "ward_cognition_2006", "catalogue_id": "hamilton_fletcher_2017", "primary_family": "F7_psychophysical"},
+    {"phase1_source_id": "synesthesia_nature_2017", "catalogue_id": "bleuler_lehmann_1881", "primary_family": "F5_synesthetic"},
+    {"phase1_source_id": "soundmap_contemporary", "catalogue_id": null, "primary_family": "F6_esoteric"},
+    {"phase1_source_id": "helmholtz_1867", "catalogue_id": "euler_1760", "primary_family": "F1_spectral_analogy"},
+    {"phase1_source_id": "field_1835", "catalogue_id": null, "primary_family": "F1_spectral_analogy"},
+    {"phase1_source_id": "finn_1881", "catalogue_id": null, "primary_family": "F5_synesthetic"},
+    {"phase1_source_id": "lind_1900", "catalogue_id": null, "primary_family": "F5_synesthetic"},
+    {"phase1_source_id": "maryon_c1920", "catalogue_id": null, "primary_family": "F1_spectral_analogy"},
+    {"phase1_source_id": "rimsky_korsakov", "catalogue_id": null, "primary_family": "F4_emotion_mediated"},
+    {"phase1_source_id": "wells_1980", "catalogue_id": null, "primary_family": "F1_spectral_analogy"},
+    {"phase1_source_id": "pridmore_1992", "catalogue_id": null, "primary_family": "F1_spectral_analogy"}
+  ]
+}

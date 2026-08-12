@@ -1,0 +1,380 @@
+<!--
+  Template for generating dashboard.html. Do not open this file in a browser to run the dashboard.
+  The file that runs is dashboard.html: it is fully self-contained (data embedded). To regenerate
+  dashboard.html after changing data or this template, run: python3 gen_dashboard.py
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pitch-Hue Mapping Explorer Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; margin: 0; background: #1a1a1a; color: #e0e0e0; }
+    .header { background: #252525; padding: 12px 20px; border-bottom: 1px solid #333; }
+    .header h1 { margin: 0; font-size: 1.25rem; font-weight: 600; }
+    .nav { display: flex; flex-wrap: wrap; gap: 4px; padding: 10px 20px; background: #252525; border-bottom: 1px solid #333; }
+    .nav button { padding: 8px 14px; background: #333; color: #e0e0e0; border: 1px solid #444; border-radius: 6px; cursor: pointer; font-size: 0.9rem; }
+    .nav button:hover { background: #444; }
+    .nav button.active { background: #0d6efd; border-color: #0d6efd; }
+    .main { padding: 20px; max-width: 1400px; margin: 0 auto; }
+    .panel { display: none; }
+    .panel.active { display: block; }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-bottom: 20px; }
+    .stat-card { background: #252525; padding: 14px; border-radius: 8px; border: 1px solid #333; }
+    .stat-card .value { font-size: 1.5rem; font-weight: 700; color: #6ea8fe; }
+    .stat-card .label { font-size: 0.8rem; color: #888; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; background: #252525; border-radius: 8px; overflow: hidden; }
+    th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #333; }
+    th { background: #333; font-weight: 600; }
+    .swatch { width: 24px; height: 24px; border-radius: 4px; display: inline-block; vertical-align: middle; border: 1px solid #444; }
+    .filters { margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .filters label { margin-right: 4px; }
+    .filters select { padding: 6px 10px; background: #333; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; }
+    .chart-container { position: relative; height: 320px; margin: 20px 0; }
+    .grid-12 { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2px; }
+    .grid-12 .cell { aspect-ratio: 1; border-radius: 4px; border: 1px solid #333; min-height: 28px; }
+    .color-wheel { width: 320px; height: 320px; border-radius: 50%; margin: 20px auto; }
+    .lab-2d { width: 100%; max-width: 500px; height: 400px; margin: 20px 0; }
+    .section-title { font-size: 1.1rem; margin: 16px 0 8px; color: #9cf; }
+    .export-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+    .export-buttons button { padding: 10px 16px; background: #0d6efd; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+    .export-buttons button:hover { background: #0b5ed7; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 800px) { .two-col { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Pitch-Hue Mapping Explorer Dashboard</h1>
+  </header>
+  <nav class="nav">
+    <button data-panel="overview" class="active">Overview</button>
+    <button data-panel="sources">Source Explorer</button>
+    <button data-panel="pitch">Pitch Explorer</button>
+    <button data-panel="viz">Visualizations</button>
+    <button data-panel="patterns">Patterns</button>
+    <button data-panel="compare">Compare</button>
+    <button data-panel="export">Data Export</button>
+  </nav>
+  <main class="main">
+    <div id="overview" class="panel active"></div>
+    <div id="sources" class="panel"></div>
+    <div id="pitch" class="panel"></div>
+    <div id="viz" class="panel"></div>
+    <div id="patterns" class="panel"></div>
+    <div id="compare" class="panel"></div>
+    <div id="export" class="panel"></div>
+  </main>
+
+  <script>
+  /* DATA_PLACEHOLDER */
+
+  function labToHex(L, a, b) {
+    const yn = 1, xn = 0.95047, zn = 1.08883;
+    const f = t => t > 6/29 ? Math.pow(t, 3) : 3*Math.pow(6/29, 2)*(t - 4/29);
+    const fy = (L + 16) / 116;
+    const fx = a / 500 + fy;
+    const fz = fy - b / 200;
+    const x = f(fx) * xn;
+    const y = f(fy) * yn;
+    const z = f(fz) * zn;
+    let r = x * 3.2404542 - y * 1.5371385 - z * 0.4985314;
+    let g = -x * 0.9692660 + y * 1.8760108 + z * 0.0415560;
+    let bl = x * 0.0556434 - y * 0.2040259 + z * 1.0572252;
+    const gamma = v => v <= 0.0031308 ? 12.92*v : 1.055*Math.pow(v, 1/2.4)-0.055;
+    r = gamma(r); g = gamma(g); bl = gamma(bl);
+    const R = Math.round(Math.max(0, Math.min(255, r*255)));
+    const G = Math.round(Math.max(0, Math.min(255, g*255)));
+    const B = Math.round(Math.max(0, Math.min(255, bl*255)));
+    return '#' + [R,G,B].map(n => n.toString(16).padStart(2,'0')).join('');
+  }
+
+  const sourceNames = {};
+  phase1_collected_mappings.forEach(m => { if (!sourceNames[m.source_id]) sourceNames[m.source_id] = m.source_name; });
+
+  function renderOverview() {
+    const s = phase2_statistical_summary.statistics;
+    const p = phase2_statistical_summary.patterns || {};
+    document.getElementById('overview').innerHTML = `
+      <div class="stats-grid">
+        <div class="stat-card"><div class="value">${s.total_mappings_collected}</div><div class="label">Total mappings</div></div>
+        <div class="stat-card"><div class="value">${s.num_sources}</div><div class="label">Sources</div></div>
+        <div class="stat-card"><div class="value">${s.num_pitch_classes_mapped}</div><div class="label">Pitch classes mapped</div></div>
+      </div>
+      <div class="section-title">Coverage per source</div>
+      <table><thead><tr><th>Source</th><th>Coverage</th></tr></thead><tbody>
+        ${Object.entries(s.coverage_per_source).map(([id, cov]) => `<tr><td>${sourceNames[id] || id}</td><td>${cov}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="section-title">Key patterns</div>
+      <p>${(p.monotonic_brightness && p.monotonic_brightness.description) || phase2_statistical_summary.trends.brightness_vs_frequency}</p>
+      <p>${(p.harmonic_relationships && p.harmonic_relationships.description) || ''}</p>
+      <p>${(p.pitch_class_clusters && p.pitch_class_clusters.description) || ''}</p>
+    `;
+  }
+
+  function renderSources() {
+    const sid = document.getElementById('sourceSelect') ? document.getElementById('sourceSelect').value : (phase1_collected_mappings[0] && phase1_collected_mappings[0].source_id);
+    const list = phase1_collected_mappings.filter(m => m.source_id === sid);
+    const ids = [...new Set(phase1_collected_mappings.map(m => m.source_id))];
+    document.getElementById('sources').innerHTML = `
+      <div class="filters">
+        <label>Source</label>
+        <select id="sourceSelect">${ids.map(id => `<option value="${id}" ${id===sid?'selected':''}>${sourceNames[id] || id}</option>`).join('')}</select>
+      </div>
+      <div class="section-title">Mappings (${list.length})</div>
+      <table><thead><tr><th>Pitch</th><th>Color</th><th>Hex</th><th>L*a*b*</th></tr></thead><tbody>
+        ${list.map(m => {
+          const lab = m.color_assignment.lab;
+          return `<tr><td>${m.pitch_class}</td><td><span class="swatch" style="background:${m.color_assignment.rgb_hex}"></span> ${m.color_assignment.original_description}</td><td>${m.color_assignment.rgb_hex}</td><td>L=${lab.L} a=${lab.a} b=${lab.b}</td></tr>`;
+        }).join('')}
+      </tbody></table>
+      <div class="section-title">Color wheel (by hue)</div>
+      <canvas id="sourceWheel" width="320" height="320"></canvas>
+    `;
+    const ctx = document.getElementById('sourceWheel').getContext('2d');
+    const cx = 160, cy = 160, r = 140;
+    list.sort((a,b) => (a.color_assignment.hue_degree || 0) - (b.color_assignment.hue_degree || 0));
+    const n = list.length;
+    const startTop = -Math.PI/2;
+    list.forEach((m, i) => {
+      const a0 = startTop + i * (2*Math.PI/n);
+      const a1 = startTop + (i+1) * (2*Math.PI/n);
+      const r1 = r - 24, r2 = r;
+      ctx.fillStyle = m.color_assignment.rgb_hex;
+      ctx.beginPath();
+      ctx.moveTo(cx + r1*Math.cos(a0), cy + r1*Math.sin(a0));
+      ctx.arc(cx, cy, r2, a0, a1);
+      ctx.arc(cx, cy, r1, a1, a0, true);
+      ctx.closePath();
+      ctx.fill();
+    });
+    ctx.strokeStyle = '#444';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, 0, 2*Math.PI);
+    ctx.stroke();
+    document.getElementById('sourceSelect').onchange = () => renderSources();
+  }
+
+  function renderPitch() {
+    const pid = document.getElementById('pitchSelect') ? document.getElementById('pitchSelect').value : 'C';
+    const ag = phase2_agreement_analysis.find(a => a.pitch_class === pid);
+    const props = phase2_pitch_properties.find(p => p.pitch_class === pid);
+    const pitches = phase2_agreement_analysis.map(a => a.pitch_class);
+    if (!ag) { document.getElementById('pitch').innerHTML = '<p>No data for this pitch.</p>'; return; }
+    const meanLab = ag.mean_lab;
+    const meanHex = labToHex(meanLab.L, meanLab.a, meanLab.b);
+    document.getElementById('pitch').innerHTML = `
+      <div class="filters">
+        <label>Pitch class</label>
+        <select id="pitchSelect">${pitches.map(p => `<option value="${p}" ${p===pid?'selected':''}>${p}</option>`).join('')}</select>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="value">${ag.frequency_hz}</div><div class="label">Frequency (Hz)</div></div>
+        <div class="stat-card"><div class="value">${ag.agreement_score.toFixed(2)}</div><div class="label">Agreement (CIEDE2000)</div></div>
+        <div class="stat-card"><div class="value">${ag.num_sources_mapping}</div><div class="label">Sources</div></div>
+        ${ag.mean_lch ? `<div class="stat-card"><div class="value">${ag.mean_lch.H.toFixed(0)}</div><div class="label">Mean hue (LCH deg)</div></div><div class="stat-card"><div class="value">${(ag.hue_std_circular_deg != null ? ag.hue_std_circular_deg : '-').toString()}</div><div class="label">Hue std (deg)</div></div>` : ''}
+      </div>
+      ${props ? `<p><strong>Intervals:</strong> P5 up ${props.interval_properties.perfect_5th_up}, P5 down ${props.interval_properties.perfect_5th_down}, M3 up ${props.interval_properties.major_3rd_up}, tritone ${props.interval_properties.tritone}.</p>` : ''}
+      <div class="section-title">Mean color (L*=${meanLab.L} a*=${meanLab.a} b*=${meanLab.b})</div>
+      <p><span class="swatch" style="width:48px;height:48px;background:${meanHex}"></span></p>
+      <div class="section-title">Assignments by source</div>
+      <table><thead><tr><th>Source</th><th>Color</th><th>Hex</th></tr></thead><tbody>
+        ${ag.assignments.map(a => `<tr><td>${a.source}</td><td><span class="swatch" style="background:${a.rgb_hex}"></span> ${a.color_name}</td><td>${a.rgb_hex}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="section-title">LAB 2D (a* vs b*)</div>
+      <canvas id="pitchLab2d" width="400" height="400"></canvas>
+    `;
+    const canvas = document.getElementById('pitchLab2d');
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      const w = 400, h = 400;
+      ctx.fillStyle = '#252525';
+      ctx.fillRect(0,0,w,h);
+      const pad = 40;
+      const minA = Math.min(-80, ...ag.assignments.map(a => a.lab.a));
+      const maxA = Math.max(90, ...ag.assignments.map(a => a.lab.a));
+      const minB = Math.min(-110, ...ag.assignments.map(a => a.lab.b));
+      const maxB = Math.max(100, ...ag.assignments.map(a => a.lab.b));
+      ag.assignments.forEach(a => {
+        const x = pad + (a.lab.a - minA) / (maxA - minA) * (w - 2*pad);
+        const y = h - pad - (a.lab.b - minB) / (maxB - minB) * (h - 2*pad);
+        ctx.fillStyle = a.rgb_hex;
+        ctx.beginPath();
+        ctx.arc(x, y, 12, 0, 2*Math.PI);
+        ctx.fill();
+        ctx.strokeStyle = '#fff';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      });
+    }
+    document.getElementById('pitchSelect').onchange = () => renderPitch();
+  }
+
+  function renderViz() {
+    document.getElementById('viz').innerHTML = `
+      <div class="section-title">Pitch-Color Grid (rows = pitch, columns = source)</div>
+      <div class="grid-12" id="pitchColorGrid"></div>
+      <div class="section-title">Brightness (L*) vs Frequency (Hz)</div>
+      <div class="chart-container"><canvas id="chartLfreq"></canvas></div>
+      <div class="section-title">Agreement by pitch (CIEDE2000)</div>
+      <div class="chart-container"><canvas id="chartAgree"></canvas></div>
+    `;
+    const sources = [...new Set(phase1_collected_mappings.map(m => m.source_id))];
+    const pitches = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
+    const grid = document.getElementById('pitchColorGrid');
+    grid.innerHTML = '';
+    pitches.forEach(pc => {
+      sources.forEach(sid => {
+        const m = phase1_collected_mappings.find(x => x.pitch_class === pc && x.source_id === sid);
+        const div = document.createElement('div');
+        div.className = 'cell';
+        div.style.background = m ? m.color_assignment.rgb_hex : '#333';
+        div.title = m ? `${pc} ${sid}` : '';
+        grid.appendChild(div);
+      });
+    });
+    grid.style.gridTemplateColumns = `repeat(${sources.length}, 1fr)`;
+
+    new Chart(document.getElementById('chartLfreq'), {
+      type: 'scatter',
+      data: {
+        datasets: [{
+          label: 'L* vs frequency',
+          data: phase1_collected_mappings.map(m => ({
+            x: m.note_frequency_hz,
+            y: m.color_assignment.lab.L,
+            backgroundColor: m.color_assignment.rgb_hex
+          })),
+          backgroundColor: phase1_collected_mappings.map(m => m.color_assignment.rgb_hex),
+          borderColor: '#666',
+          pointRadius: 6
+        }]
+      },
+      options: {
+        scales: { x: { title: { display: true, text: 'Frequency (Hz)' } }, y: { title: { display: true, text: 'L*' } } }
+      }
+    });
+
+    new Chart(document.getElementById('chartAgree'), {
+      type: 'bar',
+      data: {
+        labels: phase2_agreement_analysis.map(a => a.pitch_class),
+        datasets: [{ label: 'Agreement (CIEDE2000)', data: phase2_agreement_analysis.map(a => a.agreement_score), backgroundColor: '#6ea8fe' }]
+      },
+      options: {
+        scales: { y: { min: 0, max: 1 } },
+        plugins: { legend: { display: false } }
+      }
+    });
+  }
+
+  function renderPatterns() {
+    const p = phase2_statistical_summary.patterns || {};
+    document.getElementById('patterns').innerHTML = `
+      <div class="section-title">Monotonic brightness</div>
+      <p>${(p.monotonic_brightness && p.monotonic_brightness.description) || 'N/A'}</p>
+      <div class="section-title">Harmonic relationships (5ths)</div>
+      <p>${(p.harmonic_relationships && p.harmonic_relationships.description) || 'N/A'}</p>
+      <table><thead><tr><th>Interval</th><th>Hue distance (mean)</th><th>Relationship</th></tr></thead><tbody>
+        ${((p.harmonic_relationships && p.harmonic_relationships.examples) || []).map(e => `<tr><td>${e.interval}</td><td>${e.hue_distance_mean}</td><td>${e.color_relationship}</td></tr>`).join('')}
+      </tbody></table>
+      <div class="section-title">Outliers</div>
+      <p>${(p.outliers && p.outliers.description) || 'N/A'}</p>
+      <ul>${((p.outliers && p.outliers.examples) || []).map(e => `<li>${e.pitch} (${e.source}): ${e.issue}</li>`).join('')}</ul>
+      <div class="section-title">Agreement bar chart</div>
+      <div class="chart-container"><canvas id="chartPatternAgree"></canvas></div>
+    `;
+    if (document.getElementById('chartPatternAgree')) {
+      new Chart(document.getElementById('chartPatternAgree'), {
+        type: 'bar',
+        data: {
+          labels: phase2_agreement_analysis.map(a => a.pitch_class),
+          datasets: [{ label: 'Agreement (CIEDE2000)', data: phase2_agreement_analysis.map(a => a.agreement_score), backgroundColor: '#6ea8fe' }]
+        },
+        options: { scales: { y: { min: 0, max: 1 } } }
+      });
+    }
+  }
+
+  function renderCompare() {
+    const sids = [...new Set(phase1_collected_mappings.map(m => m.source_id))];
+    const sid1 = sids[0];
+    const sid2 = sids[1] || sid1;
+    document.getElementById('compare').innerHTML = `
+      <div class="filters">
+        <label>Source A</label>
+        <select id="compareA">${sids.map(id => `<option value="${id}" ${id===sid1?'selected':''}>${sourceNames[id]||id}</option>`).join('')}</select>
+        <label>Source B</label>
+        <select id="compareB">${sids.map(id => `<option value="${id}" ${id===sid2?'selected':''}>${sourceNames[id]||id}</option>`).join('')}</select>
+      </div>
+      <div class="two-col">
+        <div><div class="section-title">Source A mappings</div><table id="compareTableA"></table></div>
+        <div><div class="section-title">Source B mappings</div><table id="compareTableB"></table></div>
+      </div>
+    `;
+    function fillCompare(sid, tableId) {
+      const list = phase1_collected_mappings.filter(m => m.source_id === sid);
+      document.getElementById(tableId).innerHTML = '<thead><tr><th>Pitch</th><th>Color</th></tr></thead><tbody>' +
+        list.map(m => `<tr><td>${m.pitch_class}</td><td><span class="swatch" style="background:${m.color_assignment.rgb_hex}"></span> ${m.color_assignment.original_description}</td></tr>`).join('') + '</tbody>';
+    }
+    fillCompare(document.getElementById('compareA').value, 'compareTableA');
+    fillCompare(document.getElementById('compareB').value, 'compareTableB');
+    document.getElementById('compareA').onchange = () => fillCompare(document.getElementById('compareA').value, 'compareTableA');
+    document.getElementById('compareB').onchange = () => fillCompare(document.getElementById('compareB').value, 'compareTableB');
+  }
+
+  function renderExport() {
+    document.getElementById('export').innerHTML = `
+      <div class="section-title">Download data</div>
+      <div class="export-buttons">
+        <button id="dlPhase1">Download phase1_collected_mappings.json</button>
+        <button id="dlPhase2Agree">Download phase2_agreement_analysis.json</button>
+        <button id="dlPhase2Pitch">Download phase2_pitch_properties.json</button>
+        <button id="dlPhase2Stats">Download phase2_statistical_summary.json</button>
+        <button id="dlCsv">Download pitch-hue CSV</button>
+      </div>
+    `;
+    document.getElementById('dlPhase1').onclick = () => download('phase1_collected_mappings.json', JSON.stringify(phase1_collected_mappings, null, 2));
+    document.getElementById('dlPhase2Agree').onclick = () => download('phase2_agreement_analysis.json', JSON.stringify(phase2_agreement_analysis, null, 2));
+    document.getElementById('dlPhase2Pitch').onclick = () => download('phase2_pitch_properties.json', JSON.stringify(phase2_pitch_properties, null, 2));
+    document.getElementById('dlPhase2Stats').onclick = () => download('phase2_statistical_summary.json', JSON.stringify(phase2_statistical_summary, null, 2));
+    const csv = ['pitch_class,source_id,color_name,rgb_hex,L,a,b'];
+    phase1_collected_mappings.forEach(m => {
+      const lab = m.color_assignment.lab;
+      csv.push([m.pitch_class, m.source_id, '"'+m.color_assignment.original_description.replace(/"/g,'""')+'"', m.color_assignment.rgb_hex, lab.L, lab.a, lab.b].join(','));
+    });
+    document.getElementById('dlCsv').onclick = () => download('pitch_hue_mappings.csv', csv.join('\n'));
+  }
+
+  function download(filename, content) {
+    const a = document.createElement('a');
+    a.href = 'data:application/octet-stream;charset=utf-8,' + encodeURIComponent(content);
+    a.download = filename;
+    a.click();
+  }
+
+  document.querySelectorAll('.nav button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const id = btn.getAttribute('data-panel');
+      document.getElementById(id).classList.add('active');
+      if (id === 'overview') renderOverview();
+      else if (id === 'sources') renderSources();
+      else if (id === 'pitch') renderPitch();
+      else if (id === 'viz') renderViz();
+      else if (id === 'patterns') renderPatterns();
+      else if (id === 'compare') renderCompare();
+      else if (id === 'export') renderExport();
+    });
+  });
+
+  renderOverview();
+  </script>
+</body>
+</html>

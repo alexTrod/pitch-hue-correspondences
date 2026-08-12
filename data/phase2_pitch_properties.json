@@ -1,0 +1,206 @@
+[
+  {
+    "pitch_class": "C",
+    "frequency_hz": 261.63,
+    "log_frequency": 5.57,
+    "octave_position_fraction": 0.0,
+    "position_in_chromatic_scale": 1,
+    "semitones_from_c": 0,
+    "semitones_from_a4": -9,
+    "note_name": "Middle C",
+    "interval_properties": {
+      "perfect_5th_up": "G",
+      "perfect_5th_down": "F",
+      "major_3rd_up": "E",
+      "major_3rd_down": "Ab",
+      "tritone": "F#/Gb"
+    }
+  },
+  {
+    "pitch_class": "C#",
+    "frequency_hz": 277.18,
+    "log_frequency": 5.62,
+    "octave_position_fraction": 0.08,
+    "position_in_chromatic_scale": 2,
+    "semitones_from_c": 1,
+    "semitones_from_a4": -8,
+    "note_name": "C#",
+    "interval_properties": {
+      "perfect_5th_up": "G#",
+      "perfect_5th_down": "F#",
+      "major_3rd_up": "F",
+      "major_3rd_down": "A",
+      "tritone": "G"
+    }
+  },
+  {
+    "pitch_class": "D",
+    "frequency_hz": 293.66,
+    "log_frequency": 5.68,
+    "octave_position_fraction": 0.17,
+    "position_in_chromatic_scale": 3,
+    "semitones_from_c": 2,
+    "semitones_from_a4": -7,
+    "note_name": "D",
+    "interval_properties": {
+      "perfect_5th_up": "A",
+      "perfect_5th_down": "G",
+      "major_3rd_up": "F#",
+      "major_3rd_down": "Bb",
+      "tritone": "G#/Ab"
+    }
+  },
+  {
+    "pitch_class": "D#",
+    "frequency_hz": 311.13,
+    "log_frequency": 5.74,
+    "octave_position_fraction": 0.25,
+    "position_in_chromatic_scale": 4,
+    "semitones_from_c": 3,
+    "semitones_from_a4": -6,
+    "note_name": "D#",
+    "interval_properties": {
+      "perfect_5th_up": "A#",
+      "perfect_5th_down": "G#",
+      "major_3rd_up": "G",
+      "major_3rd_down": "B",
+      "tritone": "A"
+    }
+  },
+  {
+    "pitch_class": "E",
+    "frequency_hz": 329.63,
+    "log_frequency": 5.8,
+    "octave_position_fraction": 0.33,
+    "position_in_chromatic_scale": 5,
+    "semitones_from_c": 4,
+    "semitones_from_a4": -5,
+    "note_name": "E",
+    "interval_properties": {
+      "perfect_5th_up": "B",
+      "perfect_5th_down": "A",
+      "major_3rd_up": "G#",
+      "major_3rd_down": "C",
+      "tritone": "A#/Bb"
+    }
+  },
+  {
+    "pitch_class": "F",
+    "frequency_hz": 349.23,
+    "log_frequency": 5.86,
+    "octave_position_fraction": 0.42,
+    "position_in_chromatic_scale": 6,
+    "semitones_from_c": 5,
+    "semitones_from_a4": -4,
+    "note_name": "F",
+    "interval_properties": {
+      "perfect_5th_up": "C",
+      "perfect_5th_down": "Bb",
+      "major_3rd_up": "A",
+      "major_3rd_down": "Db",
+      "tritone": "B"
+    }
+  },
+  {
+    "pitch_class": "F#",
+    "frequency_hz": 369.99,
+    "log_frequency": 5.91,
+    "octave_position_fraction": 0.5,
+    "position_in_chromatic_scale": 7,
+    "semitones_from_c": 6,
+    "semitones_from_a4": -3,
+    "note_name": "F#",
+    "interval_properties": {
+      "perfect_5th_up": "C#",
+      "perfect_5th_down": "B",
+      "major_3rd_up": "A#",
+      "major_3rd_down": "D",
+      "tritone": "C"
+    }
+  },
+  {
+    "pitch_class": "G",
+    "frequency_hz": 392.0,
+    "log_frequency": 5.97,
+    "octave_position_fraction": 0.58,
+    "position_in_chromatic_scale": 8,
+    "semitones_from_c": 7,
+    "semitones_from_a4": -2,
+    "note_name": "G",
+    "interval_properties": {
+      "perfect_5th_up": "D",
+      "perfect_5th_down": "C",
+      "major_3rd_up": "B",
+      "major_3rd_down": "Eb",
+      "tritone": "C#/Db"
+    }
+  },
+  {
+    "pitch_class": "G#",
+    "frequency_hz": 415.3,
+    "log_frequency": 6.03,
+    "octave_position_fraction": 0.67,
+    "position_in_chromatic_scale": 9,
+    "semitones_from_c": 8,
+    "semitones_from_a4": -1,
+    "note_name": "G#",
+    "interval_properties": {
+      "perfect_5th_up": "D#",
+      "perfect_5th_down": "C#",
+      "major_3rd_up": "C",
+      "major_3rd_down": "E",
+      "tritone": "D"
+    }
+  },
+  {
+    "pitch_class": "A",
+    "frequency_hz": 440.0,
+    "log_frequency": 6.09,
+    "octave_position_fraction": 0.75,
+    "position_in_chromatic_scale": 10,
+    "semitones_from_c": 9,
+    "semitones_from_a4": 0,
+    "note_name": "A",
+    "interval_properties": {
+      "perfect_5th_up": "E",
+      "perfect_5th_down": "D",
+      "major_3rd_up": "C#",
+      "major_3rd_down": "F",
+      "tritone": "D#/Eb"
+    }
+  },
+  {
+    "pitch_class": "A#",
+    "frequency_hz": 466.16,
+    "log_frequency": 6.14,
+    "octave_position_fraction": 0.83,
+    "position_in_chromatic_scale": 11,
+    "semitones_from_c": 10,
+    "semitones_from_a4": 1,
+    "note_name": "A#",
+    "interval_properties": {
+      "perfect_5th_up": "F",
+      "perfect_5th_down": "D#",
+      "major_3rd_up": "D",
+      "major_3rd_down": "Gb",
+      "tritone": "E"
+    }
+  },
+  {
+    "pitch_class": "B",
+    "frequency_hz": 493.88,
+    "log_frequency": 6.2,
+    "octave_position_fraction": 0.92,
+    "position_in_chromatic_scale": 12,
+    "semitones_from_c": 11,
+    "semitones_from_a4": 2,
+    "note_name": "B",
+    "interval_properties": {
+      "perfect_5th_up": "F#",
+      "perfect_5th_down": "E",
+      "major_3rd_up": "D#",
+      "major_3rd_down": "G",
+      "tritone": "F"
+    }
+  }
+]

@@ -1,0 +1,156 @@
+{
+  "statistics": {
+    "total_mappings_collected": 165,
+    "num_sources": 15,
+    "num_pitch_classes_mapped": 12,
+    "coverage_per_source": {
+      "castel_1740": "12/12 pitches",
+      "field_1835": "12/12 pitches",
+      "finn_1881": "12/12 pitches",
+      "helmholtz_1867": "12/12 pitches",
+      "lind_1900": "12/12 pitches",
+      "maryon_c1920": "12/12 pitches",
+      "newton_optics": "7/12 pitches",
+      "pridmore_1992": "12/12 pitches",
+      "rimington_1912": "12/12 pitches",
+      "rimsky_korsakov": "12/12 pitches",
+      "scriabin_primary": "12/12 pitches",
+      "soundmap_contemporary": "12/12 pitches",
+      "synesthesia_nature_2017": "7/12 pitches",
+      "ward_cognition_2006": "7/12 pitches",
+      "wells_1980": "12/12 pitches"
+    }
+  },
+  "methodology_caveats": {
+    "agreement_score_formula": "agreement_score = 1 / (1 + mean_delta_e_ciede2000 / 12). Primary metric is CIEDE2000 (perceptual); 0 = high disagreement, 1 = perfect agreement. agreement_score_lab (from LAB variance) is kept for comparison.",
+    "color_space": "LAB used for storage; LCH (Lightness, Chroma, Hue) derived from LAB for hue-focused analysis (mean_lch, hue_std_circular_deg). CIEDE2000 used for all agreement and harmonic-distance metrics.",
+    "octave_conflation": "All mappings are treated as pitch-class only. Scriabin and synesthesia research both report that octave (pitch height) adds a brightness dimension on top of pitch class to hue; this interaction is not modelled in the current data structure."
+  },
+  "color_space_coverage": {
+    "L_range": [
+      14.8,
+      100.0
+    ],
+    "a_range": [
+      -86.2,
+      98.2
+    ],
+    "b_range": [
+      -107.9,
+      94.5
+    ],
+    "hue_range": [
+      0,
+      359
+    ],
+    "hue_clustering": "Hues span full circle; red/yellow/green/blue/violet all represented. Multiple sources use spectrum order (Newton, Rimington, synesthesia); others use circle-of-fifths or custom (Scriabin, Soundmap)."
+  },
+  "trends": {
+    "brightness_vs_frequency": "Correlation L* vs frequency: -0.28. No strong monotonic relationship across all mappings (sources differ in whether higher pitch is brighter).",
+    "warmth_vs_frequency": "a* and b* vary by source: some systems (spectrum) give warm (red/yellow) at low pitch; others (Scriabin) spread warm/cool by pitch class.",
+    "saturation_patterns": "Synesthesia study reports decreasing saturation along do-si; other sources use full saturation for principal hues."
+  },
+  "patterns": {
+    "monotonic_brightness": {
+      "exists": true,
+      "description": "Across pitch classes, mean L* vs frequency correlation = -0.64. No strong monotonic brightness-pitch trend across sources.",
+      "supporting_pitches": "Mixed: Rimington has low C = deep red (dark), high B = violet; Newton similar. Synesthesia maps pitch height to brightness (separate from pitch class).",
+      "correlation_strength": 0.64
+    },
+    "harmonic_relationships": {
+      "description": "Consonant intervals (5ths, 3rds) sometimes map to similar hue families within a source; cross-source hue distances vary widely.",
+      "examples": [
+        {
+          "interval": "Perfect 5th (C-G)",
+          "pitches": [
+            "C",
+            "G"
+          ],
+          "hue_distance_mean": 57.6,
+          "color_relationship": "distinct"
+        },
+        {
+          "interval": "Perfect 5th (D-A)",
+          "pitches": [
+            "D",
+            "A"
+          ],
+          "hue_distance_mean": 68.6,
+          "color_relationship": "distinct"
+        },
+        {
+          "interval": "Perfect 5th (E-B)",
+          "pitches": [
+            "E",
+            "B"
+          ],
+          "hue_distance_mean": 76.2,
+          "color_relationship": "distinct"
+        }
+      ]
+    },
+    "pitch_class_clusters": {
+      "description": "Warm (red/orange/yellow) and cool (blue/green/violet) clusters appear; assignment to pitch class varies by source.",
+      "clusters": [
+        {
+          "name": "Warm (red/orange/yellow)",
+          "pitches": [
+            "C",
+            "D",
+            "F",
+            "G"
+          ],
+          "avg_lab": {
+            "L": 60,
+            "a": 45,
+            "b": 55
+          }
+        },
+        {
+          "name": "Cool (blue/green/violet)",
+          "pitches": [
+            "E",
+            "A",
+            "B",
+            "C#"
+          ],
+          "avg_lab": {
+            "L": 50,
+            "a": 10,
+            "b": -30
+          }
+        }
+      ]
+    },
+    "outliers": {
+      "description": "Pitches with high cross-source variance or non-spectral colors (e.g. gray).",
+      "examples": [
+        {
+          "source": "multiple",
+          "pitch": "C",
+          "issue": "High LAB variance (68); sources assign very different colors."
+        },
+        {
+          "source": "multiple",
+          "pitch": "C#",
+          "issue": "High LAB variance (67); sources assign very different colors."
+        },
+        {
+          "source": "multiple",
+          "pitch": "D",
+          "issue": "High LAB variance (75); sources assign very different colors."
+        },
+        {
+          "source": "multiple",
+          "pitch": "D#",
+          "issue": "High LAB variance (70); sources assign very different colors."
+        },
+        {
+          "source": "multiple",
+          "pitch": "E",
+          "issue": "High LAB variance (81); sources assign very different colors."
+        }
+      ]
+    }
+  }
+}
